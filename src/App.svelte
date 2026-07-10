@@ -23,7 +23,7 @@
 
   const t = $derived(LABELS[lang]);
 
-  // The origin's own operators decide what you can pick; only five stations offer a choice.
+  // The origin's own operators decide what you can pick; interchange complexes offer a choice.
   const activeOperator = $derived(
     operatorChoice && stations[origin].ops.includes(operatorChoice)
       ? operatorChoice

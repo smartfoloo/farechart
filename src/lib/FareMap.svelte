@@ -110,7 +110,7 @@
     };
   });
 
-  // Highlight the operator whose fares are on screen; recede the other five.
+  // Highlight the operator whose fares are on screen; recede the rest.
   $effect(() => {
     if (!map || !linesReady || !operator) return;
     map.setFilter('lines-active', ['==', ['get', 'operator'], operator]);

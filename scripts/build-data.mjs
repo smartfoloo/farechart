@@ -1,9 +1,12 @@
 // Precompute browser-ready data from the raw ODPT dumps in /data.
 //
-// RailwayFares.json is 38 MB of per-line station pairs. Stations that share a
-// platform complex (station-groups.json) are collapsed into one logical node,
-// which is what the UI treats as "a station". Fares are emitted per operator as
-// a CSR adjacency in a binary blob so the app only fetches the network it needs.
+// Two fare dumps, ~67 MB of per-line station pairs between them: the Challenge
+// 2026 release covers the six private operators, the public ODPT release covers
+// the subways and monorails. Their operator sets are disjoint, so they concat.
+// Stations that share a platform complex (station-groups.json) are collapsed
+// into one logical node, which is what the UI treats as "a station". Fares are
+// emitted per operator as a CSR adjacency in a binary blob so the app only
+// fetches the network it needs.
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -17,6 +20,7 @@ const STATION_PREFIX = 'odpt.Station:';
 const OPERATOR_PREFIX = 'odpt.Operator:';
 
 // Only these operators have fare data; everything else in /data/polygons is omitted.
+// `fallback` colors a line whose geojson feature carries no color of its own.
 const OPERATORS = [
   { key: 'Tobu', ja: '東武鉄道', en: 'Tobu', fallback: '#1E90FF' },
   { key: 'Tokyu', ja: '東急電鉄', en: 'Tokyu', fallback: '#DA0442' },
@@ -24,6 +28,13 @@ const OPERATORS = [
   { key: 'Keikyu', ja: '京急電鉄', en: 'Keikyu', fallback: '#00BFFF' },
   { key: 'Keio', ja: '京王電鉄', en: 'Keio', fallback: '#DD0077' },
   { key: 'Sotetsu', ja: '相鉄', en: 'Sotetsu', fallback: '#0080C6' },
+  { key: 'TokyoMetro', ja: '東京メトロ', en: 'Tokyo Metro', fallback: '#00A7DB' },
+  { key: 'Toei', ja: '都営地下鉄', en: 'Toei Subway', fallback: '#009944' },
+  { key: 'YokohamaMunicipal', ja: '横浜市営地下鉄', en: 'Yokohama Municipal', fallback: '#0070B9' },
+  { key: 'MIR', ja: 'つくばエクスプレス', en: 'Tsukuba Express', fallback: '#0F55A0' },
+  { key: 'TamaMonorail', ja: '多摩都市モノレール', en: 'Tama Monorail', fallback: '#E60012' },
+  { key: 'Yurikamome', ja: 'ゆりかもめ', en: 'Yurikamome', fallback: '#0075C2' },
+  { key: 'TWR', ja: 'りんかい線', en: 'Rinkai Line', fallback: '#00639C' },
 ];
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
@@ -31,7 +42,10 @@ const round5 = (n) => Math.round(n * 1e5) / 1e5;
 
 const stations = json(join(SRC, 'stations.json'));
 const groups = json(join(SRC, 'station-groups.json'));
-const fares = json(join(SRC, 'RailwayFares.json'));
+const fares = [
+  ...json(join(SRC, 'RailwayFares.Challenge2026.json')),
+  ...json(join(SRC, 'RailwayFares.ODPT.json')),
+];
 
 const byId = new Map(stations.map((s) => [s.id, s]));
 
@@ -78,10 +92,22 @@ for (const rec of fares) {
   const op = rec['odpt:operator'].slice(OPERATOR_PREFIX.length);
   const table = perOp.get(op);
   if (!table) continue;
+
+  // Tokyo Metro bills out-of-station transfers (Otemachi/Tokyo, Ginza/Ginza-itchome)
+  // as ¥0 to mean "one fare station". Those are transfer markers, not fares.
+  if (rec['odpt:icCardFare'] === 0 || rec['odpt:ticketFare'] === 0) continue;
+
   const a = indexOf.get(nodeKey(rec['odpt:fromStation'].slice(STATION_PREFIX.length)));
   const b = indexOf.get(nodeKey(rec['odpt:toStation'].slice(STATION_PREFIX.length)));
   if (a === b) continue; // same complex, different platform
-  table.set(a * 100000 + b, [
+
+  // A complex can bill as several fare origins (Toei charges more from Shinjuku-nishiguchi
+  // than from Shinjuku). The node is one station to the user, so quote the cheapest.
+  const key = a * 100000 + b;
+  const prev = table.get(key);
+  if (prev && prev[0] <= rec['odpt:icCardFare']) continue;
+
+  table.set(key, [
     rec['odpt:icCardFare'],
     rec['odpt:ticketFare'],
     rec['odpt:childIcCardFare'],

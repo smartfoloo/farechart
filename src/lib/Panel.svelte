@@ -26,7 +26,7 @@
   let query = $state(null);
   let open = $state(false);
 
-  const originName = $derived(stationName(stations[origin], lang));
+  const originName = $derived(origin === null ? '' : stationName(stations[origin], lang));
   const text = $derived(query ?? originName);
 
   const suggestions = $derived.by(() => {
@@ -42,7 +42,9 @@
   });
 
   const operatorChips = $derived(
-    stations[origin].ops.map((key) => operators.find((o) => o.key === key)).filter(Boolean),
+    origin === null
+      ? []
+      : stations[origin].ops.map((key) => operators.find((o) => o.key === key)).filter(Boolean),
   );
 
   function pick(idx) {
@@ -81,7 +83,10 @@
   >
     <label for="origin-input">{t.origin}</label>
     <div class="field">
-      <span class="glyph" aria-hidden="true">⌕</span>
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+        <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
       <input
         id="origin-input"
         value={text}
@@ -117,24 +122,26 @@
     {/if}
   </div>
 
-  <div class="block">
-    <div class="block-head">
-      <span class="block-title">{t.operator}</span>
-      <span class="block-hint">{t.departingVia}</span>
+  {#if operatorChips.length}
+    <div class="block">
+      <div class="block-head">
+        <span class="block-title">{t.operator}</span>
+        <span class="block-hint">{t.departingVia}</span>
+      </div>
+      <div class="chips">
+        {#each operatorChips as op (op.key)}
+          <button
+            class="chip"
+            class:active={op.key === activeOperator}
+            disabled={operatorChips.length === 1}
+            onclick={() => onSetOperator(op.key)}
+          >
+            {operatorName(op, lang)}
+          </button>
+        {/each}
+      </div>
     </div>
-    <div class="chips">
-      {#each operatorChips as op (op.key)}
-        <button
-          class="chip"
-          class:active={op.key === activeOperator}
-          disabled={operatorChips.length === 1}
-          onclick={() => onSetOperator(op.key)}
-        >
-          {operatorName(op, lang)}
-        </button>
-      {/each}
-    </div>
-  </div>
+  {/if}
 
   <div class="block">
     <div class="block-head"><span class="block-title">{t.fareType}</span></div>
@@ -147,7 +154,7 @@
   <div class="list-head">{t.dest}</div>
   <div class="list">
     {#if !rows.length}
-      <div class="empty">{t.loading}</div>
+      <div class="empty">{origin === null ? t.startPrompt : t.loading}</div>
     {/if}
     {#each rows as row (row.station)}
       {@const color = fareColor(row.fare, range[0], range[1])}
@@ -252,11 +259,12 @@
   }
   .glyph {
     position: absolute;
-    left: 12px;
+    left: 11px;
     top: 50%;
     transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
     color: var(--muted-3);
-    font-size: 15px;
     pointer-events: none;
   }
   input {

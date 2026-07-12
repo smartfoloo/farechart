@@ -42,10 +42,15 @@ const round5 = (n) => Math.round(n * 1e5) / 1e5;
 
 const stations = json(join(SRC, 'stations.json'));
 const groups = json(join(SRC, 'station-groups.json'));
+const railwayLines = json(join(SRC, 'railway-lines.json'));
 const fares = [
   ...json(join(SRC, 'RailwayFares.Challenge2026.json')),
   ...json(join(SRC, 'RailwayFares.ODPT.json')),
 ];
+
+const opOrder = new Map(OPERATORS.map((o, i) => [o.key, i]));
+// A station id is operator.line.station, so its first two segments name the railway line.
+const lineOf = (id) => id.split('.').slice(0, 2).join('.');
 
 const byId = new Map(stations.map((s) => [s.id, s]));
 
@@ -71,16 +76,30 @@ for (const rec of fares) {
 const nodeKeys = [...members.keys()].sort();
 const indexOf = new Map(nodeKeys.map((k, i) => [k, i]));
 
+const usedLines = new Set(); // railway ids referenced by at least one node
 const nodes = nodeKeys.map((key) => {
   const ids = [...members.get(key)].sort();
   const rep = byId.get(ids[0]);
   const lng = ids.reduce((a, id) => a + byId.get(id).coord[0], 0) / ids.length;
   const lat = ids.reduce((a, id) => a + byId.get(id).coord[1], 0) / ids.length;
+
+  // Railways serving this complex, sorted by operator order then name, so the
+  // details popup lists them predictably.
+  const lines = [...new Set(ids.map(lineOf))].sort((a, b) => {
+    const d = opOrder.get(a.split('.')[0]) - opOrder.get(b.split('.')[0]);
+    return d || a.localeCompare(b);
+  });
+  for (const id of lines) {
+    if (!railwayLines[id]) throw new Error(`no name/color for railway ${id} in railway-lines.json`);
+    usedLines.add(id);
+  }
+
   return {
     ja: rep.title.ja,
     en: rep.title.en,
     coord: [round5(lng), round5(lat)],
     ops: [...new Set(ids.map((id) => id.split('.')[0]))].sort(),
+    lines,
   };
 });
 
@@ -193,9 +212,12 @@ for (const op of OPERATORS) {
 }
 writeFileSync(join(OUT, 'lines.geojson'), JSON.stringify({ type: 'FeatureCollection', features }));
 
+// Only the railways actually referenced by a node, keyed by id for the popup to resolve.
+const lineMeta = Object.fromEntries([...usedLines].sort().map((id) => [id, railwayLines[id]]));
+
 writeFileSync(
   join(OUT, 'stations.json'),
-  JSON.stringify({ operators: opMeta, maxFare, stations: nodes }),
+  JSON.stringify({ operators: opMeta, maxFare, lines: lineMeta, stations: nodes }),
 );
 
-console.log(`  ${nodes.length} logical stations, ${features.length} lines`);
+console.log(`  ${nodes.length} logical stations, ${features.length} lines, ${usedLines.size} named railways`);

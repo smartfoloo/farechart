@@ -110,11 +110,13 @@
     };
   });
 
-  // Highlight the operator whose fares are on screen; recede the rest.
+  // Highlight the operator whose fares are on screen; recede the rest. With no
+  // origin picked there is no operator, so the whole network stays faint.
   $effect(() => {
-    if (!map || !linesReady || !operator) return;
-    map.setFilter('lines-active', ['==', ['get', 'operator'], operator]);
-    map.setFilter('lines-dim', ['!=', ['get', 'operator'], operator]);
+    if (!map || !linesReady) return;
+    const active = operator ?? '';
+    map.setFilter('lines-active', ['==', ['get', 'operator'], active]);
+    map.setFilter('lines-dim', ['!=', ['get', 'operator'], active]);
   });
 
   // First paint frames the whole network; picking an origin flies to it;
@@ -138,7 +140,7 @@
 
     const fares = byStation;
     const wanted = new Set(fares.keys());
-    wanted.add(origin);
+    if (origin !== null) wanted.add(origin);
 
     for (const [idx, { marker }] of markers) {
       if (!wanted.has(idx)) {
@@ -226,7 +228,8 @@
     const name = esc(stationName(stations[idx], lang));
 
     if (idx === origin) {
-      el.style.pointerEvents = 'none';
+      el.style.cursor = 'pointer';
+      el.style.pointerEvents = 'auto';
       el.style.zIndex = '30';
       el.innerHTML = `<div class="pill-inner pill-origin" style="background:${ACCENT}">${name}</div>`;
       return;

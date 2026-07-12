@@ -1,11 +1,10 @@
 <script>
-  import { untrack } from 'svelte';
   import { loadNetwork, destinationsFrom, fareBetween } from './lib/data.js';
   import { LABELS, stationName, operatorName } from './lib/i18n.js';
   import FareMap from './lib/FareMap.svelte';
   import Panel from './lib/Panel.svelte';
   import Legend from './lib/Legend.svelte';
-  import CompareModal from './lib/CompareModal.svelte';
+  import StationDetails from './lib/StationDetails.svelte';
 
   let { meta } = $props();
 
@@ -13,25 +12,30 @@
   const operators = $derived(meta.operators);
 
   let lang = $state('ja');
-  let origin = $state(untrack(() => Math.max(0, meta.stations.findIndex((s) => s.en === 'Shibuya'))));
+  let origin = $state(null); // nothing loads until the user picks a station
   let operatorChoice = $state(null);
   let fareMode = $state('ic');
   let selected = $state(null);
-  let compareTarget = $state(null);
+  let detailTarget = $state(null); // station whose details popup is open
   let network = $state(null);
-  let compareFares = $state([]);
+  let detailFares = $state([]);
 
   const t = $derived(LABELS[lang]);
 
   // The origin's own operators decide what you can pick; interchange complexes offer a choice.
-  const activeOperator = $derived(
-    operatorChoice && stations[origin].ops.includes(operatorChoice)
+  const activeOperator = $derived.by(() => {
+    if (origin === null) return null;
+    return operatorChoice && stations[origin].ops.includes(operatorChoice)
       ? operatorChoice
-      : stations[origin].ops[0],
-  );
+      : stations[origin].ops[0];
+  });
 
   $effect(() => {
     const key = activeOperator;
+    if (!key) {
+      network = null;
+      return;
+    }
     let stale = false;
     loadNetwork(key).then((net) => {
       if (!stale) network = net;
@@ -50,35 +54,29 @@
 
   const sharedOperators = (a, b) => stations[a].ops.filter((k) => stations[b].ops.includes(k));
 
-  // A pair is only comparable when two operators both actually sell a fare for it.
+  // Every fare from the origin to the open station, one per operator that sells it.
   $effect(() => {
-    const target = compareTarget;
-    if (target === null) {
-      compareFares = [];
+    const target = detailTarget;
+    if (target === null || origin === null || target === origin) {
+      detailFares = [];
       return;
     }
     const from = origin;
     let stale = false;
     Promise.all(sharedOperators(from, target).map(loadNetwork)).then((nets) => {
       if (stale) return;
-      const found = nets
+      detailFares = nets
         .map((net) => {
           const fare = fareBetween(net, from, target);
           return fare && { key: net.key, ...fare };
         })
         .filter(Boolean);
-      if (found.length < 2) {
-        compareTarget = null;
-        selected = target;
-      } else {
-        compareFares = found;
-      }
     });
     return () => (stale = true);
   });
 
-  const compareRows = $derived(
-    compareFares
+  const detailRows = $derived(
+    detailFares
       .map((r) => ({
         ...r,
         label: operatorName(operators.find((o) => o.key === r.key), lang),
@@ -87,32 +85,33 @@
       .sort((a, b) => a.fare - b.fare),
   );
 
+  // Railways serving the open station, resolved to names and colors.
+  const detailLines = $derived(
+    detailTarget === null ? [] : stations[detailTarget].lines.map((id) => meta.lines[id]),
+  );
+
   function pickOrigin(idx) {
     origin = idx;
     operatorChoice = null;
     selected = null;
-    compareTarget = null;
+    detailTarget = null;
   }
 
   function setOperator(key) {
     operatorChoice = key;
     selected = null;
-    compareTarget = null;
+    detailTarget = null;
   }
 
   function selectDest(idx) {
-    if (idx === origin) return;
-    if (sharedOperators(origin, idx).length > 1) {
-      compareTarget = idx;
-      return;
-    }
-    selected = selected === idx ? null : idx;
+    detailTarget = idx;
+    selected = idx === origin ? null : idx;
   }
 
-  function pickCompared(key) {
+  function pickFromDetails(key) {
     operatorChoice = key;
-    selected = compareTarget;
-    compareTarget = null;
+    selected = detailTarget;
+    detailTarget = null;
   }
 </script>
 
@@ -149,16 +148,21 @@
     <Legend {t} min={range[0]} max={range[1]} />
   {/if}
 
-  {#if compareTarget !== null && compareRows.length > 1}
-    <CompareModal
+  {#if detailTarget !== null}
+    <StationDetails
       {t}
+      {lang}
       {fareMode}
       {activeOperator}
-      originName={stationName(stations[origin], lang)}
-      destName={stationName(stations[compareTarget], lang)}
-      rows={compareRows}
-      onPick={pickCompared}
-      onClose={() => (compareTarget = null)}
+      stationName={stationName(stations[detailTarget], lang)}
+      stationSub={lang === 'ja' ? stations[detailTarget].en : stations[detailTarget].ja}
+      originName={origin === null ? null : stationName(stations[origin], lang)}
+      isOrigin={detailTarget === origin}
+      lines={detailLines}
+      rows={detailRows}
+      onPick={pickFromDetails}
+      onSetOrigin={() => pickOrigin(detailTarget)}
+      onClose={() => (detailTarget = null)}
     />
   {/if}
 </main>

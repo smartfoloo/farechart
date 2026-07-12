@@ -1,6 +1,6 @@
 export const LABELS = {
   ja: {
-    explorerSub: '運賃エクスプローラー',
+    explorerSub: 'デジタル運賃表',
     origin: '出発駅',
     fareScale: '運賃の目安',
     dest: '行き先',
@@ -11,10 +11,15 @@ export const LABELS = {
     ic: 'ICカード',
     ticket: 'きっぷ',
     child: 'こども',
-    compareLabel: '運賃を比較',
-    compareSub: '両駅を経由する複数の運行会社があります。運賃を比較して選んでください。',
+    stationDetails: '駅情報',
+    lines: '路線',
+    fareLabel: '運賃',
+    setOrigin: 'この駅を出発駅にする',
+    originHere: '現在の出発駅です',
+    pickOriginHint: '出発駅を選ぶと運賃が表示されます',
     noDest: '運賃データがありません',
     loading: '読み込み中…',
+    startPrompt: '出発駅を選んでください',
   },
   en: {
     explorerSub: 'Pick a station to compare fares',
@@ -28,10 +33,15 @@ export const LABELS = {
     ic: 'IC card',
     ticket: 'Ticket',
     child: 'Child',
-    compareLabel: 'Compare fares',
-    compareSub: 'Multiple operators run between these two stations. Compare fares and pick one.',
+    stationDetails: 'Station details',
+    lines: 'Lines',
+    fareLabel: 'Fare',
+    setOrigin: 'Set as origin',
+    originHere: 'This is your origin station',
+    pickOriginHint: 'Pick an origin to see fares',
     noDest: 'No fare data',
     loading: 'Loading…',
+    startPrompt: 'Search for a station to begin',
   },
 };
 

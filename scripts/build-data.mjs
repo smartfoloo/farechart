@@ -37,6 +37,11 @@ const OPERATORS = [
   { key: 'TWR', ja: 'りんかい線', en: 'Rinkai Line', fallback: '#00639C' },
 ];
 
+// Keikyu (from 2023-10) and Seibu (from 2026-03) charge one flat child fare on IC at
+// any distance. ODPT still derives their child fares as half the adult one, so the
+// dumps carry a distance curve that no longer exists. Paper tickets keep the half fare.
+const FLAT_CHILD_IC = { Keikyu: 75, Seibu: 50 };
+
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 const round5 = (n) => Math.round(n * 1e5) / 1e5;
 
@@ -106,11 +111,17 @@ const nodes = nodeKeys.map((key) => {
 // ---- fares: operator -> directed pair -> fares -------------------------------
 
 const perOp = new Map(OPERATORS.map((o) => [o.key, new Map()]));
+// The tariff each operator's records are drawn from (dct:issued), not the dump's own
+// date. Several are years old, so the app shows it rather than implying fares are current.
+const issuedOf = new Map();
 let maxFare = 0;
 for (const rec of fares) {
   const op = rec['odpt:operator'].slice(OPERATOR_PREFIX.length);
   const table = perOp.get(op);
   if (!table) continue;
+
+  const issued = rec['dct:issued'];
+  if (!issuedOf.has(op) || issuedOf.get(op) < issued) issuedOf.set(op, issued);
 
   // Tokyo Metro bills out-of-station transfers (Otemachi/Tokyo, Ginza/Ginza-itchome)
   // as ¥0 to mean "one fare station". Those are transfer markers, not fares.
@@ -129,7 +140,7 @@ for (const rec of fares) {
   table.set(key, [
     rec['odpt:icCardFare'],
     rec['odpt:ticketFare'],
-    rec['odpt:childIcCardFare'],
+    FLAT_CHILD_IC[op] ?? rec['odpt:childIcCardFare'],
     rec['odpt:childTicketFare'],
   ]);
   maxFare = Math.max(maxFare, rec['odpt:ticketFare'], rec['odpt:icCardFare']);
@@ -189,7 +200,14 @@ for (const op of OPERATORS) {
   offsets[nStations] = cursor;
 
   writeFileSync(join(OUT, 'fares', `${op.key}.bin`), Buffer.from(buf));
-  opMeta.push({ key: op.key, ja: op.ja, en: op.en, stations: nStations, entries: nEntries });
+  opMeta.push({
+    key: op.key,
+    ja: op.ja,
+    en: op.en,
+    issued: issuedOf.get(op.key),
+    stations: nStations,
+    entries: nEntries,
+  });
   console.log(`  ${op.key.padEnd(8)} ${String(nStations).padStart(3)} stations  ${String(nEntries).padStart(5)} fares  ${(buf.byteLength / 1024).toFixed(1)} KB`);
 }
 

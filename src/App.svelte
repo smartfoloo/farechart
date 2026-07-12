@@ -1,5 +1,6 @@
 <script>
   import { loadNetwork, destinationsFrom, fareBetween } from './lib/data.js';
+  import { fareOf } from './lib/fare.js';
   import { LABELS, stationName, operatorName } from './lib/i18n.js';
   import FareMap from './lib/FareMap.svelte';
   import Panel from './lib/Panel.svelte';
@@ -15,10 +16,11 @@
   let origin = $state(null); // nothing loads until the user picks a station
   let operatorChoice = $state(null);
   let fareMode = $state('ic');
+  let passenger = $state('adult');
   let selected = $state(null);
   let detailTarget = $state(null); // station whose details popup is open
   let network = $state(null);
-  let detailFares = $state([]);
+  let detailFares = $state(null);
 
   const t = $derived(LABELS[lang]);
 
@@ -46,44 +48,42 @@
   const rows = $derived.by(() => {
     if (!network || network.key !== activeOperator) return [];
     return destinationsFrom(network, origin)
-      .map((e) => ({ ...e, fare: fareMode === 'ic' ? e.ic : e.ticket }))
+      .map((e) => ({ ...e, fare: fareOf(e, fareMode, passenger) }))
       .sort((a, b) => a.fare - b.fare);
   });
 
   const range = $derived(rows.length ? [rows[0].fare, rows[rows.length - 1].fare] : [0, 0]);
 
   const sharedOperators = (a, b) => stations[a].ops.filter((k) => stations[b].ops.includes(k));
+  const opLabel = (key) => operatorName(operators.find((o) => o.key === key), lang);
 
-  // Every fare from the origin to the open station, one per operator that sells it.
+  // Every operator that sells a fare from the origin to the open station. Fares are
+  // derived from the loaded networks, so the fare-type and passenger toggles stay live.
   $effect(() => {
     const target = detailTarget;
     if (target === null || origin === null || target === origin) {
-      detailFares = [];
+      detailFares = null;
       return;
     }
     const from = origin;
     let stale = false;
     Promise.all(sharedOperators(from, target).map(loadNetwork)).then((nets) => {
-      if (stale) return;
-      detailFares = nets
-        .map((net) => {
-          const fare = fareBetween(net, from, target);
-          return fare && { key: net.key, ...fare };
-        })
-        .filter(Boolean);
+      if (!stale) detailFares = { from, target, nets };
     });
     return () => (stale = true);
   });
 
-  const detailRows = $derived(
-    detailFares
-      .map((r) => ({
-        ...r,
-        label: operatorName(operators.find((o) => o.key === r.key), lang),
-        fare: fareMode === 'ic' ? r.ic : r.ticket,
-      }))
-      .sort((a, b) => a.fare - b.fare),
-  );
+  const detailRows = $derived.by(() => {
+    const d = detailFares;
+    if (!d || d.target !== detailTarget || d.from !== origin) return [];
+
+    const out = [];
+    for (const net of d.nets) {
+      const e = fareBetween(net, d.from, d.target);
+      if (e) out.push({ ...e, key: net.key, label: opLabel(net.key), fare: fareOf(e, fareMode, passenger) });
+    }
+    return out.sort((a, b) => a.fare - b.fare);
+  });
 
   // Railways serving the open station, resolved to names and colors.
   const detailLines = $derived(
@@ -134,6 +134,7 @@
     {origin}
     {activeOperator}
     {fareMode}
+    {passenger}
     {rows}
     {selected}
     {range}
@@ -141,6 +142,7 @@
     onPickOrigin={pickOrigin}
     onSetOperator={setOperator}
     onSetFareMode={(m) => (fareMode = m)}
+    onSetPassenger={(p) => (passenger = p)}
     onSelectDest={selectDest}
   />
 
@@ -153,6 +155,7 @@
       {t}
       {lang}
       {fareMode}
+      {passenger}
       {activeOperator}
       stationName={stationName(stations[detailTarget], lang)}
       stationSub={lang === 'ja' ? stations[detailTarget].en : stations[detailTarget].ja}

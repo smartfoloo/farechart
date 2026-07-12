@@ -20,3 +20,10 @@ export function fareGradient(stops = 6) {
 }
 
 export const yen = (n) => `¥${n}`;
+
+// Resolve a raw fare entry to a single number. Adult and child fares both ship
+// in the ODPT data, so neither is derived.
+export function fareOf(entry, mode, passenger) {
+  if (passenger === 'child') return mode === 'ic' ? entry.childIc : entry.childTicket;
+  return mode === 'ic' ? entry.ic : entry.ticket;
+}

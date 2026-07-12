@@ -11,6 +11,7 @@
     origin,
     activeOperator,
     fareMode,
+    passenger,
     rows,
     selected,
     range,
@@ -18,6 +19,7 @@
     onPickOrigin,
     onSetOperator,
     onSetFareMode,
+    onSetPassenger,
     onSelectDest,
   } = $props();
 
@@ -46,6 +48,9 @@
       ? []
       : stations[origin].ops.map((key) => operators.find((o) => o.key === key)).filter(Boolean),
   );
+
+  // ODPT publishes each operator's tariff as of a date, and some are years stale.
+  const issued = $derived(operators.find((o) => o.key === activeOperator)?.issued);
 
   function pick(idx) {
     query = null;
@@ -140,6 +145,9 @@
           </button>
         {/each}
       </div>
+      {#if issued}
+        <div class="vintage">{t.faresAsOf} {issued}</div>
+      {/if}
     </div>
   {/if}
 
@@ -148,6 +156,14 @@
     <div class="segmented">
       <button class:active={fareMode === 'ic'} onclick={() => onSetFareMode('ic')}>{t.ic}</button>
       <button class:active={fareMode === 'ticket'} onclick={() => onSetFareMode('ticket')}>{t.ticket}</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-head"><span class="block-title">{t.passengerType}</span></div>
+    <div class="segmented">
+      <button class:active={passenger === 'adult'} onclick={() => onSetPassenger('adult')}>{t.adult}</button>
+      <button class:active={passenger === 'child'} onclick={() => onSetPassenger('child')}>{t.child}</button>
     </div>
   </div>
 
@@ -350,6 +366,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+  }
+  .vintage {
+    margin-top: 8px;
+    font-size: 11.5px;
+    color: var(--muted-3);
   }
   .chip {
     font: inherit;

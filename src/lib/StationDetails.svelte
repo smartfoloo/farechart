@@ -1,10 +1,11 @@
 <script>
-  import { fareColor } from './fare.js';
+  import { fareColor, fareOf } from './fare.js';
 
   let {
     t,
     lang,
     fareMode,
+    passenger,
     activeOperator,
     stationName,
     stationSub,
@@ -24,8 +25,13 @@
   });
 
   const lineName = (l) => (lang === 'ja' ? l.ja : l.en);
-  const alt = (row) => (fareMode === 'ic' ? [t.ticket, row.ticket] : [t.ic, row.ic]);
-  const child = (row) => (fareMode === 'ic' ? row.childIc : row.childTicket);
+
+  // The same trip priced the other way round, so both fare types are always on show.
+  const alt = (row) => {
+    const other = fareMode === 'ic' ? 'ticket' : 'ic';
+    return [other === 'ic' ? t.ic : t.ticket, fareOf(row, other, passenger)];
+  };
+  const child = (row) => fareOf(row, fareMode, 'child');
 </script>
 
 <svelte:window onkeydown={(e) => e.key === 'Escape' && onClose()} />
@@ -74,7 +80,9 @@
             >
               <span class="meta">
                 <span class="label">{row.label}</span>
-                <span class="detail">{altLabel} ¥{altFare} · {t.child} ¥{child(row)}</span>
+                <span class="detail">
+                  {altLabel} ¥{altFare}{#if passenger === 'adult'} · {t.child} ¥{child(row)}{/if}
+                </span>
               </span>
               <span class="fare" style="color: {color}">¥{row.fare}</span>
             </button>

@@ -15,12 +15,24 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none; /* no rubber-banding the page behind the map */
+}
+
 body {
   margin: 0;
   font-family: 'Inter', 'Hiragino Sans', system-ui, sans-serif;
   background: #edf2f7;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 ::-webkit-scrollbar {

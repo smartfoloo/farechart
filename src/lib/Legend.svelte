@@ -42,4 +42,24 @@
     font-size: 11px;
     color: var(--muted-2);
   }
+
+  @media (max-width: 768px) {
+    .legend {
+      top: 12px;
+      right: 12px;
+      width: 124px;
+      padding: 8px 10px 9px;
+      border-radius: 10px;
+    }
+    .title {
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+    .ramp {
+      height: 8px;
+    }
+    .ends {
+      font-size: 10.5px;
+    }
+  }
 </style>

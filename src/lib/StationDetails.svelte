@@ -1,5 +1,7 @@
 <script>
   import { fareColor, fareOf } from './fare.js';
+  import { isMobile } from './media.svelte.js';
+  import { dragY } from './drag.js';
 
   let {
     t,
@@ -18,6 +20,14 @@
     onClose,
   } = $props();
 
+  const DISMISS = 96; // px of downward travel that closes the sheet
+  const FLICK = 0.5; // px/ms
+
+  const mobile = $derived(isMobile.current);
+
+  let pull = $state(0); // downward drag distance, mobile only
+  let dragging = $state(false);
+
   const range = $derived.by(() => {
     if (!rows.length) return [0, 0];
     const fares = rows.map((r) => r.fare);
@@ -32,19 +42,53 @@
     return [other === 'ic' ? t.ic : t.ticket, fareOf(row, other, passenger)];
   };
   const child = (row) => fareOf(row, fareMode, 'child');
+
+  function onDragEnd(dy, velocity) {
+    dragging = false;
+    if (dy > DISMISS || velocity > FLICK) onClose();
+    else pull = 0;
+  }
 </script>
 
 <svelte:window onkeydown={(e) => e.key === 'Escape' && onClose()} />
 
-<div class="backdrop" role="presentation" onclick={(e) => e.target === e.currentTarget && onClose()}>
-  <div class="modal" role="dialog" aria-modal="true" aria-label={stationName}>
+<div
+  class="backdrop"
+  class:bottom={mobile}
+  role="presentation"
+  onclick={(e) => e.target === e.currentTarget && onClose()}
+>
+  <div
+    class="modal"
+    class:sheet={mobile}
+    class:dragging
+    style={mobile ? `--pull: ${pull}px` : ''}
+    role="dialog"
+    aria-modal="true"
+    aria-label={stationName}
+  >
+    {#if mobile}
+      <button
+        class="grabber"
+        aria-label={t.close}
+        use:dragY={{
+          onStart: () => (dragging = true),
+          onMove: (dy) => (pull = Math.max(0, dy)),
+          onEnd: onDragEnd,
+        }}
+        onclick={(e) => e.detail === 0 && onClose()}
+      >
+        <span class="grip"></span>
+      </button>
+    {/if}
+
     <div class="head">
       <div>
         <div class="eyebrow">{t.stationDetails}</div>
         <div class="title">{stationName}</div>
         <div class="sub">{stationSub}</div>
       </div>
-      <button class="close" onclick={onClose} aria-label="Close">✕</button>
+      <button class="close" onclick={onClose} aria-label={t.close}>✕</button>
     </div>
 
     <div class="body">
@@ -101,7 +145,7 @@
 
 <style>
   .backdrop {
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 40;
     background: rgb(26 32 44 / 0.45);
@@ -265,5 +309,87 @@
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
+  }
+
+  .grabber {
+    display: none;
+  }
+
+  /* --- Bottom sheet ------------------------------------------------------ */
+  .backdrop.bottom {
+    align-items: flex-end;
+  }
+  .modal.sheet {
+    width: 100%;
+    max-width: 100%;
+    max-height: 86dvh;
+    border-radius: 16px 16px 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(var(--pull, 0px));
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    animation: rise 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .modal.sheet.dragging {
+    transition: none;
+  }
+  @keyframes rise {
+    from {
+      transform: translateY(100%);
+    }
+  }
+
+  .sheet .grabber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: grab;
+    touch-action: none;
+  }
+  .grip {
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+  .sheet .grabber:hover .grip,
+  .sheet .grabber:focus-visible .grip {
+    background: var(--muted-3);
+  }
+  .sheet .head {
+    padding: 4px 18px 16px;
+  }
+  .sheet .body {
+    padding: 8px 18px 16px;
+    overscroll-behavior: contain;
+  }
+  .sheet .foot {
+    padding: 14px 18px;
+  }
+
+  @media (max-width: 768px) {
+    /* Touch targets: 44px minimum. */
+    .close {
+      width: 40px;
+      height: 40px;
+    }
+    .option {
+      padding: 15px;
+    }
+    .set-origin {
+      padding: 14px;
+      font-size: 15px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modal.sheet {
+      transition: none;
+      animation: none;
+    }
   }
 </style>

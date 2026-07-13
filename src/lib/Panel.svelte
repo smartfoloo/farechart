@@ -1,6 +1,8 @@
 <script>
   import { fareColor } from './fare.js';
   import { stationName, stationSub, operatorName } from './i18n.js';
+  import { isMobile } from './media.svelte.js';
+  import { dragY } from './drag.js';
   import MultiRouteIcon from './MultiRouteIcon.svelte';
 
   let {
@@ -52,138 +54,241 @@
   // ODPT publishes each operator's tariff as of a date, and some are years stale.
   const issued = $derived(operators.find((o) => o.key === activeOperator)?.issued);
 
+  // --- Bottom sheet (mobile only) -------------------------------------------
+  // Ordered top to bottom: a larger offset means less of the sheet is on screen.
+  const DETENTS = ['full', 'half', 'collapsed'];
+  const FLICK = 0.4; // px/ms past which a release counts as a flick, not a drop
+  const TAP = 4; // px of travel under which a drag on the handle is really a tap
+
+  const mobile = $derived(isMobile.current);
+
+  let detent = $state('half');
+  let dragOffset = $state(null); // live translateY mid-drag; null when settled
+  let dragBase = 0;
+
+  let viewH = $state(0);
+  let sheetH = $state(0);
+  let peekH = $state(0); // the handle + search block, the only part left visible when collapsed
+  let safeB = $state(0); // home-indicator inset, measured from env() by the probe
+
+  const offsets = $derived.by(() => {
+    const collapsed = Math.max(0, sheetH - peekH - safeB);
+    const half = Math.min(collapsed, Math.max(0, sheetH - Math.round(viewH * 0.45)));
+    return { full: 0, half, collapsed };
+  });
+
+  const offset = $derived(dragOffset ?? offsets[detent]);
+  const collapsed = $derived(mobile && detent === 'collapsed' && dragOffset === null);
+
+  const clamp = (y) => Math.min(offsets.collapsed, Math.max(0, y));
+
+  const nearest = (y) =>
+    DETENTS.reduce((best, d) => (Math.abs(offsets[d] - y) < Math.abs(offsets[best] - y) ? d : best));
+
+  function snapTo(next) {
+    detent = next;
+    dragOffset = null;
+  }
+
+  function step(dir) {
+    const i = DETENTS.indexOf(detent) + dir;
+    snapTo(DETENTS[Math.min(DETENTS.length - 1, Math.max(0, i))]);
+  }
+
+  const toggle = () => snapTo(detent === 'collapsed' ? 'half' : 'collapsed');
+
+  function onDragStart() {
+    dragBase = offsets[detent];
+    dragOffset = dragBase;
+  }
+
+  function onDrag(dy) {
+    dragOffset = clamp(dragBase + dy);
+  }
+
+  // A flick carries the sheet one detent further than where the finger left it.
+  function onDragEnd(dy, velocity) {
+    if (Math.abs(dy) < TAP) {
+      toggle();
+      return;
+    }
+    const from = DETENTS.indexOf(nearest(clamp(dragBase + dy)));
+    const i = Math.abs(velocity) > FLICK ? from + (velocity > 0 ? 1 : -1) : from;
+    snapTo(DETENTS[Math.min(DETENTS.length - 1, Math.max(0, i))]);
+  }
+
   function pick(idx) {
     query = null;
     open = false;
     onPickOrigin(idx);
+    if (mobile) snapTo('half'); // hand the map back once a station is chosen
+  }
+
+  // The suggestion list drops below the input, so it needs the sheet open to land on screen.
+  function focusSearch() {
+    open = true;
+    if (mobile && detent !== 'full') snapTo('full');
   }
 </script>
 
-<aside class="panel">
-  <div class="head">
-    <div class="head-row">
-      <h1 class="brand">Farechart</h1>
-      <div class="langs" role="group" aria-label="Language">
-        <button
-          class:active={lang === 'en'}
-          aria-pressed={lang === 'en'}
-          onclick={() => onSetLang('en')}>EN</button
-        >
-        <button
-          class:active={lang === 'ja'}
-          aria-pressed={lang === 'ja'}
-          onclick={() => onSetLang('ja')}>JA</button
-        >
-      </div>
-    </div>
-    <div class="sub">{t.explorerSub}</div>
-  </div>
+<svelte:window bind:innerHeight={viewH} />
 
-  <!-- Keep the list open while focus moves between the input and its options. -->
-  <div
-    class="block search"
-    onfocusout={(e) => {
-      if (!e.currentTarget.contains(e.relatedTarget)) open = false;
-    }}
-  >
-    <label for="origin-input">{t.origin}</label>
-    <div class="field">
-      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
-        <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      </svg>
-      <input
-        id="origin-input"
-        value={text}
-        placeholder={t.searchPh}
-        autocomplete="off"
-        role="combobox"
-        aria-expanded={open && suggestions.length > 0}
-        aria-controls="origin-suggestions"
-        oninput={(e) => {
-          query = e.currentTarget.value;
-          open = true;
+<aside
+  class="panel"
+  class:sheet={mobile}
+  class:dragging={dragOffset !== null}
+  bind:clientHeight={sheetH}
+  style={mobile ? `--sheet-y: ${offset}px` : ''}
+>
+  <div class="safe-probe" bind:clientHeight={safeB} aria-hidden="true"></div>
+
+  <div class="peek" bind:clientHeight={peekH}>
+    {#if mobile}
+      <button
+        class="grabber"
+        aria-label={t.sheetHandle}
+        aria-expanded={detent !== 'collapsed'}
+        use:dragY={{ onStart: onDragStart, onMove: onDrag, onEnd: onDragEnd }}
+        onclick={(e) => e.detail === 0 && toggle()}
+        onkeydown={(e) => {
+          if (e.key === 'ArrowUp') step(-1);
+          else if (e.key === 'ArrowDown') step(1);
+          else return;
+          e.preventDefault();
         }}
-        onfocus={() => (open = true)}
-        onkeydown={(e) => e.key === 'Escape' && (open = false)}
-      />
+      >
+        <span class="grip"></span>
+      </button>
+    {/if}
+
+    <div class="head">
+      <div class="head-row">
+        <h1 class="brand">Farechart</h1>
+        <div class="langs" role="group" aria-label="Language">
+          <button
+            class:active={lang === 'en'}
+            aria-pressed={lang === 'en'}
+            onclick={() => onSetLang('en')}>EN</button
+          >
+          <button
+            class:active={lang === 'ja'}
+            aria-pressed={lang === 'ja'}
+            onclick={() => onSetLang('ja')}>JA</button
+          >
+        </div>
+      </div>
+      <div class="sub">{t.explorerSub}</div>
     </div>
 
-    {#if open && suggestions.length}
-      <div class="suggestions" id="origin-suggestions" role="listbox">
-        {#each suggestions as idx (idx)}
-          <button
-            class="suggestion"
-            class:current={idx === origin}
-            role="option"
-            aria-selected={idx === origin}
-            onclick={() => pick(idx)}
-          >
-            <span class="primary">{stationName(stations[idx], lang)}</span>
-            <span class="secondary">{stationSub(stations[idx], lang)}</span>
-          </button>
-        {/each}
+    <!-- Keep the list open while focus moves between the input and its options. -->
+    <div
+      class="block search"
+      onfocusout={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) open = false;
+      }}
+    >
+      <label for="origin-input">{t.origin}</label>
+      <div class="field">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+          <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input
+          id="origin-input"
+          value={text}
+          placeholder={t.searchPh}
+          autocomplete="off"
+          role="combobox"
+          aria-expanded={open && suggestions.length > 0}
+          aria-controls="origin-suggestions"
+          oninput={(e) => {
+            query = e.currentTarget.value;
+            open = true;
+          }}
+          onfocus={focusSearch}
+          onkeydown={(e) => e.key === 'Escape' && (open = false)}
+        />
       </div>
-    {/if}
-  </div>
 
-  {#if operatorChips.length}
-    <div class="block">
-      <div class="block-head">
-        <span class="block-title">{t.operator}</span>
-        <span class="block-hint">{t.departingVia}</span>
-      </div>
-      <div class="chips">
-        {#each operatorChips as op (op.key)}
-          <button
-            class="chip"
-            class:active={op.key === activeOperator}
-            disabled={operatorChips.length === 1}
-            onclick={() => onSetOperator(op.key)}
-          >
-            {operatorName(op, lang)}
-          </button>
-        {/each}
-      </div>
-      {#if issued}
-        <div class="vintage">{t.faresAsOf} {issued}</div>
+      {#if open && suggestions.length}
+        <div class="suggestions" id="origin-suggestions" role="listbox">
+          {#each suggestions as idx (idx)}
+            <button
+              class="suggestion"
+              class:current={idx === origin}
+              role="option"
+              aria-selected={idx === origin}
+              onclick={() => pick(idx)}
+            >
+              <span class="primary">{stationName(stations[idx], lang)}</span>
+              <span class="secondary">{stationSub(stations[idx], lang)}</span>
+            </button>
+          {/each}
+        </div>
       {/if}
     </div>
-  {/if}
-
-  <div class="block">
-    <div class="block-head"><span class="block-title">{t.fareType}</span></div>
-    <div class="segmented">
-      <button class:active={fareMode === 'ic'} onclick={() => onSetFareMode('ic')}>{t.ic}</button>
-      <button class:active={fareMode === 'ticket'} onclick={() => onSetFareMode('ticket')}>{t.ticket}</button>
-    </div>
   </div>
 
-  <div class="block">
-    <div class="block-head"><span class="block-title">{t.passengerType}</span></div>
-    <div class="segmented">
-      <button class:active={passenger === 'adult'} onclick={() => onSetPassenger('adult')}>{t.adult}</button>
-      <button class:active={passenger === 'child'} onclick={() => onSetPassenger('child')}>{t.child}</button>
-    </div>
-  </div>
-
-  <div class="list-head">{t.dest}</div>
-  <div class="list">
-    {#if !rows.length}
-      <div class="empty">{origin === null ? t.startPrompt : t.loading}</div>
+  <!-- Below the peek line: unreachable by keyboard while the sheet is collapsed. -->
+  <div class="rest" inert={collapsed}>
+    {#if operatorChips.length}
+      <div class="block">
+        <div class="block-head">
+          <span class="block-title">{t.operator}</span>
+          <span class="block-hint">{t.departingVia}</span>
+        </div>
+        <div class="chips">
+          {#each operatorChips as op (op.key)}
+            <button
+              class="chip"
+              class:active={op.key === activeOperator}
+              disabled={operatorChips.length === 1}
+              onclick={() => onSetOperator(op.key)}
+            >
+              {operatorName(op, lang)}
+            </button>
+          {/each}
+        </div>
+        {#if issued}
+          <div class="vintage">{t.faresAsOf} {issued}</div>
+        {/if}
+      </div>
     {/if}
-    {#each rows as row (row.station)}
-      {@const color = fareColor(row.fare, range[0], range[1])}
-      <button class="row" class:selected={row.station === selected} onclick={() => onSelectDest(row.station)}>
-        <span class="row-name">{stationName(stations[row.station], lang)}</span>
-        <span class="row-fare">
-          {#if stations[row.station].ops.length > 1}
-            <MultiRouteIcon size={13} {color} />
-          {/if}
-          <span class="amount" style="color: {color}">¥{row.fare}</span>
-        </span>
-      </button>
-    {/each}
+
+    <div class="block">
+      <div class="block-head"><span class="block-title">{t.fareType}</span></div>
+      <div class="segmented">
+        <button class:active={fareMode === 'ic'} onclick={() => onSetFareMode('ic')}>{t.ic}</button>
+        <button class:active={fareMode === 'ticket'} onclick={() => onSetFareMode('ticket')}>{t.ticket}</button>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head"><span class="block-title">{t.passengerType}</span></div>
+      <div class="segmented">
+        <button class:active={passenger === 'adult'} onclick={() => onSetPassenger('adult')}>{t.adult}</button>
+        <button class:active={passenger === 'child'} onclick={() => onSetPassenger('child')}>{t.child}</button>
+      </div>
+    </div>
+
+    <div class="list-head">{t.dest}</div>
+    <div class="list">
+      {#if !rows.length}
+        <div class="empty">{origin === null ? t.startPrompt : t.loading}</div>
+      {/if}
+      {#each rows as row (row.station)}
+        {@const color = fareColor(row.fare, range[0], range[1])}
+        <button class="row" class:selected={row.station === selected} onclick={() => onSelectDest(row.station)}>
+          <span class="row-name">{stationName(stations[row.station], lang)}</span>
+          <span class="row-fare">
+            {#if stations[row.station].ops.length > 1}
+              <MultiRouteIcon size={13} {color} />
+            {/if}
+            <span class="amount" style="color: {color}">¥{row.fare}</span>
+          </span>
+        </button>
+      {/each}
+    </div>
   </div>
 </aside>
 
@@ -202,6 +307,24 @@
     border: 1px solid var(--line);
     box-shadow: var(--shadow-panel);
     overflow: hidden;
+  }
+  .peek {
+    flex: 0 0 auto;
+  }
+  .rest {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .safe-probe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: env(safe-area-inset-bottom, 0px);
+    pointer-events: none;
   }
 
   .head {
@@ -428,6 +551,8 @@
   .list {
     flex: 1;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     padding: 0 12px 12px;
   }
   .empty {
@@ -478,5 +603,118 @@
   .amount {
     font-weight: 700;
     font-size: 16px;
+  }
+
+  .grabber {
+    display: none;
+  }
+
+  /* --- Bottom sheet ------------------------------------------------------ */
+  .panel.sheet {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 88dvh;
+    max-height: none;
+    border: none;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -8px 30px -8px rgb(0 0 0 / 0.25);
+    transform: translateY(var(--sheet-y, 0px));
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .panel.sheet.dragging {
+    transition: none;
+  }
+
+  .sheet .grabber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: grab;
+    touch-action: none; /* the drag is ours, not the browser's */
+  }
+  .sheet .grabber:active {
+    cursor: grabbing;
+  }
+  .grip {
+    width: 40px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+  .sheet .grabber:hover .grip,
+  .sheet .grabber:focus-visible .grip {
+    background: var(--muted-3);
+  }
+
+  .sheet .peek {
+    padding-bottom: 8px; /* keeps the search field off the screen edge when collapsed */
+  }
+  .sheet .head {
+    padding: 2px 18px 12px;
+  }
+  .sheet .sub {
+    display: none; /* the peek height is precious; the search label carries the intent */
+  }
+  .sheet .block {
+    padding: 10px 18px 12px;
+  }
+  .sheet .suggestions {
+    left: 18px;
+    right: 18px;
+    max-height: 40dvh;
+  }
+  .sheet .list-head {
+    padding: 10px 18px 8px;
+  }
+  .sheet .list {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+
+  @media (max-width: 768px) {
+    /* Touch targets: 44px minimum on everything you can hit with a thumb. */
+    .langs button {
+      padding: 8px 12px;
+    }
+    .chip {
+      padding: 11px 14px;
+    }
+    .segmented button {
+      padding: 11px 10px;
+      font-size: 13.5px;
+    }
+    .suggestion {
+      padding: 13px 12px;
+    }
+    .row {
+      padding: 13px 12px;
+    }
+    input {
+      height: 46px;
+      font-size: 16px; /* iOS zooms the page in on any input below 16px */
+    }
+  }
+
+  /* Hover lift is a lie on touch; it sticks after a tap. */
+  @media (hover: none) {
+    .suggestion:hover {
+      background: transparent;
+    }
+    .row:hover {
+      border-color: var(--line-soft);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .panel.sheet {
+      transition: none;
+    }
   }
 </style>

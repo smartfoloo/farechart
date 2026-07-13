@@ -5,12 +5,22 @@
   import { loadLines } from './data.js';
   import { fareColor, ACCENT } from './fare.js';
   import { stationName } from './i18n.js';
+  import { isMobile } from './media.svelte.js';
 
   let { stations, rows, origin, selected, operator, lang, onSelect } = $props();
 
   const STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json';
   const NAME_ZOOM = 11;
-  const FIT = { padding: { top: 70, bottom: 70, left: 400, right: 70 }, duration: 600 };
+
+  // The panel eats the left edge on desktop and the bottom on mobile, so the
+  // network has to be framed into whatever is left.
+  function fitOptions() {
+    if (!isMobile.current) {
+      return { padding: { top: 70, bottom: 70, left: 400, right: 70 }, duration: 600 };
+    }
+    const bottom = Math.min(340, Math.round(window.innerHeight * 0.42)); // the half-open sheet
+    return { padding: { top: 90, bottom, left: 20, right: 20 }, duration: 600 };
+  }
 
   let container;
   let map = $state(null);
@@ -47,7 +57,13 @@
       center: [139.6, 35.6],
       zoom: 9.6,
       attributionControl: false,
+      // A fare map is read north-up, and on a touch screen both gestures are
+      // mostly triggered by accident.
+      dragRotate: false,
+      pitchWithRotate: false,
+      touchPitch: false,
     });
+    m.touchZoomRotate.disableRotation();
     // Source attribution is required by both data providers.
     m.addControl(
       new maplibregl.AttributionControl({
@@ -97,10 +113,20 @@
     };
     m.on('styledata', attachLines);
 
+    // Sliding the sheet uncovers or buries pills without moving the map, so the
+    // cull has to rerun when it settles. Pill hover animates transform too — hence
+    // the check for the panel itself.
+    const stage = container.parentElement;
+    const onSheetSettled = (e) => {
+      if (e.propertyName === 'transform' && e.target.classList.contains('panel')) scheduleCull();
+    };
+    stage.addEventListener('transitionend', onSheetSettled);
+
     map = m;
 
     return () => {
       removed = true;
+      stage.removeEventListener('transitionend', onSheetSettled);
       for (const { marker } of markers.values()) marker.remove();
       markers.clear();
       m.remove();
@@ -108,6 +134,14 @@
       linesReady = false;
       camera = null;
     };
+  });
+
+  // MapLibre ships the attribution expanded, which costs two lines of a phone
+  // screen. Collapse it to the ⓘ button there; the credit is one tap away.
+  $effect(() => {
+    if (!map) return;
+    const attrib = container.querySelector('.maplibregl-ctrl-attrib');
+    attrib?.classList.toggle('maplibregl-compact-show', !isMobile.current);
   });
 
   // Highlight the operator whose fares are on screen; recede the rest. With no
@@ -127,10 +161,16 @@
     if (!map || !rows.length) return;
 
     untrack(() => {
-      if (!camera) map.fitBounds(networkBounds(), FIT);
+      if (!camera) map.fitBounds(networkBounds(), fitOptions());
       else if (camera.origin !== nextOrigin)
-        map.flyTo({ center: stations[nextOrigin].coord, zoom: Math.max(map.getZoom(), 10.6), speed: 0.9 });
-      else if (camera.operator !== nextOperator) map.fitBounds(networkBounds(), FIT);
+        map.flyTo({
+          center: stations[nextOrigin].coord,
+          zoom: Math.max(map.getZoom(), 10.6),
+          speed: 0.9,
+          // Lift the origin clear of the sheet instead of parking it under one.
+          offset: isMobile.current ? [0, -Math.round(window.innerHeight * 0.16)] : [0, 0],
+        });
+      else if (camera.operator !== nextOperator) map.fitBounds(networkBounds(), fitOptions());
       camera = { origin: nextOrigin, operator: nextOperator };
     });
   });
@@ -268,11 +308,13 @@
     background: #e2e8f0;
   }
 
-  :global(.farepill:hover) {
-    z-index: 40 !important;
-  }
-  :global(.farepill:hover .pill-inner) {
-    transform: translateY(-1px) scale(1.06);
+  @media (hover: hover) {
+    :global(.farepill:hover) {
+      z-index: 40 !important;
+    }
+    :global(.farepill:hover .pill-inner) {
+      transform: translateY(-1px) scale(1.06);
+    }
   }
   :global(.pill-inner) {
     font-family: 'Inter', 'Hiragino Sans', sans-serif;
@@ -342,5 +384,37 @@
   :global(.maplibregl-ctrl-attrib) {
     font-size: 9px;
     opacity: 0.55;
+  }
+
+  @media (max-width: 768px) {
+    /* A pill is a small target for a thumb; grow the hit area without growing the pill. */
+    :global(.farepill::after) {
+      content: '';
+      position: absolute;
+      inset: -8px;
+    }
+    :global(.pill-name) {
+      font-size: 12px;
+      padding: 3px 10px;
+    }
+    :global(.pill-fare) {
+      font-size: 13px;
+      padding: 3px 10px;
+    }
+    :global(.pill-dot) {
+      width: 11px;
+      height: 11px;
+    }
+    /* Pinch does the job, and the buttons would sit under the sheet anyway. */
+    :global(.maplibregl-ctrl-bottom-right .maplibregl-ctrl-group) {
+      display: none;
+    }
+    /* The sheet owns the bottom of the screen, so attribution moves out from under it. */
+    :global(.maplibregl-ctrl-bottom-right) {
+      top: 0;
+      right: auto;
+      bottom: auto;
+      left: 0;
+    }
   }
 </style>

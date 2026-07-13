@@ -23,6 +23,8 @@ export const LABELS = {
     noDest: '運賃データがありません',
     loading: '読み込み中…',
     startPrompt: '出発駅を選んでください',
+    close: '閉じる',
+    sheetHandle: 'パネルを開閉する',
   },
   en: {
     explorerSub: 'Pick a station to compare fares',
@@ -48,6 +50,8 @@ export const LABELS = {
     noDest: 'No fare data',
     loading: 'Loading…',
     startPrompt: 'Search for a station to begin',
+    close: 'Close',
+    sheetHandle: 'Expand or collapse the panel',
   },
 };
 

@@ -1,7 +1,7 @@
 <script>
   import { fareColor } from './fare.js';
   import { stationName, stationSub, operatorName } from './i18n.js';
-  import { isMobile } from './media.svelte.js';
+  import { isMobile, viewport } from './media.svelte.js';
   import { dragY } from './drag.js';
   import MultiRouteIcon from './MultiRouteIcon.svelte';
 
@@ -66,7 +66,11 @@
   let dragOffset = $state(null); // live translateY mid-drag; null when settled
   let dragBase = 0;
 
-  let viewH = $state(0);
+  // Visual viewport, so the sheet sizes to what's actually on screen once a
+  // keyboard is up rather than to the full (unchanged) layout viewport.
+  const viewH = $derived(viewport.height);
+  const keyboard = $derived(mobile ? viewport.keyboard : 0);
+
   let sheetH = $state(0);
   let peekH = $state(0); // the handle + search block, the only part left visible when collapsed
   let safeB = $state(0); // home-indicator inset, measured from env() by the probe
@@ -117,11 +121,22 @@
     snapTo(DETENTS[Math.min(DETENTS.length - 1, Math.max(0, i))]);
   }
 
+  let input;
+
   function pick(idx) {
     query = null;
     open = false;
+    input?.blur(); // dismiss the keyboard; the choice is made
     onPickOrigin(idx);
     if (mobile) snapTo('half'); // hand the map back once a station is chosen
+  }
+
+  // iOS Safari doesn't focus a button on tap, so the input's focusout fires with a
+  // null relatedTarget and tears the list down before the click can land. Commit on
+  // pointerdown and keep focus where it is; click then only has to serve keyboards.
+  function onSuggestionDown(e, idx) {
+    e.preventDefault();
+    pick(idx);
   }
 
   // The suggestion list drops below the input, so it needs the sheet open to land on screen.
@@ -131,14 +146,14 @@
   }
 </script>
 
-<svelte:window bind:innerHeight={viewH} />
-
 <aside
   class="panel"
   class:sheet={mobile}
   class:dragging={dragOffset !== null}
   bind:clientHeight={sheetH}
-  style={mobile ? `--sheet-y: ${offset}px` : ''}
+  style={mobile
+    ? `--sheet-y: ${offset}px; --sheet-h: ${Math.round(viewH * 0.88)}px; --kb: ${keyboard}px`
+    : ''}
 >
   <div class="safe-probe" bind:clientHeight={safeB} aria-hidden="true"></div>
 
@@ -195,9 +210,14 @@
         </svg>
         <input
           id="origin-input"
+          bind:this={input}
           value={text}
           placeholder={t.searchPh}
           autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          enterkeyhint="search"
           role="combobox"
           aria-expanded={open && suggestions.length > 0}
           aria-controls="origin-suggestions"
@@ -206,7 +226,15 @@
             open = true;
           }}
           onfocus={focusSearch}
-          onkeydown={(e) => e.key === 'Escape' && (open = false)}
+          onkeydown={(e) => {
+            if (e.key === 'Escape') {
+              open = false;
+              e.currentTarget.blur();
+            } else if (e.key === 'Enter' && open && suggestions.length) {
+              e.preventDefault();
+              pick(suggestions[0]);
+            }
+          }}
         />
       </div>
 
@@ -218,7 +246,8 @@
               class:current={idx === origin}
               role="option"
               aria-selected={idx === origin}
-              onclick={() => pick(idx)}
+              onpointerdown={(e) => onSuggestionDown(e, idx)}
+              onclick={(e) => e.detail === 0 && pick(idx)}
             >
               <span class="primary">{stationName(stations[idx], lang)}</span>
               <span class="secondary">{stationSub(stations[idx], lang)}</span>
@@ -613,16 +642,21 @@
   .panel.sheet {
     top: auto;
     right: 0;
-    bottom: 0;
     left: 0;
     width: auto;
-    height: 88dvh;
     max-height: none;
     border: none;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -8px 30px -8px rgb(0 0 0 / 0.25);
     transform: translateY(var(--sheet-y, 0px));
-    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    transition:
+      transform 0.3s cubic-bezier(0.32, 0.72, 0, 1),
+      bottom 0.25s ease-out,
+      height 0.25s ease-out;
+    /* Sized and lifted off the visual viewport, so an open keyboard shrinks the
+       sheet and pushes it up instead of burying it. */
+    bottom: var(--kb, 0px);
+    height: var(--sheet-h, 88dvh);
   }
   .panel.sheet.dragging {
     transition: none;
@@ -669,7 +703,9 @@
   .sheet .suggestions {
     left: 18px;
     right: 18px;
-    max-height: 40dvh;
+    max-height: calc(var(--sheet-h, 40dvh) * 0.5);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
   .sheet .list-head {
     padding: 10px 18px 8px;

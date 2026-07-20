@@ -11,6 +11,7 @@
     stations,
     operators,
     origin,
+    originMember,
     activeOperator,
     fareMode,
     passenger,
@@ -30,7 +31,12 @@
   let query = $state(null);
   let open = $state(false);
 
-  const originName = $derived(origin === null ? '' : stationName(stations[origin], lang));
+  // The picked station of a complex, or the node itself when it isn't one.
+  const facet = (idx, m) => stations[idx].members?.[m] ?? stations[idx];
+
+  const originName = $derived(
+    origin === null ? '' : stationName(facet(origin, originMember), lang),
+  );
   const text = $derived(query ?? originName);
 
   const suggestions = $derived.by(() => {
@@ -38,9 +44,19 @@
     const showAll = !term || term === originName;
     const lower = term.toLowerCase();
     const out = [];
+    const hit = (x) => showAll || x.ja.includes(term) || x.en.toLowerCase().includes(lower);
     for (let i = 0; i < stations.length && out.length < MAX_SUGGESTIONS; i++) {
       const s = stations[i];
-      if (showAll || s.ja.includes(term) || s.en.toLowerCase().includes(lower)) out.push(i);
+      // A complex is one fare station, but its physically separate stations carry
+      // their own names (後楽園 / 春日). Each is its own row, so either name finds it
+      // and the one you picked is the one you see.
+      if (s.members) {
+        for (let m = 0; m < s.members.length && out.length < MAX_SUGGESTIONS; m++) {
+          if (hit(s.members[m])) out.push({ idx: i, m });
+        }
+      } else if (hit(s)) {
+        out.push({ idx: i, m: 0 });
+      }
     }
     return out;
   });
@@ -123,20 +139,20 @@
 
   let input;
 
-  function pick(idx) {
+  function pick(idx, m = 0) {
     query = null;
     open = false;
     input?.blur(); // dismiss the keyboard; the choice is made
-    onPickOrigin(idx);
+    onPickOrigin(idx, m);
     if (mobile) snapTo('half'); // hand the map back once a station is chosen
   }
 
   // iOS Safari doesn't focus a button on tap, so the input's focusout fires with a
   // null relatedTarget and tears the list down before the click can land. Commit on
   // pointerdown and keep focus where it is; click then only has to serve keyboards.
-  function onSuggestionDown(e, idx) {
+  function onSuggestionDown(e, idx, m) {
     e.preventDefault();
-    pick(idx);
+    pick(idx, m);
   }
 
   // The suggestion list drops below the input, so it needs the sheet open to land on screen.
@@ -232,7 +248,7 @@
               e.currentTarget.blur();
             } else if (e.key === 'Enter' && open && suggestions.length) {
               e.preventDefault();
-              pick(suggestions[0]);
+              pick(suggestions[0].idx, suggestions[0].m);
             }
           }}
         />
@@ -240,17 +256,18 @@
 
       {#if open && suggestions.length}
         <div class="suggestions" id="origin-suggestions" role="listbox">
-          {#each suggestions as idx (idx)}
+          {#each suggestions as { idx, m } (`${idx}:${m}`)}
+            {@const st = facet(idx, m)}
             <button
               class="suggestion"
-              class:current={idx === origin}
+              class:current={idx === origin && m === originMember}
               role="option"
-              aria-selected={idx === origin}
-              onpointerdown={(e) => onSuggestionDown(e, idx)}
-              onclick={(e) => e.detail === 0 && pick(idx)}
+              aria-selected={idx === origin && m === originMember}
+              onpointerdown={(e) => onSuggestionDown(e, idx, m)}
+              onclick={(e) => e.detail === 0 && pick(idx, m)}
             >
-              <span class="primary">{stationName(stations[idx], lang)}</span>
-              <span class="secondary">{stationSub(stations[idx], lang)}</span>
+              <span class="primary">{stationName(st, lang)}</span>
+              <span class="secondary">{stationSub(st, lang)}</span>
             </button>
           {/each}
         </div>
@@ -492,6 +509,13 @@
   }
   .primary {
     font-weight: 500;
+  }
+  /* The name the query actually matched, when it isn't the one the station goes by. */
+  .alias {
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--muted-3);
   }
   .secondary {
     color: var(--muted-3);

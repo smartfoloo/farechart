@@ -182,32 +182,40 @@
     const wanted = new Set(fares.keys());
     if (origin !== null) wanted.add(origin);
 
-    for (const [idx, { marker }] of markers) {
-      if (!wanted.has(idx)) {
-        marker.remove();
-        markers.delete(idx);
+    for (const [key, entry] of markers) {
+      if (!wanted.has(entry.idx)) {
+        entry.marker.remove();
+        markers.delete(key);
       }
     }
 
     const [min, max] = range;
     const showName = zoom >= NAME_ZOOM;
 
+    // A complex spanning several physically distinct stations (members) gets one
+    // marker per member, all keyed to the same fare node — clicking any of them
+    // opens that node, since the fare is per complex, not per platform.
     for (const idx of wanted) {
-      let entry = markers.get(idx);
-      if (!entry) {
-        const el = document.createElement('div');
-        el.className = 'farepill';
-        el.addEventListener('click', (e) => {
-          e.stopPropagation();
-          onSelect(idx);
-        });
-        const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
-          .setLngLat(stations[idx].coord)
-          .addTo(map);
-        entry = { el, marker };
-        markers.set(idx, entry);
+      const points = stations[idx].members ?? [stations[idx]];
+      for (let n = 0; n < points.length; n++) {
+        const point = points[n];
+        const key = points.length > 1 ? `${idx}:${n}` : `${idx}`;
+        let entry = markers.get(key);
+        if (!entry) {
+          const el = document.createElement('div');
+          el.className = 'farepill';
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            onSelect(idx, n); // the node's fare, but opened on the station you tapped
+          });
+          const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
+            .setLngLat(point.coord)
+            .addTo(map);
+          entry = { idx, el, marker, point };
+          markers.set(key, entry);
+        }
+        paint(entry.el, idx, point, fares.get(idx), min, max, showName);
       }
-      paint(entry.el, idx, fares.get(idx), min, max, showName);
     }
     scheduleCull();
   });
@@ -226,31 +234,36 @@
   }
 
   function cull() {
+    // A rank, not a chain of early returns: a complex can now contribute several
+    // markers sharing one idx, so both sides of a comparison can be the origin.
+    const rank = (idx) => (idx === origin ? 0 : idx === selected ? 1 : 2);
     const order = [...markers.keys()].sort((a, b) => {
-      if (a === origin) return -1;
-      if (b === origin) return 1;
-      if (a === selected) return -1;
-      if (b === selected) return 1;
-      return (byStation.get(a)?.fare ?? 0) - (byStation.get(b)?.fare ?? 0);
+      const ea = markers.get(a);
+      const eb = markers.get(b);
+      return (
+        rank(ea.idx) - rank(eb.idx) ||
+        (byStation.get(ea.idx)?.fare ?? 0) - (byStation.get(eb.idx)?.fare ?? 0)
+      );
     });
 
     // Measure every pill at full size so the outcome doesn't depend on the last pass.
-    for (const idx of order) markers.get(idx).el.classList.remove('dot');
+    for (const key of order) markers.get(key).el.classList.remove('dot');
 
-    const boxes = order.map((idx) => {
-      const el = markers.get(idx).el;
-      const { x, y } = map.project(stations[idx].coord);
-      const w = el.offsetWidth / 2 + 2;
-      const h = el.offsetHeight / 2 + 2;
+    const boxes = order.map((key) => {
+      const entry = markers.get(key);
+      const { x, y } = map.project(entry.point.coord);
+      const w = entry.el.offsetWidth / 2 + 2;
+      const h = entry.el.offsetHeight / 2 + 2;
       return [x - w, y - h, x + w, y + h];
     });
 
     // The panel and legend sit above the map, so pills behind them are wasted.
     const kept = overlayBoxes();
     for (let i = 0; i < order.length; i++) {
-      const idx = order[i];
-      if (idx === origin || idx === selected || !kept.some((k) => overlaps(k, boxes[i]))) kept.push(boxes[i]);
-      else markers.get(idx).el.classList.add('dot');
+      const entry = markers.get(order[i]);
+      if (entry.idx === origin || entry.idx === selected || !kept.some((k) => overlaps(k, boxes[i])))
+        kept.push(boxes[i]);
+      else entry.el.classList.add('dot');
     }
   }
 
@@ -264,8 +277,8 @@
 
   const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3];
 
-  function paint(el, idx, row, min, max, showName) {
-    const name = esc(stationName(stations[idx], lang));
+  function paint(el, idx, point, row, min, max, showName) {
+    const name = esc(stationName(point, lang));
 
     if (idx === origin) {
       el.style.cursor = 'pointer';
@@ -289,7 +302,7 @@
     el.style.cursor = 'pointer';
     el.style.pointerEvents = 'auto';
     el.style.zIndex = isSelected ? '28' : '15';
-    el.title = `${stationName(stations[idx], lang)} ¥${row.fare}`;
+    el.title = `${stationName(point, lang)} ¥${row.fare}`;
     el.innerHTML = `${pill}<span class="pill-dot" style="background:${color}"></span>`;
   }
 

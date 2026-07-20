@@ -99,13 +99,45 @@ const nodes = nodeKeys.map((key) => {
     usedLines.add(id);
   }
 
-  return {
+  // A complex can span differently-named stations (虎ノ門 / 虎ノ門ヒルズ). Fares are
+  // keyed to the complex, so it stays one node, but the map needs each physical
+  // station's own name and position to draw them all. Only emitted when the names
+  // actually differ -- 98% of nodes are a single name and carry nothing extra.
+  const byName = new Map();
+  for (const id of ids) {
+    const rec = byId.get(id);
+    let m = byName.get(rec.title.ja);
+    if (!m) byName.set(rec.title.ja, (m = { ja: rec.title.ja, en: rec.title.en, ids: [] }));
+    m.ids.push(id);
+  }
+
+  const node = {
     ja: rep.title.ja,
     en: rep.title.en,
     coord: [round5(lng), round5(lat)],
     ops: [...new Set(ids.map((id) => id.split('.')[0]))].sort(),
     lines,
   };
+
+  if (byName.size > 1) {
+    node.members = [...byName.values()]
+      .map((m) => ({
+        ja: m.ja,
+        en: m.en,
+        coord: [
+          round5(m.ids.reduce((a, id) => a + byId.get(id).coord[0], 0) / m.ids.length),
+          round5(m.ids.reduce((a, id) => a + byId.get(id).coord[1], 0) / m.ids.length),
+        ],
+        lines: [...new Set(m.ids.map(lineOf))].sort((a, b) => {
+          const d = opOrder.get(a.split('.')[0]) - opOrder.get(b.split('.')[0]);
+          return d || a.localeCompare(b);
+        }),
+      }))
+      // The node's own name first; the rest are the ones you have to walk to.
+      .sort((a, b) => (a.ja === node.ja ? -1 : b.ja === node.ja ? 1 : a.ja.localeCompare(b.ja)));
+  }
+
+  return node;
 });
 
 // ---- fares: operator -> directed pair -> fares -------------------------------
@@ -233,9 +265,77 @@ writeFileSync(join(OUT, 'lines.geojson'), JSON.stringify({ type: 'FeatureCollect
 // Only the railways actually referenced by a node, keyed by id for the popup to resolve.
 const lineMeta = Object.fromEntries([...usedLines].sort().map((id) => [id, railwayLines[id]]));
 
+// ---- ordered stops per line --------------------------------------------------
+
+// Records for a given railway appear consecutively, in geographic order, in the
+// source dump. That order is otherwise thrown away, so walk it once per line.
+for (const railwayId of usedLines) {
+  const stops = [];
+  const names = {};
+  let prevIdx;
+  for (const rec of stations) {
+    if (rec.railway !== railwayId) continue;
+    const idx = indexOf.get(nodeKey(rec.id));
+    if (idx === undefined) continue; // no fare records -> not a node
+    if (idx !== prevIdx) stops.push(idx); // collapse consecutive dupes only (Oedo loops through 都庁前 twice)
+    if (rec.title.ja !== nodes[idx].ja) names[String(idx)] = rec.title.ja;
+    prevIdx = idx;
+  }
+  if (stops.length < 2) throw new Error(`railway ${railwayId} has fewer than 2 stops (${stops.length})`);
+  lineMeta[railwayId].stops = stops;
+  if (Object.keys(names).length) lineMeta[railwayId].names = names;
+}
+
+// ---- transfer discounts -------------------------------------------------------
+
+const norm = (s) => s.normalize('NFKC');
+
+// `operator` narrows the raw-station search to that operator's ids; omit it (as for
+// `via`) to search across all operators.
+function resolveStationName(name, operator, context) {
+  const target = norm(name);
+  for (const rec of stations) {
+    if (operator && rec.id.split('.')[0] !== operator) continue;
+    if (norm(rec.title.ja) === target) {
+      const idx = indexOf.get(nodeKey(rec.id));
+      if (idx !== undefined) return idx;
+    }
+  }
+  throw new Error(`${context}: station "${name}"${operator ? ` (${operator})` : ''} did not resolve to a fare node`);
+}
+
+const discountsSrc = json(join(SRC, 'transfer-discounts.json'));
+
+const discountsFlat = discountsSrc.flat.map((f) => ({ ops: f.operators, adult: f.adult, child: f.child }));
+
+const discountsConditional = [];
+for (const row of discountsSrc.conditional) {
+  if ('_skip' in row) continue;
+  const via = resolveStationName(row.via, undefined, `discount via "${row.via}"`);
+  const aStations = [...new Set(
+    row.a.stations.map((name) => resolveStationName(name, row.a.operator, `discount via "${row.via}" a:${row.a.operator}`)),
+  )].sort((x, y) => x - y);
+  const bStations = [...new Set(
+    row.b.stations.map((name) => resolveStationName(name, row.b.operator, `discount via "${row.via}" b:${row.b.operator}`)),
+  )].sort((x, y) => x - y);
+  discountsConditional.push({
+    via,
+    a: { op: row.a.operator, stations: aStations },
+    b: { op: row.b.operator, stations: bStations },
+    adult: row.adult,
+    child: row.child,
+  });
+}
+
 writeFileSync(
   join(OUT, 'stations.json'),
-  JSON.stringify({ operators: opMeta, maxFare, lines: lineMeta, stations: nodes }),
+  JSON.stringify({
+    operators: opMeta,
+    maxFare,
+    lines: lineMeta,
+    stations: nodes,
+    discounts: { flat: discountsFlat, conditional: discountsConditional },
+  }),
 );
 
 console.log(`  ${nodes.length} logical stations, ${features.length} lines, ${usedLines.size} named railways`);

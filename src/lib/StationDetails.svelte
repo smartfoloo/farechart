@@ -1,5 +1,5 @@
 <script>
-  import { fareColor, fareOf } from './fare.js';
+  import { fareColor, yen } from './fare.js';
   import { isMobile } from './media.svelte.js';
   import { dragY } from './drag.js';
 
@@ -14,7 +14,8 @@
     originName,
     isOrigin,
     lines,
-    rows,
+    lineMeta,
+    routes,
     onPick,
     onSetOrigin,
     onClose,
@@ -29,19 +30,27 @@
   let dragging = $state(false);
 
   const range = $derived.by(() => {
-    if (!rows.length) return [0, 0];
-    const fares = rows.map((r) => r.fare);
+    if (!routes.length) return [0, 0];
+    const fares = routes.map((r) => r.fare);
     return [Math.min(...fares), Math.max(...fares)];
   });
 
-  const lineName = (l) => (lang === 'ja' ? l.ja : l.en);
+  const lineName = (l) => (l ? (lang === 'ja' ? l.ja : l.en) : '');
 
-  // The same trip priced the other way round, so both fare types are always on show.
-  const alt = (row) => {
-    const other = fareMode === 'ic' ? 'ticket' : 'ic';
-    return [other === 'ic' ? t.ic : t.ticket, fareOf(row, other, passenger)];
-  };
-  const child = (row) => fareOf(row, fareMode, 'child');
+  // `lines` is this station's own railways, for the Lines section. Route legs need
+  // `lineMeta`, the full keyed map, because a route passes through railways that
+  // don't serve this station.
+  const lineList = $derived(lines ?? []);
+
+  const singleRoutes = $derived(routes.filter((r) => r.operators.length === 1));
+  const multiRoutes = $derived(routes.filter((r) => r.operators.length > 1));
+
+  // Platform-to-platform walking transfer: only called out when the names differ.
+  const boundaryName = (prevLeg, nextLeg) =>
+    prevLeg.toName === nextLeg.fromName ? prevLeg.toName : `${prevLeg.toName}・・・${nextLeg.fromName}`;
+
+  // Operator keys ship as bare identifiers (e.g. "TokyoMetro"); split the
+  // camelCase into words since no localized operator name is available here.
 
   function onDragEnd(dy, velocity) {
     dragging = false;
@@ -84,7 +93,6 @@
 
     <div class="head">
       <div>
-        <div class="eyebrow">{t.stationDetails}</div>
         <div class="title">{stationName}</div>
         <div class="sub">{stationSub}</div>
       </div>
@@ -94,46 +102,105 @@
     <div class="body">
       <section>
         <div class="section-title">{t.lines}</div>
-        <div class="lines">
-          {#each lines as line (line.ja)}
-            <div class="line-row">
-              <span class="line-dot" style="background: {line.color}"></span>
-              <span class="line-name">{lineName(line)}</span>
+        {#each lineList as group, gi (group.ja)}
+          <!-- The first group is the station the modal is already titled with; only
+               the differently-named ones need calling out. -->
+          {#if gi > 0}
+            <div class="line-station">
+              {lang === 'ja' ? group.ja : group.en}
+              <span class="walk">{t.walkTransfer}</span>
             </div>
-          {/each}
-        </div>
+          {/if}
+          <div class="lines" class:other-station={gi > 0}>
+            {#each group.lines as line (line.ja)}
+              <div class="line-row">
+                <span class="line-dot" style="background: {line.color}"></span>
+                <span class="line-name">{lineName(line)}</span>
+              </div>
+            {/each}
+          </div>
+        {/each}
       </section>
 
       <section>
-        <div class="section-title">{t.fareLabel}</div>
+        <div class="section-title">{t.routes}</div>
         {#if isOrigin}
           <p class="note">{t.originHere}</p>
         {:else if originName === null}
           <p class="note">{t.pickOriginHint}</p>
-        {:else if rows.length === 0}
-          <p class="note">{t.noDest}</p>
+        {:else if routes.length === 0}
+          <p class="note">{t.noRoutes}</p>
         {:else}
           <p class="fare-lede">{originName} → {stationName}</p>
-          {#each rows as row (row.key)}
-            {@const color = fareColor(row.fare, range[0], range[1])}
-            {@const [altLabel, altFare] = alt(row)}
-            <button
-              class="option"
-              class:active={row.key === activeOperator}
-              onclick={() => onPick(row.key)}
-            >
-              <span class="meta">
-                <span class="label">{row.label}</span>
-                <span class="detail">
-                  {altLabel} ¥{altFare}{#if passenger === 'adult'} · {t.child} ¥{child(row)}{/if}
-                </span>
-              </span>
-              <span class="fare" style="color: {color}">¥{row.fare}</span>
-            </button>
-          {/each}
+
+          {#if singleRoutes.length}
+            <div class="route-group-title">{t.singleOperator}</div>
+            {#each singleRoutes as route, i (`s${i}`)}
+              {@render routeCard(route)}
+            {/each}
+          {/if}
+
+          {#if multiRoutes.length}
+            <div class="route-group-title">{t.multiOperator}</div>
+            {#each multiRoutes as route, i (`m${i}`)}
+              {@render routeCard(route)}
+            {/each}
+          {/if}
         {/if}
       </section>
     </div>
+
+    {#snippet routeCard(route)}
+      {@const color = fareColor(route.fare, range[0], range[1])}
+      <button
+        class="route"
+        class:active={route.operators[0] === activeOperator}
+        onclick={() => onPick(route.operators[0])}
+      >
+        <div class="route-path">
+          <span class="stop">{route.legs[0].fromName}</span>
+          {#each route.legs as leg, i (i)}
+            {@const line = lineMeta?.[leg.railway]}
+            <span class="chip" style="--chip-color: {line?.color ?? 'var(--muted-3)'}">
+              {lineName(line) || leg.railway}
+            </span>
+            {#if i < route.legs.length - 1}
+              <span class="stop transfer">{boundaryName(leg, route.legs[i + 1])}</span>
+            {:else}
+              <span class="stop">{leg.toName}</span>
+            {/if}
+          {/each}
+        </div>
+
+        <div class="route-bottom">
+          <span class="route-meta">
+            {t.change(route.transfers)} · {t.stops(route.hops)}
+          </span>
+
+          <span class="route-fare-group">
+            {#if route.discount > 0}
+              <span class="fare-gross">{yen(route.gross)}</span>
+            {/if}
+            <span
+              class="fare"
+              style="color: {color}"
+              title={route.discountAssumed ? t.approxFare : undefined}
+            >
+              {#if route.discountAssumed}≈{/if}{yen(route.fare)}
+            </span>
+          </span>
+        </div>
+
+        {#if route.discount > 0}
+          <div class="discount-note">
+            −{yen(route.discount)} {t.transferDiscount}
+            {#if route.discountAssumed}
+              <span class="approx-flag" title={t.approxFare}>*</span>
+            {/if}
+          </div>
+        {/if}
+      </button>
+    {/snippet}
 
     {#if !isOrigin}
       <div class="foot">
@@ -154,7 +221,7 @@
     justify-content: center;
   }
   .modal {
-    width: 420px;
+    width: 560px;
     max-width: calc(100% - 40px);
     max-height: 640px;
     background: #fff;
@@ -172,14 +239,6 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;
-  }
-  .eyebrow {
-    font-weight: 500;
-    font-size: 11px;
-    color: var(--muted-3);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
   }
   .title {
     font-family: 'Libre Baskerville', 'Hiragino Sans', serif;
@@ -228,6 +287,28 @@
     flex-direction: column;
     gap: 9px;
   }
+  /* Lines belonging to a differently-named station in the complex are set off by a
+     rule, so they don't read as lines you can reach without walking. */
+  .lines.other-station {
+    padding-left: 10px;
+    border-left: 2px solid var(--line);
+  }
+  /* A station in the complex with a different name gets its own heading, so a change
+     that means walking to it reads as one. */
+  .line-station {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--ink);
+    margin: 12px 0 7px;
+  }
+  .walk {
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--muted-3);
+  }
   .line-row {
     display: flex;
     align-items: center;
@@ -251,17 +332,30 @@
     color: var(--muted-2);
   }
   .fare-lede {
-    margin: 0 0 12px;
-    font-size: 13px;
-    color: var(--muted-2);
+    margin: 0 0 14px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
   }
 
-  .option {
+  .route-group-title {
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--muted-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 14px 0 8px;
+  }
+  .route-group-title:first-child {
+    margin-top: 0;
+  }
+
+  .route {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
+    min-height: 44px;
     padding: 13px 15px;
     border-radius: 12px;
     cursor: pointer;
@@ -271,27 +365,71 @@
     font: inherit;
     text-align: left;
   }
-  .option.active {
+  .route.active {
     background: #ebf8ff;
     border-color: #bee3f8;
   }
-  .meta {
+
+  /* Wrap, never scroll sideways -- the bottom sheet has no room for that. */
+  .route-path {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 6px;
+    min-width: 0;
   }
-  .label {
-    font-weight: 700;
-    font-size: 14.5px;
+  .stop {
+    font-weight: 600;
+    font-size: 12px;
     color: var(--ink);
   }
-  .detail {
+  .stop.transfer {
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .chip {
+    flex: 0 0 auto;
+    font-weight: 600;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    color: var(--chip-color);
+    background: color-mix(in srgb, var(--chip-color) 14%, transparent);
+    white-space: nowrap;
+  }
+
+  .route-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .route-meta {
     font-size: 12px;
     color: var(--muted-2);
-    margin-top: 2px;
+  }
+  .route-fare-group {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+  }
+  .fare-gross {
+    font-size: 13px;
+    color: var(--muted-3);
+    text-decoration: line-through;
   }
   .fare {
     font-weight: 700;
     font-size: 24px;
+  }
+  .discount-note {
+    font-size: 11.5px;
+    color: var(--accent);
+    margin-top: -4px;
+  }
+  .approx-flag {
+    cursor: help;
   }
 
   .foot {
@@ -377,7 +515,7 @@
       width: 40px;
       height: 40px;
     }
-    .option {
+    .route {
       padding: 15px;
     }
     .set-origin {

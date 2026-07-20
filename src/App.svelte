@@ -1,7 +1,8 @@
 <script>
-  import { loadNetwork, destinationsFrom, fareBetween } from './lib/data.js';
+  import { loadNetwork, destinationsFrom } from './lib/data.js';
   import { fareOf } from './lib/fare.js';
-  import { LABELS, stationName, operatorName } from './lib/i18n.js';
+  import { candidateRoutes, operatorsFor, priceRoutes, rankRoutes } from './lib/route.js';
+  import { LABELS, stationName, stationSub } from './lib/i18n.js';
   import FareMap from './lib/FareMap.svelte';
   import Panel from './lib/Panel.svelte';
   import Legend from './lib/Legend.svelte';
@@ -19,8 +20,15 @@
   let passenger = $state('adult');
   let selected = $state(null);
   let detailTarget = $state(null); // station whose details popup is open
+  // Which physical station of a complex the user picked. Purely presentational --
+  // fares are keyed to the complex, so this only decides which name leads.
+  let originMember = $state(0);
+  let detailMember = $state(0);
+
+  // The picked station of a complex, or the node itself when it isn't one.
+  const facet = (idx, m) => stations[idx].members?.[m] ?? stations[idx];
   let network = $state(null);
-  let detailFares = $state(null);
+  let detailPricing = $state(null);
 
   const t = $derived(LABELS[lang]);
 
@@ -54,44 +62,50 @@
 
   const range = $derived(rows.length ? [rows[0].fare, rows[rows.length - 1].fare] : [0, 0]);
 
-  const sharedOperators = (a, b) => stations[a].ops.filter((k) => stations[b].ops.includes(k));
-  const opLabel = (key) => operatorName(operators.find((o) => o.key === key), lang);
-
-  // Every operator that sells a fare from the origin to the open station. Fares are
-  // derived from the loaded networks, so the fare-type and passenger toggles stay live.
+  // Candidate routes from the origin to the open station, priced against every
+  // network they touch. Two phases so route-finding stays synchronous while
+  // fare networks load asynchronously (and are shared via the loadNetwork cache).
   $effect(() => {
     const target = detailTarget;
     if (target === null || origin === null || target === origin) {
-      detailFares = null;
+      detailPricing = null;
       return;
     }
     const from = origin;
+    const candidates = candidateRoutes(meta, from, target);
     let stale = false;
-    Promise.all(sharedOperators(from, target).map(loadNetwork)).then((nets) => {
-      if (!stale) detailFares = { from, target, nets };
+    const nets = {};
+    Promise.all(
+      [...operatorsFor(candidates)].map((key) => loadNetwork(key).then((net) => (nets[key] = net))),
+    ).then(() => {
+      if (!stale) detailPricing = { from, target, candidates, nets };
     });
     return () => (stale = true);
   });
 
-  const detailRows = $derived.by(() => {
-    const d = detailFares;
+  const detailRoutes = $derived.by(() => {
+    const d = detailPricing;
     if (!d || d.target !== detailTarget || d.from !== origin) return [];
-
-    const out = [];
-    for (const net of d.nets) {
-      const e = fareBetween(net, d.from, d.target);
-      if (e) out.push({ ...e, key: net.key, label: opLabel(net.key), fare: fareOf(e, fareMode, passenger) });
-    }
-    return out.sort((a, b) => a.fare - b.fare);
+    const priced = priceRoutes(meta, d.candidates, d.nets, fareMode, passenger);
+    return rankRoutes(priced);
   });
 
   // Railways serving the open station, resolved to names and colors.
-  const detailLines = $derived(
-    detailTarget === null ? [] : stations[detailTarget].lines.map((id) => meta.lines[id]),
-  );
+  // A complex can span differently-named stations (虎ノ門 / 虎ノ門ヒルズ). Group its
+  // railways under the name you'd actually walk to, so changing to a line at a
+  // differently-named station is visible rather than hidden behind one label.
+  const detailLines = $derived.by(() => {
+    if (detailTarget === null) return [];
+    const s = stations[detailTarget];
+    const groups = s.members ?? [{ ja: s.ja, en: s.en, lines: s.lines }];
+    // The station the user actually picked leads; the rest are the walk-to ones.
+    const ordered = [groups[detailMember], ...groups.filter((_, i) => i !== detailMember)];
+    return ordered.map((g) => ({ ja: g.ja, en: g.en, lines: g.lines.map((id) => meta.lines[id]) }));
+  });
 
-  function pickOrigin(idx) {
+  function pickOrigin(idx, m = 0) {
     origin = idx;
+    originMember = m;
     operatorChoice = null;
     selected = null;
     detailTarget = null;
@@ -103,8 +117,9 @@
     detailTarget = null;
   }
 
-  function selectDest(idx) {
+  function selectDest(idx, m = 0) {
     detailTarget = idx;
+    detailMember = m;
     selected = idx === origin ? null : idx;
   }
 
@@ -132,6 +147,7 @@
     {stations}
     {operators}
     {origin}
+    {originMember}
     {activeOperator}
     {fareMode}
     {passenger}
@@ -157,14 +173,15 @@
       {fareMode}
       {passenger}
       {activeOperator}
-      stationName={stationName(stations[detailTarget], lang)}
-      stationSub={lang === 'ja' ? stations[detailTarget].en : stations[detailTarget].ja}
-      originName={origin === null ? null : stationName(stations[origin], lang)}
+      stationName={stationName(facet(detailTarget, detailMember), lang)}
+      stationSub={stationSub(facet(detailTarget, detailMember), lang)}
+      originName={origin === null ? null : stationName(facet(origin, originMember), lang)}
       isOrigin={detailTarget === origin}
       lines={detailLines}
-      rows={detailRows}
+      lineMeta={meta.lines}
+      routes={detailRoutes}
       onPick={pickFromDetails}
-      onSetOrigin={() => pickOrigin(detailTarget)}
+      onSetOrigin={() => pickOrigin(detailTarget, detailMember)}
       onClose={() => (detailTarget = null)}
     />
   {/if}

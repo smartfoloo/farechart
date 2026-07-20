@@ -60,11 +60,59 @@ const lineOf = (id) => id.split('.').slice(0, 2).join('.');
 const byId = new Map(stations.map((s) => [s.id, s]));
 
 // A station in a group belongs to that interchange complex; otherwise it stands alone.
-const groupOf = new Map();
-groups.forEach((group, gi) => {
-  for (const cluster of group) for (const id of cluster) groupOf.set(id, gi);
-});
-const nodeKey = (id) => (groupOf.has(id) ? `g${groupOf.get(id)}` : `s${id}`);
+// Union-find rather than a flat group id, because two separate signals have to merge:
+// station-groups.json, and Metro's own ¥0 fares below.
+const parent = new Map();
+const find = (id) => {
+  let root = id;
+  while (parent.get(root) !== undefined && parent.get(root) !== root) root = parent.get(root);
+  while (parent.get(id) !== undefined && parent.get(id) !== id) {
+    const next = parent.get(id);
+    parent.set(id, root);
+    id = next;
+  }
+  return root;
+};
+const union = (a, b) => {
+  const [ra, rb] = [find(a), find(b)];
+  if (ra === rb) return;
+  // Lowest id wins so the key is stable regardless of input order.
+  if (ra < rb) parent.set(rb, ra);
+  else parent.set(ra, rb);
+};
+const seed = (id) => {
+  if (!parent.has(id)) parent.set(id, id);
+};
+
+for (const group of groups) {
+  for (const cluster of group) for (const id of cluster) seed(id);
+  const flat = group.flat();
+  for (let i = 1; i < flat.length; i++) union(flat[0], flat[i]);
+}
+
+// Tokyo Metro bills some out-of-station transfers as ¥0 to mean "one fare station"
+// (Ginza/Ginza-itchome), and station-groups.json misses several of those. But those
+// markers are pairwise permissions, not an equivalence: unioning all of them chains
+// Otemachi to Yurakucho via Tokyo, and since a node quotes its cheapest origin that
+// understates 10 of Otemachi's 139 fares (Shibuya ¥209 -> ¥178). So only merge a pair
+// that is one station wearing two names -- one title a prefix of the other.
+const sameStationTwoNames = (a, b) => {
+  const na = byId.get(a)?.title.ja;
+  const nb = byId.get(b)?.title.ja;
+  return !!na && !!nb && (na.startsWith(nb) || nb.startsWith(na));
+};
+
+for (const rec of fares) {
+  if (rec['odpt:icCardFare'] !== 0 && rec['odpt:ticketFare'] !== 0) continue;
+  const a = rec['odpt:fromStation'].slice(STATION_PREFIX.length);
+  const b = rec['odpt:toStation'].slice(STATION_PREFIX.length);
+  if (!sameStationTwoNames(a, b)) continue;
+  seed(a);
+  seed(b);
+  union(a, b);
+}
+
+const nodeKey = (id) => (parent.has(id) ? `g${find(id)}` : `s${id}`);
 
 // ---- logical stations -------------------------------------------------------
 

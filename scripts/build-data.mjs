@@ -16,9 +16,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(ROOT, 'data');
 const OUT = join(ROOT, 'public', 'data');
 
-const STATION_PREFIX = 'odpt.Station:';
-const OPERATOR_PREFIX = 'odpt.Operator:';
-
 // Only these operators have fare data; everything else in /data/polygons is omitted.
 // `fallback` colors a line whose geojson feature carries no color of its own.
 const OPERATORS = [
@@ -49,8 +46,8 @@ const stations = json(join(SRC, 'stations.json'));
 const groups = json(join(SRC, 'station-groups.json'));
 const railwayLines = json(join(SRC, 'railway-lines.json'));
 const fares = [
-  ...json(join(SRC, 'RailwayFares.Challenge2026.json')),
-  ...json(join(SRC, 'RailwayFares.ODPT.json')),
+  ...json(join(SRC, 'RailwayFares.Challenge2026.slim.json')),
+  ...json(join(SRC, 'RailwayFares.ODPT.slim.json')),
 ];
 
 const opOrder = new Map(OPERATORS.map((o, i) => [o.key, i]));
@@ -103,9 +100,9 @@ const sameStationTwoNames = (a, b) => {
 };
 
 for (const rec of fares) {
-  if (rec['odpt:icCardFare'] !== 0 && rec['odpt:ticketFare'] !== 0) continue;
-  const a = rec['odpt:fromStation'].slice(STATION_PREFIX.length);
-  const b = rec['odpt:toStation'].slice(STATION_PREFIX.length);
+  if (rec.ic !== 0 && rec.tk !== 0) continue;
+  const a = rec.from;
+  const b = rec.to;
   if (!sameStationTwoNames(a, b)) continue;
   seed(a);
   seed(b);
@@ -118,8 +115,7 @@ const nodeKey = (id) => (parent.has(id) ? `g${find(id)}` : `s${id}`);
 
 const members = new Map(); // nodeKey -> station ids that carry fares
 for (const rec of fares) {
-  for (const field of ['odpt:fromStation', 'odpt:toStation']) {
-    const id = rec[field].slice(STATION_PREFIX.length);
+  for (const id of [rec.from, rec.to]) {
     const key = nodeKey(id);
     if (!members.has(key)) members.set(key, new Set());
     members.get(key).add(id);
@@ -196,34 +192,29 @@ const perOp = new Map(OPERATORS.map((o) => [o.key, new Map()]));
 const issuedOf = new Map();
 let maxFare = 0;
 for (const rec of fares) {
-  const op = rec['odpt:operator'].slice(OPERATOR_PREFIX.length);
+  const op = rec.op;
   const table = perOp.get(op);
   if (!table) continue;
 
-  const issued = rec['dct:issued'];
+  const issued = rec.iss;
   if (!issuedOf.has(op) || issuedOf.get(op) < issued) issuedOf.set(op, issued);
 
   // Tokyo Metro bills out-of-station transfers (Otemachi/Tokyo, Ginza/Ginza-itchome)
   // as ¥0 to mean "one fare station". Those are transfer markers, not fares.
-  if (rec['odpt:icCardFare'] === 0 || rec['odpt:ticketFare'] === 0) continue;
+  if (rec.ic === 0 || rec.tk === 0) continue;
 
-  const a = indexOf.get(nodeKey(rec['odpt:fromStation'].slice(STATION_PREFIX.length)));
-  const b = indexOf.get(nodeKey(rec['odpt:toStation'].slice(STATION_PREFIX.length)));
+  const a = indexOf.get(nodeKey(rec.from));
+  const b = indexOf.get(nodeKey(rec.to));
   if (a === b) continue; // same complex, different platform
 
   // A complex can bill as several fare origins (Toei charges more from Shinjuku-nishiguchi
   // than from Shinjuku). The node is one station to the user, so quote the cheapest.
   const key = a * 100000 + b;
   const prev = table.get(key);
-  if (prev && prev[0] <= rec['odpt:icCardFare']) continue;
+  if (prev && prev[0] <= rec.ic) continue;
 
-  table.set(key, [
-    rec['odpt:icCardFare'],
-    rec['odpt:ticketFare'],
-    FLAT_CHILD_IC[op] ?? rec['odpt:childIcCardFare'],
-    rec['odpt:childTicketFare'],
-  ]);
-  maxFare = Math.max(maxFare, rec['odpt:ticketFare'], rec['odpt:icCardFare']);
+  table.set(key, [rec.ic, rec.tk, FLAT_CHILD_IC[op] ?? rec.cic, rec.ctk]);
+  maxFare = Math.max(maxFare, rec.tk, rec.ic);
 }
 if (maxFare > 0xffff) throw new Error(`fare ${maxFare} overflows uint16`);
 

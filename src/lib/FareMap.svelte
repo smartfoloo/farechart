@@ -7,7 +7,7 @@
   import { stationName } from './i18n.js';
   import { isMobile } from './media.svelte.js';
 
-  let { stations, rows, origin, selected, operator, lang, onSelect } = $props();
+  let { stations, rows, origin, selected, hovered, operator, lang, onSelect } = $props();
 
   const STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json';
   const NAME_ZOOM = 11;
@@ -177,6 +177,9 @@
 
   $effect(() => {
     if (!map) return;
+    // Referenced only for its reactive dependency: a hover change repaints pills
+    // without touching which markers exist.
+    void hovered;
 
     const fares = byStation;
     const wanted = new Set(fares.keys());
@@ -290,18 +293,19 @@
     if (!row) return;
 
     const isSelected = idx === selected;
+    const isHovered = idx === hovered;
     const color = fareColor(row.fare, min, max);
-    const border = isSelected ? '#1A202C' : '#fff';
+    const border = isSelected || isHovered ? '#1A202C' : '#fff';
     const fare = `<span class="pill-fare" style="background:${color}">¥${row.fare}</span>`;
 
     const pill =
-      showName || isSelected
+      showName || isSelected || isHovered
         ? `<div class="pill-inner pill-stack" style="border-color:${border}"><span class="pill-name">${name}</span>${fare}</div>`
         : `<div class="pill-inner pill-flat" style="border-color:${border}">${fare}</div>`;
 
     el.style.cursor = 'pointer';
     el.style.pointerEvents = 'auto';
-    el.style.zIndex = isSelected ? '28' : '15';
+    el.style.zIndex = isSelected || isHovered ? '28' : '15';
     el.title = `${stationName(point, lang)} ¥${row.fare}`;
     el.innerHTML = `${pill}<span class="pill-dot" style="background:${color}"></span>`;
   }

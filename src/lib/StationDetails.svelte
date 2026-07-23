@@ -174,7 +174,7 @@
 
         <div class="route-bottom">
           <span class="route-meta">
-            {t.change(route.transfers)} · {t.stops(route.hops)}
+            {t.stops(route.hops)}
           </span>
 
           <span class="route-fare-group">

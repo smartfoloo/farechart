@@ -19,6 +19,7 @@
   let fareMode = $state('ic');
   let passenger = $state('adult');
   let selected = $state(null);
+  let hoverDest = $state(null); // station whose destination-search suggestion is hovered/focused
   let detailTarget = $state(null); // station whose details popup is open
   // Which physical station of a complex the user picked. Purely presentational --
   // fares are keyed to the complex, so this only decides which name leads.
@@ -136,6 +137,7 @@
     {rows}
     {origin}
     {selected}
+    hovered={hoverDest}
     {lang}
     operator={activeOperator}
     onSelect={selectDest}
@@ -151,15 +153,13 @@
     {activeOperator}
     {fareMode}
     {passenger}
-    {rows}
-    {selected}
-    {range}
     onSetLang={(l) => (lang = l)}
     onPickOrigin={pickOrigin}
     onSetOperator={setOperator}
     onSetFareMode={(m) => (fareMode = m)}
     onSetPassenger={(p) => (passenger = p)}
     onSelectDest={selectDest}
+    onHoverDest={(i) => (hoverDest = i)}
   />
 
   {#if rows.length}

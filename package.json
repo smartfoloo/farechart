@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "data": "node scripts/build-data.mjs",
+    "slim": "node scripts/slim-fares.mjs",
     "predev": "npm run data",
     "dev": "vite",
     "prebuild": "npm run data",

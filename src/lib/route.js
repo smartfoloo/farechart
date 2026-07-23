@@ -371,9 +371,26 @@ export function priceRoutes(meta, candidates, nets, fareMode, passenger) {
 
     let discount = 0;
     let discountAssumed = false;
+    // A same-pair transfer discount (e.g. Toei<->Metro) isn't granted again
+    // when you immediately re-cross back into a network you just left. For a
+    // maximal run of consecutive boundaries sharing the same unordered
+    // operator pair, only every other boundary within the run (index 0, 2, 4,
+    // ...) actually applies the discount, giving ceil(k/2) for a run of
+    // length k. A boundary whose pair differs from the previous one starts a
+    // new run.
+    let prevPairKey = null;
+    let runIndex = 0;
     for (let i = 0; i < operatorLegs.length - 1; i++) {
       const a = operatorLegs[i];
       const b = operatorLegs[i + 1];
+      const pairKey = [a.operator, b.operator].sort().join('|');
+      if (pairKey === prevPairKey) {
+        runIndex++;
+      } else {
+        runIndex = 0;
+        prevPairKey = pairKey;
+      }
+      if (runIndex % 2 !== 0) continue;
       const res = resolveDiscount(discountIndex, a.operator, b.operator, a.to, a.from, b.to, passenger);
       if (res) {
         discount += res.amount;

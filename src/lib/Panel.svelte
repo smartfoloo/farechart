@@ -1,9 +1,7 @@
 <script>
-  import { fareColor } from './fare.js';
   import { stationName, stationSub, operatorName } from './i18n.js';
   import { isMobile, viewport } from './media.svelte.js';
   import { dragY } from './drag.js';
-  import MultiRouteIcon from './MultiRouteIcon.svelte';
 
   let {
     t,
@@ -15,21 +13,22 @@
     activeOperator,
     fareMode,
     passenger,
-    rows,
-    selected,
-    range,
     onSetLang,
     onPickOrigin,
     onSetOperator,
     onSetFareMode,
     onSetPassenger,
     onSelectDest,
+    onHoverDest,
   } = $props();
 
   const MAX_SUGGESTIONS = 40;
 
   let query = $state(null);
   let open = $state(false);
+
+  let destQuery = $state(null);
+  let destOpen = $state(false);
 
   // The picked station of a complex, or the node itself when it isn't one.
   const facet = (idx, m) => stations[idx].members?.[m] ?? stations[idx];
@@ -38,13 +37,16 @@
     origin === null ? '' : stationName(facet(origin, originMember), lang),
   );
   const text = $derived(query ?? originName);
+  const destText = $derived(destQuery ?? '');
 
-  const suggestions = $derived.by(() => {
-    const term = (query ?? '').trim();
-    const showAll = !term || term === originName;
-    const lower = term.toLowerCase();
+  // Shared by both searches: every name/alias that matches the term, capped so a
+  // blank query (or one matching the current pick) doesn't dump the whole network.
+  function findSuggestions(term) {
+    const q = term.trim();
+    const showAll = !q;
+    const lower = q.toLowerCase();
     const out = [];
-    const hit = (x) => showAll || x.ja.includes(term) || x.en.toLowerCase().includes(lower);
+    const hit = (x) => showAll || x.ja.includes(q) || x.en.toLowerCase().includes(lower);
     for (let i = 0; i < stations.length && out.length < MAX_SUGGESTIONS; i++) {
       const s = stations[i];
       // A complex is one fare station, but its physically separate stations carry
@@ -59,7 +61,14 @@
       }
     }
     return out;
+  }
+
+  const suggestions = $derived.by(() => {
+    const term = query ?? '';
+    return findSuggestions(term === originName ? '' : term);
   });
+
+  const destSuggestions = $derived.by(() => findSuggestions(destQuery ?? ''));
 
   const operatorChips = $derived(
     origin === null
@@ -138,6 +147,7 @@
   }
 
   let input;
+  let destInput;
 
   function pick(idx, m = 0) {
     query = null;
@@ -145,6 +155,15 @@
     input?.blur(); // dismiss the keyboard; the choice is made
     onPickOrigin(idx, m);
     if (mobile) snapTo('half'); // hand the map back once a station is chosen
+  }
+
+  function pickDest(idx, m = 0) {
+    destQuery = null;
+    destOpen = false;
+    onHoverDest?.(null);
+    destInput?.blur();
+    onSelectDest(idx, m); // same flow as tapping the station on the map
+    if (mobile) snapTo('half');
   }
 
   // iOS Safari doesn't focus a button on tap, so the input's focusout fires with a
@@ -155,9 +174,19 @@
     pick(idx, m);
   }
 
+  function onDestSuggestionDown(e, idx, m) {
+    e.preventDefault();
+    pickDest(idx, m);
+  }
+
   // The suggestion list drops below the input, so it needs the sheet open to land on screen.
   function focusSearch() {
     open = true;
+    if (mobile && detent !== 'full') snapTo('full');
+  }
+
+  function focusDestSearch() {
+    destOpen = true;
     if (mobile && detent !== 'full') snapTo('full');
   }
 </script>
@@ -273,6 +302,76 @@
         </div>
       {/if}
     </div>
+
+    <!-- The destination search only makes sense once there's an origin to price from. -->
+    {#if origin !== null}
+    <!-- Keep the list open while focus moves between the input and its options. -->
+    <div
+      class="block search"
+      onfocusout={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) destOpen = false;
+      }}
+    >
+      <label for="dest-input">{t.dest}</label>
+      <div class="field">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+          <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input
+          id="dest-input"
+          bind:this={destInput}
+          value={destText}
+          placeholder={t.destSearchPh}
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          enterkeyhint="search"
+          role="combobox"
+          aria-expanded={destOpen && destSuggestions.length > 0}
+          aria-controls="dest-suggestions"
+          oninput={(e) => {
+            destQuery = e.currentTarget.value;
+            destOpen = true;
+          }}
+          onfocus={focusDestSearch}
+          onblur={() => onHoverDest?.(null)}
+          onkeydown={(e) => {
+            if (e.key === 'Escape') {
+              destOpen = false;
+              e.currentTarget.blur();
+            } else if (e.key === 'Enter' && destOpen && destSuggestions.length) {
+              e.preventDefault();
+              pickDest(destSuggestions[0].idx, destSuggestions[0].m);
+            }
+          }}
+        />
+      </div>
+
+      {#if destOpen && destSuggestions.length}
+        <div class="suggestions" id="dest-suggestions" role="listbox">
+          {#each destSuggestions as { idx, m } (`${idx}:${m}`)}
+            {@const st = facet(idx, m)}
+            <button
+              class="suggestion"
+              role="option"
+              aria-selected="false"
+              onpointerdown={(e) => onDestSuggestionDown(e, idx, m)}
+              onclick={(e) => e.detail === 0 && pickDest(idx, m)}
+              onmouseenter={() => onHoverDest?.(idx)}
+              onmouseleave={() => onHoverDest?.(null)}
+              onfocus={() => onHoverDest?.(idx)}
+              onblur={() => onHoverDest?.(null)}
+            >
+              <span class="primary">{stationName(st, lang)}</span>
+              <span class="secondary">{stationSub(st, lang)}</span>
+            </button>
+          {/each}
+        </div>
+      {/if}
+    </div>
+    {/if}
   </div>
 
   <!-- Below the peek line: unreachable by keyboard while the sheet is collapsed. -->
@@ -315,25 +414,6 @@
         <button class:active={passenger === 'adult'} onclick={() => onSetPassenger('adult')}>{t.adult}</button>
         <button class:active={passenger === 'child'} onclick={() => onSetPassenger('child')}>{t.child}</button>
       </div>
-    </div>
-
-    <div class="list-head">{t.dest}</div>
-    <div class="list">
-      {#if !rows.length}
-        <div class="empty">{origin === null ? t.startPrompt : t.loading}</div>
-      {/if}
-      {#each rows as row (row.station)}
-        {@const color = fareColor(row.fare, range[0], range[1])}
-        <button class="row" class:selected={row.station === selected} onclick={() => onSelectDest(row.station)}>
-          <span class="row-name">{stationName(stations[row.station], lang)}</span>
-          <span class="row-fare">
-            {#if stations[row.station].ops.length > 1}
-              <MultiRouteIcon size={13} {color} />
-            {/if}
-            <span class="amount" style="color: {color}">¥{row.fare}</span>
-          </span>
-        </button>
-      {/each}
     </div>
   </div>
 </aside>
@@ -595,69 +675,6 @@
     color: #fff;
   }
 
-  .list-head {
-    padding: 12px 20px 8px;
-    font-weight: 700;
-    font-size: 13px;
-    color: #2d3748;
-  }
-  .list {
-    flex: 1;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    padding: 0 12px 12px;
-  }
-  .empty {
-    padding: 16px 8px;
-    font-size: 13px;
-    color: var(--muted-3);
-  }
-
-  .row {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 9px;
-    cursor: pointer;
-    margin-bottom: 6px;
-    transition: all 0.12s;
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    font: inherit;
-    text-align: left;
-  }
-  .row:hover {
-    border-color: var(--line);
-  }
-  .row.selected {
-    background: #fff;
-    border-color: var(--accent);
-    box-shadow: 0 4px 12px -4px rgb(0 0 0 / 0.18);
-  }
-  .row-name {
-    flex: 1;
-    min-width: 0;
-    font-weight: 500;
-    font-size: 14.5px;
-    color: var(--ink);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .row-fare {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .amount {
-    font-weight: 700;
-    font-size: 16px;
-  }
-
   .grabber {
     display: none;
   }
@@ -731,13 +748,6 @@
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
-  .sheet .list-head {
-    padding: 10px 18px 8px;
-  }
-  .sheet .list {
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  }
-
   @media (max-width: 768px) {
     /* Touch targets: 44px minimum on everything you can hit with a thumb. */
     .langs button {
@@ -753,9 +763,6 @@
     .suggestion {
       padding: 13px 12px;
     }
-    .row {
-      padding: 13px 12px;
-    }
     input {
       height: 46px;
       font-size: 16px; /* iOS zooms the page in on any input below 16px */
@@ -766,9 +773,6 @@
   @media (hover: none) {
     .suggestion:hover {
       background: transparent;
-    }
-    .row:hover {
-      border-color: var(--line-soft);
     }
   }
 

@@ -32,6 +32,7 @@ const OPERATORS = [
   { key: 'TamaMonorail', ja: '多摩都市モノレール', en: 'Tama Monorail', fallback: '#E60012' },
   { key: 'Yurikamome', ja: 'ゆりかもめ', en: 'Yurikamome', fallback: '#0075C2' },
   { key: 'TWR', ja: 'りんかい線', en: 'Rinkai Line', fallback: '#00639C' },
+  { key: 'JR-East', ja: 'JR東日本', en: 'JR East', fallback: '#008803' },
 ];
 
 // Keikyu (from 2023-10) and Seibu (from 2026-03) charge one flat child fare on IC at
@@ -48,6 +49,11 @@ const railwayLines = json(join(SRC, 'railway-lines.json'));
 const fares = [
   ...json(join(SRC, 'RailwayFares.Challenge2026.slim.json')),
   ...json(join(SRC, 'RailwayFares.ODPT.slim.json')),
+  // JR East is computed, not sourced: ODPT publishes no JR fare data. Generated
+  // by scripts/jreast-gen-fares.py from 営業キロ + the 幹線 table + 特定都区市内
+  // zone rules. 幹線 only -- the 10 地方交通線 are excluded because pricing them
+  // needs 換算キロ, which is not collected.
+  ...json(join(SRC, 'RailwayFares.JREast.slim.json')),
 ];
 
 const opOrder = new Map(OPERATORS.map((o, i) => [o.key, i]));

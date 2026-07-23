@@ -1,87 +1,602 @@
 {
-  "Tobu.Isesaki": { "ja": "東武伊勢崎線", "en": "Tobu Isesaki Line", "color": "#FF0000" },
-  "Tobu.TobuSkytree": { "ja": "東武スカイツリーライン", "en": "Tobu Skytree Line", "color": "#FF0000" },
-  "Tobu.TobuSkytreeBranch": { "ja": "東武スカイツリーライン（支線）", "en": "Tobu Skytree Line (Branch)", "color": "#FF0000" },
-  "Tobu.Kameido": { "ja": "東武亀戸線", "en": "Tobu Kameido Line", "color": "#1E90FF" },
-  "Tobu.Daishi": { "ja": "東武大師線", "en": "Tobu Daishi Line", "color": "#1E90FF" },
-  "Tobu.Kiryu": { "ja": "東武桐生線", "en": "Tobu Kiryu Line", "color": "#FF0000" },
-  "Tobu.Koizumi": { "ja": "東武小泉線", "en": "Tobu Koizumi Line", "color": "#FF0000" },
-  "Tobu.KoizumiBranch": { "ja": "東武小泉線（支線）", "en": "Tobu Koizumi Line (Branch)", "color": "#FF0000" },
-  "Tobu.Sano": { "ja": "東武佐野線", "en": "Tobu Sano Line", "color": "#E71212" },
-  "Tobu.Nikko": { "ja": "東武日光線", "en": "Tobu Nikko Line", "color": "#F68B1E" },
-  "Tobu.Kinugawa": { "ja": "東武鬼怒川線", "en": "Tobu Kinugawa Line", "color": "#FFA500" },
-  "Tobu.Utsunomiya": { "ja": "東武宇都宮線", "en": "Tobu Utsunomiya Line", "color": "#FFA500" },
-  "Tobu.TobuUrbanPark": { "ja": "東武野田線", "en": "Tobu Urban Park Line", "color": "#00BFFF" },
-  "Tobu.Tojo": { "ja": "東武東上本線", "en": "Tobu Tojo Line", "color": "#004098" },
-  "Tobu.Ogose": { "ja": "東武越生線", "en": "Tobu Ogose Line", "color": "#004DA3" },
-
-  "Tokyu.Toyoko": { "ja": "東急東横線", "en": "Tokyu Toyoko Line", "color": "#DC143C" },
-  "Tokyu.Ikegami": { "ja": "東急池上線", "en": "Tokyu Ikegami Line", "color": "#EE86A7" },
-  "Tokyu.DenEnToshi": { "ja": "東急田園都市線", "en": "Tokyu Den-en-toshi Line", "color": "#2E8B57" },
-  "Tokyu.Meguro": { "ja": "東急目黒線", "en": "Tokyu Meguro Line", "color": "#1E90FF" },
-  "Tokyu.Oimachi": { "ja": "東急大井町線", "en": "Tokyu Oimachi Line", "color": "#FFA500" },
-  "Tokyu.Setagaya": { "ja": "東急世田谷線", "en": "Tokyu Setagaya Line", "color": "#FCC800" },
-  "Tokyu.Kodomonokuni": { "ja": "東急こどもの国線", "en": "Tokyu Kodomonokuni Line", "color": "#0068B7" },
-  "Tokyu.TokyuShinYokohama": { "ja": "東急新横浜線", "en": "Tokyu Shin-yokohama Line", "color": "#890D84" },
-  "Tokyu.TokyuTamagawa": { "ja": "東急多摩川線", "en": "Tokyu Tamagawa Line", "color": "#800080" },
-
-  "Seibu.Haijima": { "ja": "西武拝島線", "en": "Seibu Haijima Line", "color": "#00CED1" },
-  "Seibu.Ikebukuro": { "ja": "西武池袋線", "en": "Seibu Ikebukuro Line", "color": "#FF8C00" },
-  "Seibu.Kokubunji": { "ja": "西武国分寺線", "en": "Seibu Kokubunji Line", "color": "#00CC00" },
-  "Seibu.Sayama": { "ja": "西武狭山線", "en": "Seibu Sayama Line", "color": "#FF8C00" },
-  "Seibu.SeibuChichibu": { "ja": "西武秩父線", "en": "Seibu Chichibu Line", "color": "#FF8C00" },
-  "Seibu.SeibuYurakucho": { "ja": "西武有楽町線", "en": "Seibu Yurakucho Line", "color": "#FF8C00" },
-  "Seibu.Seibuen": { "ja": "西武西武園線", "en": "Seibu Seibuen Line", "color": "#00CC00" },
-  "Seibu.Shinjuku": { "ja": "西武新宿線", "en": "Seibu Shinjuku Line", "color": "#00CED1" },
-  "Seibu.Tamako": { "ja": "西武多摩湖線", "en": "Seibu Tamako Line", "color": "#FFD700" },
-  "Seibu.Toshima": { "ja": "西武豊島線", "en": "Seibu Toshima Line", "color": "#FF8C00" },
-  "Seibu.Yamaguchi": { "ja": "西武山口線", "en": "Seibu Yamaguchi Line", "color": "#EF473D" },
-  "Seibu.Tamagawa": { "ja": "西武多摩川線", "en": "Seibu Tamagawa Line", "color": "#FFA500" },
-
-  "Keikyu.Airport": { "ja": "京急空港線", "en": "Keikyu Airport Line", "color": "#00BFFF" },
-  "Keikyu.Main": { "ja": "京急本線", "en": "Keikyu Main Line", "color": "#00BFFF" },
-  "Keikyu.Daishi": { "ja": "京急大師線", "en": "Keikyu Daishi Line", "color": "#00BFFF" },
-  "Keikyu.Kurihama": { "ja": "京急久里浜線", "en": "Keikyu Kurihama Line", "color": "#00BFFF" },
-  "Keikyu.Zushi": { "ja": "京急逗子線", "en": "Keikyu Zushi Line", "color": "#00BFFF" },
-
-  "Keio.Dobutsuen": { "ja": "京王動物園線", "en": "Keio Dobutsuen Line", "color": "#DD0077" },
-  "Keio.Inokashira": { "ja": "京王井の頭線", "en": "Keio Inokashira Line", "color": "#1E90FF" },
-  "Keio.Keibajo": { "ja": "京王競馬場線", "en": "Keio Keibajo Line", "color": "#DD0077" },
-  "Keio.Keio": { "ja": "京王線", "en": "Keio Line", "color": "#DD0077" },
-  "Keio.KeioNew": { "ja": "京王新線", "en": "Keio New Line", "color": "#DD0077" },
-  "Keio.Sagamihara": { "ja": "京王相模原線", "en": "Keio Sagamihara Line", "color": "#DD0077" },
-  "Keio.Takao": { "ja": "京王高尾線", "en": "Keio Takao Line", "color": "#FF1493" },
-
-  "Sotetsu.Izumino": { "ja": "相鉄いずみ野線", "en": "Sotetsu Izumino Line", "color": "#FFA500" },
-  "Sotetsu.Main": { "ja": "相鉄本線", "en": "Sotetsu Main Line", "color": "#1E90FF" },
-  "Sotetsu.SotetsuShinYokohama": { "ja": "相鉄新横浜線", "en": "Sotetsu Shin-yokohama Line", "color": "#0080C6" },
-
-  "TokyoMetro.Chiyoda": { "ja": "東京メトロ千代田線", "en": "Tokyo Metro Chiyoda Line", "color": "#00A650" },
-  "TokyoMetro.Hibiya": { "ja": "東京メトロ日比谷線", "en": "Tokyo Metro Hibiya Line", "color": "#8BA2AE" },
-  "TokyoMetro.Ginza": { "ja": "東京メトロ銀座線", "en": "Tokyo Metro Ginza Line", "color": "#FF9501" },
-  "TokyoMetro.Fukutoshin": { "ja": "東京メトロ副都心線", "en": "Tokyo Metro Fukutoshin Line", "color": "#9C5D31" },
-  "TokyoMetro.Hanzomon": { "ja": "東京メトロ半蔵門線", "en": "Tokyo Metro Hanzomon Line", "color": "#8F75D6" },
-  "TokyoMetro.Marunouchi": { "ja": "東京メトロ丸ノ内線", "en": "Tokyo Metro Marunouchi Line", "color": "#F62F36" },
-  "TokyoMetro.MarunouchiBranch": { "ja": "東京メトロ丸ノ内線分岐線", "en": "Tokyo Metro Marunouchi Branch Line", "color": "#F62F36" },
-  "TokyoMetro.Namboku": { "ja": "東京メトロ南北線", "en": "Tokyo Metro Namboku Line", "color": "#00AD9C" },
-  "TokyoMetro.Tozai": { "ja": "東京メトロ東西線", "en": "Tokyo Metro Tozai Line", "color": "#019BBF" },
-  "TokyoMetro.Yurakucho": { "ja": "東京メトロ有楽町線", "en": "Tokyo Metro Yurakucho Line", "color": "#BB8B38" },
-
-  "Toei.Oedo": { "ja": "都営大江戸線", "en": "Toei Oedo Line", "color": "#CF035A" },
-  "Toei.Asakusa": { "ja": "都営浅草線", "en": "Toei Asakusa Line", "color": "#EF5BA1" },
-  "Toei.Mita": { "ja": "都営三田線", "en": "Toei Mita Line", "color": "#0269B8" },
-  "Toei.Shinjuku": { "ja": "都営新宿線", "en": "Toei Shinjuku Line", "color": "#B0BF1E" },
-  "Toei.Arakawa": { "ja": "都電荒川線", "en": "Toden Arakawa Line", "color": "#EE86A7" },
-  "Toei.NipporiToneri": { "ja": "日暮里・舎人ライナー", "en": "Nippori-Toneri Liner", "color": "#FF69B4" },
-
-  "YokohamaMunicipal.Blue": { "ja": "ブルーライン", "en": "Yokohama Blue Line", "color": "#0000FF" },
-  "YokohamaMunicipal.Green": { "ja": "グリーンライン", "en": "Yokohama Green Line", "color": "#048D58" },
-
-  "MIR.TsukubaExpress": { "ja": "つくばエクスプレス", "en": "Tsukuba Express", "color": "#000084" },
-
-  "TamaMonorail.TamaMonorail": { "ja": "多摩都市モノレール線", "en": "Tama Monorail Line", "color": "#E60012" },
-
-  "Yurikamome.Yurikamome": { "ja": "ゆりかもめ", "en": "Yurikamome", "color": "#191970" },
-
-  "TWR.Rinkai": { "ja": "りんかい線", "en": "Rinkai Line", "color": "#00B48D" }
+  "Tobu.Isesaki": {
+    "ja": "東武伊勢崎線",
+    "en": "Tobu Isesaki Line",
+    "color": "#FF0000"
+  },
+  "Tobu.TobuSkytree": {
+    "ja": "東武スカイツリーライン",
+    "en": "Tobu Skytree Line",
+    "color": "#FF0000"
+  },
+  "Tobu.TobuSkytreeBranch": {
+    "ja": "東武スカイツリーライン（支線）",
+    "en": "Tobu Skytree Line (Branch)",
+    "color": "#FF0000"
+  },
+  "Tobu.Kameido": {
+    "ja": "東武亀戸線",
+    "en": "Tobu Kameido Line",
+    "color": "#1E90FF"
+  },
+  "Tobu.Daishi": {
+    "ja": "東武大師線",
+    "en": "Tobu Daishi Line",
+    "color": "#1E90FF"
+  },
+  "Tobu.Kiryu": {
+    "ja": "東武桐生線",
+    "en": "Tobu Kiryu Line",
+    "color": "#FF0000"
+  },
+  "Tobu.Koizumi": {
+    "ja": "東武小泉線",
+    "en": "Tobu Koizumi Line",
+    "color": "#FF0000"
+  },
+  "Tobu.KoizumiBranch": {
+    "ja": "東武小泉線（支線）",
+    "en": "Tobu Koizumi Line (Branch)",
+    "color": "#FF0000"
+  },
+  "Tobu.Sano": {
+    "ja": "東武佐野線",
+    "en": "Tobu Sano Line",
+    "color": "#E71212"
+  },
+  "Tobu.Nikko": {
+    "ja": "東武日光線",
+    "en": "Tobu Nikko Line",
+    "color": "#F68B1E"
+  },
+  "Tobu.Kinugawa": {
+    "ja": "東武鬼怒川線",
+    "en": "Tobu Kinugawa Line",
+    "color": "#FFA500"
+  },
+  "Tobu.Utsunomiya": {
+    "ja": "東武宇都宮線",
+    "en": "Tobu Utsunomiya Line",
+    "color": "#FFA500"
+  },
+  "Tobu.TobuUrbanPark": {
+    "ja": "東武野田線",
+    "en": "Tobu Urban Park Line",
+    "color": "#00BFFF"
+  },
+  "Tobu.Tojo": {
+    "ja": "東武東上本線",
+    "en": "Tobu Tojo Line",
+    "color": "#004098"
+  },
+  "Tobu.Ogose": {
+    "ja": "東武越生線",
+    "en": "Tobu Ogose Line",
+    "color": "#004DA3"
+  },
+  "Tokyu.Toyoko": {
+    "ja": "東急東横線",
+    "en": "Tokyu Toyoko Line",
+    "color": "#DC143C"
+  },
+  "Tokyu.Ikegami": {
+    "ja": "東急池上線",
+    "en": "Tokyu Ikegami Line",
+    "color": "#EE86A7"
+  },
+  "Tokyu.DenEnToshi": {
+    "ja": "東急田園都市線",
+    "en": "Tokyu Den-en-toshi Line",
+    "color": "#2E8B57"
+  },
+  "Tokyu.Meguro": {
+    "ja": "東急目黒線",
+    "en": "Tokyu Meguro Line",
+    "color": "#1E90FF"
+  },
+  "Tokyu.Oimachi": {
+    "ja": "東急大井町線",
+    "en": "Tokyu Oimachi Line",
+    "color": "#FFA500"
+  },
+  "Tokyu.Setagaya": {
+    "ja": "東急世田谷線",
+    "en": "Tokyu Setagaya Line",
+    "color": "#FCC800"
+  },
+  "Tokyu.Kodomonokuni": {
+    "ja": "東急こどもの国線",
+    "en": "Tokyu Kodomonokuni Line",
+    "color": "#0068B7"
+  },
+  "Tokyu.TokyuShinYokohama": {
+    "ja": "東急新横浜線",
+    "en": "Tokyu Shin-yokohama Line",
+    "color": "#890D84"
+  },
+  "Tokyu.TokyuTamagawa": {
+    "ja": "東急多摩川線",
+    "en": "Tokyu Tamagawa Line",
+    "color": "#800080"
+  },
+  "Seibu.Haijima": {
+    "ja": "西武拝島線",
+    "en": "Seibu Haijima Line",
+    "color": "#00CED1"
+  },
+  "Seibu.Ikebukuro": {
+    "ja": "西武池袋線",
+    "en": "Seibu Ikebukuro Line",
+    "color": "#FF8C00"
+  },
+  "Seibu.Kokubunji": {
+    "ja": "西武国分寺線",
+    "en": "Seibu Kokubunji Line",
+    "color": "#00CC00"
+  },
+  "Seibu.Sayama": {
+    "ja": "西武狭山線",
+    "en": "Seibu Sayama Line",
+    "color": "#FF8C00"
+  },
+  "Seibu.SeibuChichibu": {
+    "ja": "西武秩父線",
+    "en": "Seibu Chichibu Line",
+    "color": "#FF8C00"
+  },
+  "Seibu.SeibuYurakucho": {
+    "ja": "西武有楽町線",
+    "en": "Seibu Yurakucho Line",
+    "color": "#FF8C00"
+  },
+  "Seibu.Seibuen": {
+    "ja": "西武西武園線",
+    "en": "Seibu Seibuen Line",
+    "color": "#00CC00"
+  },
+  "Seibu.Shinjuku": {
+    "ja": "西武新宿線",
+    "en": "Seibu Shinjuku Line",
+    "color": "#00CED1"
+  },
+  "Seibu.Tamako": {
+    "ja": "西武多摩湖線",
+    "en": "Seibu Tamako Line",
+    "color": "#FFD700"
+  },
+  "Seibu.Toshima": {
+    "ja": "西武豊島線",
+    "en": "Seibu Toshima Line",
+    "color": "#FF8C00"
+  },
+  "Seibu.Yamaguchi": {
+    "ja": "西武山口線",
+    "en": "Seibu Yamaguchi Line",
+    "color": "#EF473D"
+  },
+  "Seibu.Tamagawa": {
+    "ja": "西武多摩川線",
+    "en": "Seibu Tamagawa Line",
+    "color": "#FFA500"
+  },
+  "Keikyu.Airport": {
+    "ja": "京急空港線",
+    "en": "Keikyu Airport Line",
+    "color": "#00BFFF"
+  },
+  "Keikyu.Main": {
+    "ja": "京急本線",
+    "en": "Keikyu Main Line",
+    "color": "#00BFFF"
+  },
+  "Keikyu.Daishi": {
+    "ja": "京急大師線",
+    "en": "Keikyu Daishi Line",
+    "color": "#00BFFF"
+  },
+  "Keikyu.Kurihama": {
+    "ja": "京急久里浜線",
+    "en": "Keikyu Kurihama Line",
+    "color": "#00BFFF"
+  },
+  "Keikyu.Zushi": {
+    "ja": "京急逗子線",
+    "en": "Keikyu Zushi Line",
+    "color": "#00BFFF"
+  },
+  "Keio.Dobutsuen": {
+    "ja": "京王動物園線",
+    "en": "Keio Dobutsuen Line",
+    "color": "#DD0077"
+  },
+  "Keio.Inokashira": {
+    "ja": "京王井の頭線",
+    "en": "Keio Inokashira Line",
+    "color": "#1E90FF"
+  },
+  "Keio.Keibajo": {
+    "ja": "京王競馬場線",
+    "en": "Keio Keibajo Line",
+    "color": "#DD0077"
+  },
+  "Keio.Keio": {
+    "ja": "京王線",
+    "en": "Keio Line",
+    "color": "#DD0077"
+  },
+  "Keio.KeioNew": {
+    "ja": "京王新線",
+    "en": "Keio New Line",
+    "color": "#DD0077"
+  },
+  "Keio.Sagamihara": {
+    "ja": "京王相模原線",
+    "en": "Keio Sagamihara Line",
+    "color": "#DD0077"
+  },
+  "Keio.Takao": {
+    "ja": "京王高尾線",
+    "en": "Keio Takao Line",
+    "color": "#FF1493"
+  },
+  "Sotetsu.Izumino": {
+    "ja": "相鉄いずみ野線",
+    "en": "Sotetsu Izumino Line",
+    "color": "#FFA500"
+  },
+  "Sotetsu.Main": {
+    "ja": "相鉄本線",
+    "en": "Sotetsu Main Line",
+    "color": "#1E90FF"
+  },
+  "Sotetsu.SotetsuShinYokohama": {
+    "ja": "相鉄新横浜線",
+    "en": "Sotetsu Shin-yokohama Line",
+    "color": "#0080C6"
+  },
+  "TokyoMetro.Chiyoda": {
+    "ja": "東京メトロ千代田線",
+    "en": "Tokyo Metro Chiyoda Line",
+    "color": "#00A650"
+  },
+  "TokyoMetro.Hibiya": {
+    "ja": "東京メトロ日比谷線",
+    "en": "Tokyo Metro Hibiya Line",
+    "color": "#8BA2AE"
+  },
+  "TokyoMetro.Ginza": {
+    "ja": "東京メトロ銀座線",
+    "en": "Tokyo Metro Ginza Line",
+    "color": "#FF9501"
+  },
+  "TokyoMetro.Fukutoshin": {
+    "ja": "東京メトロ副都心線",
+    "en": "Tokyo Metro Fukutoshin Line",
+    "color": "#9C5D31"
+  },
+  "TokyoMetro.Hanzomon": {
+    "ja": "東京メトロ半蔵門線",
+    "en": "Tokyo Metro Hanzomon Line",
+    "color": "#8F75D6"
+  },
+  "TokyoMetro.Marunouchi": {
+    "ja": "東京メトロ丸ノ内線",
+    "en": "Tokyo Metro Marunouchi Line",
+    "color": "#F62F36"
+  },
+  "TokyoMetro.MarunouchiBranch": {
+    "ja": "東京メトロ丸ノ内線分岐線",
+    "en": "Tokyo Metro Marunouchi Branch Line",
+    "color": "#F62F36"
+  },
+  "TokyoMetro.Namboku": {
+    "ja": "東京メトロ南北線",
+    "en": "Tokyo Metro Namboku Line",
+    "color": "#00AD9C"
+  },
+  "TokyoMetro.Tozai": {
+    "ja": "東京メトロ東西線",
+    "en": "Tokyo Metro Tozai Line",
+    "color": "#019BBF"
+  },
+  "TokyoMetro.Yurakucho": {
+    "ja": "東京メトロ有楽町線",
+    "en": "Tokyo Metro Yurakucho Line",
+    "color": "#BB8B38"
+  },
+  "Toei.Oedo": {
+    "ja": "都営大江戸線",
+    "en": "Toei Oedo Line",
+    "color": "#CF035A"
+  },
+  "Toei.Asakusa": {
+    "ja": "都営浅草線",
+    "en": "Toei Asakusa Line",
+    "color": "#EF5BA1"
+  },
+  "Toei.Mita": {
+    "ja": "都営三田線",
+    "en": "Toei Mita Line",
+    "color": "#0269B8"
+  },
+  "Toei.Shinjuku": {
+    "ja": "都営新宿線",
+    "en": "Toei Shinjuku Line",
+    "color": "#B0BF1E"
+  },
+  "Toei.Arakawa": {
+    "ja": "都電荒川線",
+    "en": "Toden Arakawa Line",
+    "color": "#EE86A7"
+  },
+  "Toei.NipporiToneri": {
+    "ja": "日暮里・舎人ライナー",
+    "en": "Nippori-Toneri Liner",
+    "color": "#FF69B4"
+  },
+  "YokohamaMunicipal.Blue": {
+    "ja": "ブルーライン",
+    "en": "Yokohama Blue Line",
+    "color": "#0000FF"
+  },
+  "YokohamaMunicipal.Green": {
+    "ja": "グリーンライン",
+    "en": "Yokohama Green Line",
+    "color": "#048D58"
+  },
+  "MIR.TsukubaExpress": {
+    "ja": "つくばエクスプレス",
+    "en": "Tsukuba Express",
+    "color": "#000084"
+  },
+  "TamaMonorail.TamaMonorail": {
+    "ja": "多摩都市モノレール線",
+    "en": "Tama Monorail Line",
+    "color": "#E60012"
+  },
+  "Yurikamome.Yurikamome": {
+    "ja": "ゆりかもめ",
+    "en": "Yurikamome",
+    "color": "#191970"
+  },
+  "TWR.Rinkai": {
+    "ja": "りんかい線",
+    "en": "Rinkai Line",
+    "color": "#00B48D"
+  },
+  "JR-East.Chuo": {
+    "ja": "中央本線",
+    "en": "Chuo Main Line",
+    "color": "#F15A22"
+  },
+  "JR-East.ChuoRapid": {
+    "ja": "中央線快速",
+    "en": "Chuo Line (Rapid)",
+    "color": "#F15A22"
+  },
+  "JR-East.ChuoSobuLocal": {
+    "ja": "中央・総武線各駅停車",
+    "en": "Chuo-Sobu Line (Local)",
+    "color": "#FFD400"
+  },
+  "JR-East.Ito": {
+    "ja": "伊東線",
+    "en": "Ito Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Itsukaichi": {
+    "ja": "五日市線",
+    "en": "Itsukaichi Line",
+    "color": "#F15A22"
+  },
+  "JR-East.Joban": {
+    "ja": "常磐線",
+    "en": "Joban Line",
+    "color": "#00B2E5"
+  },
+  "JR-East.JobanLocal": {
+    "ja": "常磐線各駅停車",
+    "en": "Joban Line (Local)",
+    "color": "#00BB85"
+  },
+  "JR-East.JobanRapid": {
+    "ja": "常磐線快速",
+    "en": "Joban Line (Rapid)",
+    "color": "#00B2E5"
+  },
+  "JR-East.Joetsu": {
+    "ja": "上越線",
+    "en": "Joetsu Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Kawagoe": {
+    "ja": "川越線",
+    "en": "Kawagoe Line",
+    "color": "#00B48D"
+  },
+  "JR-East.KeihinTohokuNegishi": {
+    "ja": "京浜東北・根岸線",
+    "en": "Keihin-Tohoku / Negishi Line",
+    "color": "#00B2E5"
+  },
+  "JR-East.Keiyo": {
+    "ja": "京葉線",
+    "en": "Keiyo Line",
+    "color": "#C9252F"
+  },
+  "JR-East.KeiyoFutamataBranch": {
+    "ja": "京葉線（二俣支線）",
+    "en": "Keiyo Line (Futamata Branch)",
+    "color": "#C9252F"
+  },
+  "JR-East.KeiyoKoyaBranch": {
+    "ja": "京葉線（高谷支線）",
+    "en": "Keiyo Line (Koya Branch)",
+    "color": "#C9252F"
+  },
+  "JR-East.Mito": {
+    "ja": "水戸線",
+    "en": "Mito Line",
+    "color": "#00B2E5"
+  },
+  "JR-East.Musashino": {
+    "ja": "武蔵野線",
+    "en": "Musashino Line",
+    "color": "#F15A22"
+  },
+  "JR-East.MusashinoKunitachiBranch": {
+    "ja": "武蔵野線（国立支線）",
+    "en": "Musashino Line (Kunitachi Branch)",
+    "color": "#F15A22"
+  },
+  "JR-East.MusashinoNishiUrawaBranch": {
+    "ja": "武蔵野線（西浦和支線）",
+    "en": "Musashino Line (Nishi-Urawa Branch)",
+    "color": "#F15A22"
+  },
+  "JR-East.MusashinoOmiyaBranch": {
+    "ja": "武蔵野線（大宮支線）",
+    "en": "Musashino Line (Omiya Branch)",
+    "color": "#F15A22"
+  },
+  "JR-East.Nambu": {
+    "ja": "南武線",
+    "en": "Nambu Line",
+    "color": "#FFD400"
+  },
+  "JR-East.NambuBranch": {
+    "ja": "南武線（浜川崎支線）",
+    "en": "Nambu Line (Branch)",
+    "color": "#FFD400"
+  },
+  "JR-East.Narita": {
+    "ja": "成田線",
+    "en": "Narita Line",
+    "color": "#00B48D"
+  },
+  "JR-East.NaritaAbikoBranch": {
+    "ja": "成田線（我孫子支線）",
+    "en": "Narita Line (Abiko Branch)",
+    "color": "#00B48D"
+  },
+  "JR-East.NaritaAirportBranch": {
+    "ja": "成田線（空港支線）",
+    "en": "Narita Line (Airport Branch)",
+    "color": "#00B48D"
+  },
+  "JR-East.Ome": {
+    "ja": "青梅線",
+    "en": "Ome Line",
+    "color": "#F15A22"
+  },
+  "JR-East.OsakiBranch": {
+    "ja": "大崎支線",
+    "en": "Osaki Branch",
+    "color": "#9ACD32"
+  },
+  "JR-East.Ryomo": {
+    "ja": "両毛線",
+    "en": "Ryomo Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Sagami": {
+    "ja": "相模線",
+    "en": "Sagami Line",
+    "color": "#00B48D"
+  },
+  "JR-East.SaikyoKawagoe": {
+    "ja": "埼京・川越線",
+    "en": "Saikyo / Kawagoe Line",
+    "color": "#00B48D"
+  },
+  "JR-East.Shinetsu": {
+    "ja": "信越本線",
+    "en": "Shinetsu Main Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.ShonanShinjuku": {
+    "ja": "湘南新宿ライン",
+    "en": "Shonan-Shinjuku Line",
+    "color": "#E21F26"
+  },
+  "JR-East.Sobu": {
+    "ja": "総武本線",
+    "en": "Sobu Main Line",
+    "color": "#FFD400"
+  },
+  "JR-East.SobuRapid": {
+    "ja": "総武線快速",
+    "en": "Sobu Line (Rapid)",
+    "color": "#0067C0"
+  },
+  "JR-East.SotetsuDirect": {
+    "ja": "相鉄直通線",
+    "en": "Sotetsu Direct Line",
+    "color": "#0067C0"
+  },
+  "JR-East.Sotobo": {
+    "ja": "外房線",
+    "en": "Sotobo Line",
+    "color": "#C9252F"
+  },
+  "JR-East.Takasaki": {
+    "ja": "高崎線",
+    "en": "Takasaki Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Tokaido": {
+    "ja": "東海道線",
+    "en": "Tokaido Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.TokaidoFreight": {
+    "ja": "東海道貨物線",
+    "en": "Tokaido Freight Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Tsurumi": {
+    "ja": "鶴見線",
+    "en": "Tsurumi Line",
+    "color": "#FFD400"
+  },
+  "JR-East.TsurumiOkawaBranch": {
+    "ja": "鶴見線（大川支線）",
+    "en": "Tsurumi Line (Okawa Branch)",
+    "color": "#FFD400"
+  },
+  "JR-East.TsurumiUmiShibauraBranch": {
+    "ja": "鶴見線（海芝浦支線）",
+    "en": "Tsurumi Line (Umi-Shibaura Branch)",
+    "color": "#FFD400"
+  },
+  "JR-East.Uchibo": {
+    "ja": "内房線",
+    "en": "Uchibo Line",
+    "color": "#C9252F"
+  },
+  "JR-East.Utsunomiya": {
+    "ja": "宇都宮線",
+    "en": "Utsunomiya Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Yamanote": {
+    "ja": "山手線",
+    "en": "Yamanote Line",
+    "color": "#9ACD32"
+  },
+  "JR-East.YamanoteFreight": {
+    "ja": "山手貨物線",
+    "en": "Yamanote Freight Line",
+    "color": "#9ACD32"
+  },
+  "JR-East.Yokohama": {
+    "ja": "横浜線",
+    "en": "Yokohama Line",
+    "color": "#00B48D"
+  },
+  "JR-East.Yokosuka": {
+    "ja": "横須賀線",
+    "en": "Yokosuka Line",
+    "color": "#0067C0"
+  }
 }

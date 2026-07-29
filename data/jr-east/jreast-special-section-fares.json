@@ -1,0 +1,178 @@
+{
+  "fares": [
+    {
+      "a": "akishima",
+      "b": "okubo-chuo",
+      "ticket": 530,
+      "ic": 528
+    },
+    {
+      "a": "akishima",
+      "b": "shinjuku",
+      "ticket": 530,
+      "ic": 528
+    },
+    {
+      "a": "ayase",
+      "b": "kitasenju",
+      "ticket": 150,
+      "ic": 146
+    },
+    {
+      "a": "ebisu",
+      "b": "higashikanagawa",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "ebisu",
+      "b": "yokohama",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "hachioji",
+      "b": "okubo-chuo",
+      "ticket": 620,
+      "ic": 616
+    },
+    {
+      "a": "hachioji",
+      "b": "shinjuku",
+      "ticket": 620,
+      "ic": 616
+    },
+    {
+      "a": "haijima",
+      "b": "higashinakano",
+      "ticket": 530,
+      "ic": 528
+    },
+    {
+      "a": "haijima",
+      "b": "okubo-chuo",
+      "ticket": 530,
+      "ic": 528
+    },
+    {
+      "a": "hamamatsucho",
+      "b": "zushi",
+      "ticket": 910,
+      "ic": 902
+    },
+    {
+      "a": "higashikanagawa",
+      "b": "shibuya",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "higashikanagawa",
+      "b": "shinagawa",
+      "ticket": 350,
+      "ic": 341
+    },
+    {
+      "a": "higashinakano",
+      "b": "takao",
+      "ticket": 720,
+      "ic": 715
+    },
+    {
+      "a": "kichijoji",
+      "b": "shibuya",
+      "ticket": 290,
+      "ic": 281
+    },
+    {
+      "a": "meguro",
+      "b": "yokohama",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "nakagami",
+      "b": "shinjuku",
+      "ticket": 530,
+      "ic": 528
+    },
+    {
+      "a": "nishifunabashi",
+      "b": "tokyo",
+      "ticket": 350,
+      "ic": 341
+    },
+    {
+      "a": "nishioi",
+      "b": "yokohama",
+      "ticket": 350,
+      "ic": 341
+    },
+    {
+      "a": "nishioi",
+      "b": "zushi",
+      "ticket": 810,
+      "ic": 803
+    },
+    {
+      "a": "oimachi",
+      "b": "zushi",
+      "ticket": 810,
+      "ic": 803
+    },
+    {
+      "a": "okubo-chuo",
+      "b": "takao",
+      "ticket": 720,
+      "ic": 715
+    },
+    {
+      "a": "shibuya",
+      "b": "shinkoyasu",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "shibuya",
+      "b": "yokohama",
+      "ticket": 440,
+      "ic": 440
+    },
+    {
+      "a": "shimbashi",
+      "b": "zushi",
+      "ticket": 910,
+      "ic": 902
+    },
+    {
+      "a": "shinagawa",
+      "b": "yokohama",
+      "ticket": 350,
+      "ic": 341
+    },
+    {
+      "a": "shinagawa",
+      "b": "zushi",
+      "ticket": 810,
+      "ic": 803
+    },
+    {
+      "a": "shinjuku",
+      "b": "takao",
+      "ticket": 720,
+      "ic": 715
+    },
+    {
+      "a": "tamachi",
+      "b": "zushi",
+      "ticket": 910,
+      "ic": 902
+    },
+    {
+      "a": "yokohama",
+      "b": "zushi",
+      "ticket": 440,
+      "ic": 440
+    }
+  ]
+}

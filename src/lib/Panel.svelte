@@ -1,5 +1,5 @@
 <script>
-  import { stationName, stationSub, operatorName } from './i18n.js';
+  import { facet, stationName, stationSub, operatorName } from './i18n.js';
   import { isMobile, viewport } from './media.svelte.js';
   import { dragY } from './drag.js';
 
@@ -30,11 +30,8 @@
   let destQuery = $state(null);
   let destOpen = $state(false);
 
-  // The picked station of a complex, or the node itself when it isn't one.
-  const facet = (idx, m) => stations[idx].members?.[m] ?? stations[idx];
-
   const originName = $derived(
-    origin === null ? '' : stationName(facet(origin, originMember), lang),
+    origin === null ? '' : stationName(facet(stations, origin, originMember), lang),
   );
   const text = $derived(query ?? originName);
   const destText = $derived(destQuery ?? '');
@@ -286,7 +283,7 @@
       {#if open && suggestions.length}
         <div class="suggestions" id="origin-suggestions" role="listbox">
           {#each suggestions as { idx, m } (`${idx}:${m}`)}
-            {@const st = facet(idx, m)}
+            {@const st = facet(stations, idx, m)}
             <button
               class="suggestion"
               class:current={idx === origin && m === originMember}
@@ -352,7 +349,7 @@
       {#if destOpen && destSuggestions.length}
         <div class="suggestions" id="dest-suggestions" role="listbox">
           {#each destSuggestions as { idx, m } (`${idx}:${m}`)}
-            {@const st = facet(idx, m)}
+            {@const st = facet(stations, idx, m)}
             <button
               class="suggestion"
               role="option"
@@ -589,13 +586,6 @@
   }
   .primary {
     font-weight: 500;
-  }
-  /* The name the query actually matched, when it isn't the one the station goes by. */
-  .alias {
-    margin-left: 5px;
-    font-weight: 400;
-    font-size: 12px;
-    color: var(--muted-3);
   }
   .secondary {
     color: var(--muted-3);

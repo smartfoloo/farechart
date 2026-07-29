@@ -598,5 +598,40 @@
     "ja": "横須賀線",
     "en": "Yokosuka Line",
     "color": "#0067C0"
+  },
+  "JR-East.Shinonoi": {
+    "ja": "篠ノ井線",
+    "en": "Shinonoi Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.ShinetsuNagano": {
+    "ja": "信越本線（篠ノ井〜長野）",
+    "en": "Shinetsu Main Line (Shinonoi-Nagano)",
+    "color": "#F68B1E"
+  },
+  "JR-East.Oito": {
+    "ja": "大糸線",
+    "en": "Oito Line",
+    "color": "#00B48D"
+  },
+  "JR-East.Nikko": {
+    "ja": "日光線",
+    "en": "Nikko Line",
+    "color": "#F68B1E"
+  },
+  "JR-East.Togane": {
+    "ja": "東金線",
+    "en": "Togane Line",
+    "color": "#FFD400"
+  },
+  "JR-East.Hachiko": {
+    "ja": "八高線",
+    "en": "Hachiko Line",
+    "color": "#00B48D"
+  },
+  "JR-East.Kashima": {
+    "ja": "鹿島線",
+    "en": "Kashima Line",
+    "color": "#00B48D"
   }
 }

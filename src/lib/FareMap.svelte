@@ -7,7 +7,7 @@
   import { stationName } from './i18n.js';
   import { isMobile } from './media.svelte.js';
 
-  let { stations, rows, origin, selected, hovered, operator, lang, onSelect } = $props();
+  let { stations, rows, range, origin, selected, hovered, operator, lang, onSelect } = $props();
 
   const STYLE = 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json';
   const NAME_ZOOM = 11;
@@ -31,17 +31,6 @@
   let camera = null;
 
   const byStation = $derived(new Map(rows.map((r) => [r.station, r])));
-
-  const range = $derived.by(() => {
-    if (!rows.length) return [0, 0];
-    let min = Infinity;
-    let max = -Infinity;
-    for (const r of rows) {
-      if (r.fare < min) min = r.fare;
-      if (r.fare > max) max = r.fare;
-    }
-    return [min, max];
-  });
 
   function networkBounds() {
     const b = new maplibregl.LngLatBounds();

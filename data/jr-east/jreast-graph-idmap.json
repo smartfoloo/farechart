@@ -1,0 +1,3725 @@
+{
+  "map": {
+    "shinsugita": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.ShinSugita"
+      ]
+    },
+    "minamifunabashi": {
+      "odpt": [
+        "JR-East.Keiyo.MinamiFunabashi",
+        "JR-East.KeiyoKoyaBranch.MinamiFunabashi"
+      ]
+    },
+    "nikko": {
+      "odpt": [
+        "JR-East.Nikko.Nikko"
+      ]
+    },
+    "yagihara": {
+      "odpt": [
+        "JR-East.Joetsu.Yagihara"
+      ]
+    },
+    "nishinippori": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.NishiNippori",
+        "JR-East.Yamanote.NishiNippori"
+      ]
+    },
+    "honda": {
+      "odpt": [
+        "JR-East.Sotobo.Honda"
+      ]
+    },
+    "akihabara": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Akihabara",
+        "JR-East.KeihinTohokuNegishi.Akihabara",
+        "JR-East.Yamanote.Akihabara"
+      ]
+    },
+    "akashina": {
+      "odpt": [
+        "JR-East.Shinonoi.Akashina"
+      ]
+    },
+    "hatsukari": {
+      "odpt": [
+        "JR-East.Chuo.Hatsukari"
+      ]
+    },
+    "nagano": {
+      "odpt": [
+        "JR-East.ShinetsuNagano.Nagano"
+      ]
+    },
+    "higashitokorozawa": {
+      "odpt": [
+        "JR-East.Musashino.HigashiTokorozawa"
+      ]
+    },
+    "odasakae": {
+      "odpt": [
+        "JR-East.NambuBranch.Odasakae"
+      ]
+    },
+    "sendagaya": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Sendagaya"
+      ]
+    },
+    "warabi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Warabi"
+      ]
+    },
+    "sawa": {
+      "odpt": [
+        "JR-East.Joban.Sawa"
+      ]
+    },
+    "wadaura": {
+      "odpt": [
+        "JR-East.Uchibo.Wadaura"
+      ]
+    },
+    "hotaka": {
+      "odpt": [
+        "JR-East.Oito.Hotaka"
+      ]
+    },
+    "hijirikogen": {
+      "odpt": [
+        "JR-East.Shinonoi.Hijirikogen"
+      ]
+    },
+    "mikawashima": {
+      "odpt": [
+        "JR-East.JobanRapid.Mikawashima"
+      ]
+    },
+    "suigo": {
+      "odpt": [
+        "JR-East.Narita.Suigo"
+      ]
+    },
+    "sashiogi": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Sashiogi"
+      ]
+    },
+    "higashikiyokawa": {
+      "odpt": [
+        "JR-East.Kururi.HigashiKiyokawa"
+      ]
+    },
+    "shiozaki": {
+      "odpt": [
+        "JR-East.Chuo.Shiozaki"
+      ]
+    },
+    "namegawaisland": {
+      "odpt": [
+        "JR-East.Sotobo.NamegawaIsland"
+      ]
+    },
+    "oji": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Oji"
+      ]
+    },
+    "fukuhara": {
+      "odpt": [
+        "JR-East.Mito.Fukuhara"
+      ]
+    },
+    "nishihachioji": {
+      "odpt": [
+        "JR-East.ChuoRapid.NishiHachioji"
+      ]
+    },
+    "shikishima": {
+      "odpt": [
+        "JR-East.Joetsu.Shikishima"
+      ]
+    },
+    "higashiabiko": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.HigashiAbiko"
+      ]
+    },
+    "kashimada": {
+      "odpt": [
+        "JR-East.Nambu.Kashimada"
+      ]
+    },
+    "yotsukaido": {
+      "odpt": [
+        "JR-East.Sobu.Yotsukaido",
+        "JR-East.SobuRapid.Yotsukaido"
+      ]
+    },
+    "sobudaishita": {
+      "odpt": [
+        "JR-East.Sagami.Sobudaishita"
+      ]
+    },
+    "enokido": {
+      "odpt": [
+        "JR-East.Sobu.Enokido"
+      ]
+    },
+    "harataima": {
+      "odpt": [
+        "JR-East.Sagami.Harataima"
+      ]
+    },
+    "anegasaki": {
+      "odpt": [
+        "JR-East.Uchibo.Anegasaki"
+      ]
+    },
+    "higashihano": {
+      "odpt": [
+        "JR-East.Hachiko.HigashiHanno"
+      ]
+    },
+    "haguro": {
+      "odpt": [
+        "JR-East.Mito.Haguro"
+      ]
+    },
+    "iwai": {
+      "odpt": [
+        "JR-East.Uchibo.Iwai"
+      ]
+    },
+    "nirasaki": {
+      "odpt": [
+        "JR-East.Chuo.Nirasaki"
+      ]
+    },
+    "yokokawa": {
+      "odpt": [
+        "JR-East.Shinetsu.Yokokawa"
+      ]
+    },
+    "omata": {
+      "odpt": [
+        "JR-East.Ryomo.Omata"
+      ]
+    },
+    "kaminakazato": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.KamiNakazato"
+      ]
+    },
+    "ichikawashiohama": {
+      "odpt": [
+        "JR-East.Keiyo.Ichikawashiohama",
+        "JR-East.KeiyoFutamataBranch.Ichikawashiohama"
+      ]
+    },
+    "hota": {
+      "odpt": [
+        "JR-East.Uchibo.Hota"
+      ]
+    },
+    "shimosatoyosato": {
+      "odpt": [
+        "JR-East.Narita.ShimosaToyosato"
+      ]
+    },
+    "hirooka": {
+      "odpt": [
+        "JR-East.Shinonoi.Hirooka"
+      ]
+    },
+    "nakofunakata": {
+      "odpt": [
+        "JR-East.Uchibo.Nakofunakata"
+      ]
+    },
+    "kururi": {
+      "odpt": [
+        "JR-East.Kururi.Kururi"
+      ]
+    },
+    "kanda": {
+      "odpt": [
+        "JR-East.ChuoRapid.Kanda",
+        "JR-East.KeihinTohokuNegishi.Kanda",
+        "JR-East.Yamanote.Kanda"
+      ]
+    },
+    "katakura": {
+      "odpt": [
+        "JR-East.Yokohama.Katakura"
+      ]
+    },
+    "kofu": {
+      "odpt": [
+        "JR-East.Chuo.Kofu"
+      ]
+    },
+    "iidabashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Iidabashi"
+      ]
+    },
+    "nishioi": {
+      "odpt": [
+        "JR-East.ShonanShinjuku.NishiOi",
+        "JR-East.SotetsuDirect.NishiOi",
+        "JR-East.Yokosuka.NishiOi"
+      ]
+    },
+    "kodama": {
+      "odpt": [
+        "JR-East.Hachiko.Kodama"
+      ]
+    },
+    "kameari": {
+      "odpt": [
+        "JR-East.JobanLocal.Kameari"
+      ]
+    },
+    "iwaki": {
+      "odpt": [
+        "JR-East.Joban.Iwaki"
+      ]
+    },
+    "mukaigawara": {
+      "odpt": [
+        "JR-East.Nambu.Mukaigawara"
+      ]
+    },
+    "isogo": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Isogo"
+      ]
+    },
+    "takasakitonyacho": {
+      "odpt": [
+        "JR-East.Joetsu.Takasakitonyamachi",
+        "JR-East.Ryomo.Takasakitonyamachi"
+      ]
+    },
+    "hitoichiba": {
+      "odpt": [
+        "JR-East.Oito.Hitoichiba"
+      ]
+    },
+    "fusa": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Fusa"
+      ]
+    },
+    "iwafune": {
+      "odpt": [
+        "JR-East.Ryomo.Iwafune"
+      ]
+    },
+    "suzurannosato": {
+      "odpt": [
+        "JR-East.Chuo.Suzurannosato"
+      ]
+    },
+    "negishi-negishi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Negishi"
+      ]
+    },
+    "yokosuka": {
+      "odpt": [
+        "JR-East.Yokosuka.Yokosuka"
+      ]
+    },
+    "kamimizo": {
+      "odpt": [
+        "JR-East.Sagami.Kamimizo"
+      ]
+    },
+    "inage": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Inage",
+        "JR-East.SobuRapid.Inage"
+      ]
+    },
+    "minamihashimoto": {
+      "odpt": [
+        "JR-East.Sagami.MinamiHashimoto"
+      ]
+    },
+    "ishioka": {
+      "odpt": [
+        "JR-East.Joban.Ishioka"
+      ]
+    },
+    "shimodate": {
+      "odpt": [
+        "JR-East.Mito.Shimodate"
+      ]
+    },
+    "hoshakuji": {
+      "odpt": [
+        "JR-East.Karasuyama.Hoshakuji",
+        "JR-East.Utsunomiya.Hoshakuji"
+      ]
+    },
+    "makuharitoyosuna": {
+      "odpt": [
+        "JR-East.Keiyo.Makuharitoyosuna",
+        "JR-East.KeiyoKoyaBranch.Makuharitoyosuna"
+      ]
+    },
+    "shiishiba": {
+      "odpt": [
+        "JR-East.Narita.Shiishiba"
+      ]
+    },
+    "ogane": {
+      "odpt": [
+        "JR-East.Karasuyama.Ogane"
+      ]
+    },
+    "shiotsu": {
+      "odpt": [
+        "JR-East.Chuo.Shiotsu"
+      ]
+    },
+    "yachimata": {
+      "odpt": [
+        "JR-East.Sobu.Yachimata"
+      ]
+    },
+    "kokubunji": {
+      "odpt": [
+        "JR-East.ChuoRapid.Kokubunji"
+      ]
+    },
+    "haneo": {
+      "odpt": [
+        "JR-East.Agatsuma.Haneo"
+      ]
+    },
+    "miyanohira": {
+      "odpt": [
+        "JR-East.Ome.Miyanohira"
+      ]
+    },
+    "fukutawara": {
+      "odpt": [
+        "JR-East.Togane.Fukutawara"
+      ]
+    },
+    "akatsuka": {
+      "odpt": [
+        "JR-East.Joban.Akatsuka"
+      ]
+    },
+    "karasuyama": {
+      "odpt": [
+        "JR-East.Karasuyama.Karasuyama"
+      ]
+    },
+    "haijima": {
+      "odpt": [
+        "JR-East.Hachiko.Haijima",
+        "JR-East.Itsukaichi.Haijima",
+        "JR-East.Ome.Haijima"
+      ]
+    },
+    "yabe": {
+      "odpt": [
+        "JR-East.Yokohama.Yabe"
+      ]
+    },
+    "isobe": {
+      "odpt": [
+        "JR-East.Shinetsu.Isobe"
+      ]
+    },
+    "minamikashiwa": {
+      "odpt": [
+        "JR-East.JobanLocal.MinamiKashiwa"
+      ]
+    },
+    "tachikawa": {
+      "odpt": [
+        "JR-East.ChuoRapid.Tachikawa",
+        "JR-East.MusashinoKunitachiBranch.Tachikawa",
+        "JR-East.Nambu.Tachikawa",
+        "JR-East.Ome.Tachikawa"
+      ]
+    },
+    "showa": {
+      "odpt": [
+        "JR-East.Tsurumi.Showa"
+      ]
+    },
+    "komiya": {
+      "odpt": [
+        "JR-East.Hachiko.Komiya"
+      ]
+    },
+    "hatori": {
+      "odpt": [
+        "JR-East.Joban.Hatori"
+      ]
+    },
+    "abiko": {
+      "odpt": [
+        "JR-East.JobanLocal.Abiko",
+        "JR-East.JobanRapid.Abiko",
+        "JR-East.NaritaAbikoBranch.Abiko"
+      ]
+    },
+    "sugamo": {
+      "odpt": [
+        "JR-East.Yamanote.Sugamo"
+      ]
+    },
+    "chigasaki": {
+      "odpt": [
+        "JR-East.Sagami.Chigasaki",
+        "JR-East.Tokaido.Chigasaki"
+      ]
+    },
+    "shimotsukehanaoka": {
+      "odpt": [
+        "JR-East.Karasuyama.ShimotsukeHanaoka"
+      ]
+    },
+    "chikura": {
+      "odpt": [
+        "JR-East.Uchibo.Chikura"
+      ]
+    },
+    "kikuna": {
+      "odpt": [
+        "JR-East.Yokohama.Kikuna"
+      ]
+    },
+    "mobara": {
+      "odpt": [
+        "JR-East.Sotobo.Mobara"
+      ]
+    },
+    "higashiakiru": {
+      "odpt": [
+        "JR-East.Itsukaichi.HigashiAkiru"
+      ]
+    },
+    "odawara": {
+      "odpt": [
+        "JR-East.Tokaido.Odawara"
+      ]
+    },
+    "shishido": {
+      "odpt": [
+        "JR-East.Mito.Shishido"
+      ]
+    },
+    "akigawa": {
+      "odpt": [
+        "JR-East.Itsukaichi.Akigawa"
+      ]
+    },
+    "nishichiba": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.NishiChiba"
+      ]
+    },
+    "futomi": {
+      "odpt": [
+        "JR-East.Uchibo.Futomi"
+      ]
+    },
+    "onogami": {
+      "odpt": [
+        "JR-East.Agatsuma.Onogami"
+      ]
+    },
+    "funabashihoden": {
+      "odpt": [
+        "JR-East.Musashino.Funabashihoten"
+      ]
+    },
+    "asahi": {
+      "odpt": [
+        "JR-East.Sobu.Asahi"
+      ]
+    },
+    "inagekaigan": {
+      "odpt": [
+        "JR-East.Keiyo.Inagekaigan"
+      ]
+    },
+    "jinbohara": {
+      "odpt": [
+        "JR-East.Takasaki.Jimbohara"
+      ]
+    },
+    "onjuku": {
+      "odpt": [
+        "JR-East.Sotobo.Onjuku"
+      ]
+    },
+    "minakami": {
+      "odpt": [
+        "JR-East.Joetsu.Minakami"
+      ]
+    },
+    "kumagawa": {
+      "odpt": [
+        "JR-East.Itsukaichi.Kumagawa"
+      ]
+    },
+    "kemigawahama": {
+      "odpt": [
+        "JR-East.Keiyo.Kemigawahama"
+      ]
+    },
+    "taki": {
+      "odpt": [
+        "JR-East.Karasuyama.Taki"
+      ]
+    },
+    "otsuki": {
+      "odpt": [
+        "JR-East.Chuo.Otsuki"
+      ]
+    },
+    "onuki": {
+      "odpt": [
+        "JR-East.Uchibo.Onuki"
+      ]
+    },
+    "kichijoji": {
+      "odpt": [
+        "JR-East.ChuoRapid.Kichijoji",
+        "JR-East.ChuoSobuLocal.Kichijoji"
+      ]
+    },
+    "hino": {
+      "odpt": [
+        "JR-East.ChuoRapid.Hino",
+        "JR-East.MusashinoKunitachiBranch.Hino"
+      ]
+    },
+    "nogi": {
+      "odpt": [
+        "JR-East.Utsunomiya.Nogi"
+      ]
+    },
+    "shitte": {
+      "odpt": [
+        "JR-East.Nambu.Shitte",
+        "JR-East.NambuBranch.Shitte"
+      ]
+    },
+    "kannai": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Kannai"
+      ]
+    },
+    "kurihama": {
+      "odpt": [
+        "JR-East.Yokosuka.Kurihama"
+      ]
+    },
+    "gobara": {
+      "odpt": [
+        "JR-East.Agatsuma.Gobara"
+      ]
+    },
+    "hinatawada": {
+      "odpt": [
+        "JR-East.Ome.Hinatawada"
+      ]
+    },
+    "soga": {
+      "odpt": [
+        "JR-East.Keiyo.Soga",
+        "JR-East.Sotobo.Soga",
+        "JR-East.Uchibo.Soga"
+      ]
+    },
+    "tsujido": {
+      "odpt": [
+        "JR-East.Tokaido.Tsujido"
+      ]
+    },
+    "yuki": {
+      "odpt": [
+        "JR-East.Mito.Yuki"
+      ]
+    },
+    "mamada": {
+      "odpt": [
+        "JR-East.Utsunomiya.Mamada"
+      ]
+    },
+    "noborito": {
+      "odpt": [
+        "JR-East.Nambu.Noborito"
+      ]
+    },
+    "taito": {
+      "odpt": [
+        "JR-East.Sotobo.Taito"
+      ]
+    },
+    "hirayama": {
+      "odpt": [
+        "JR-East.Kururi.Hirayama"
+      ]
+    },
+    "tokaichiba": {
+      "odpt": [
+        "JR-East.Yokohama.Tokaichiba"
+      ]
+    },
+    "shinurayasu": {
+      "odpt": [
+        "JR-East.Keiyo.ShinUrayasu",
+        "JR-East.KeiyoFutamataBranch.ShinUrayasu"
+      ]
+    },
+    "ushiku": {
+      "odpt": [
+        "JR-East.Joban.Ushiku"
+      ]
+    },
+    "hirata": {
+      "odpt": [
+        "JR-East.Shinonoi.Hirata"
+      ]
+    },
+    "yurakucho": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Yurakucho",
+        "JR-East.Yamanote.Yurakucho"
+      ]
+    },
+    "gunmasosya": {
+      "odpt": [
+        "JR-East.Joetsu.GummaSoja"
+      ]
+    },
+    "higashimatsudo": {
+      "odpt": [
+        "JR-East.Musashino.HigashiMatsudo"
+      ]
+    },
+    "iwamoto": {
+      "odpt": [
+        "JR-East.Joetsu.Iwamoto"
+      ]
+    },
+    "kamata": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Kamata"
+      ]
+    },
+    "otsuko": {
+      "odpt": [
+        "JR-East.Joban.Otsuko"
+      ]
+    },
+    "tamachi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Tamachi",
+        "JR-East.Yamanote.Tamachi"
+      ]
+    },
+    "kodu": {
+      "odpt": [
+        "JR-East.Tokaido.Kozu"
+      ]
+    },
+    "niita": {
+      "odpt": [
+        "JR-East.Karasuyama.Niita"
+      ]
+    },
+    "ochanomizu": {
+      "odpt": [
+        "JR-East.ChuoRapid.Ochanomizu",
+        "JR-East.ChuoSobuLocal.Ochanomizu"
+      ]
+    },
+    "kaneko": {
+      "odpt": [
+        "JR-East.Hachiko.Kaneko"
+      ]
+    },
+    "matsuo": {
+      "odpt": [
+        "JR-East.Sobu.Matsuo"
+      ]
+    },
+    "nishinasuno": {
+      "odpt": [
+        "JR-East.Utsunomiya.NishiNasuno"
+      ]
+    },
+    "shinmisato": {
+      "odpt": [
+        "JR-East.Musashino.ShimMisato"
+      ]
+    },
+    "aohori": {
+      "odpt": [
+        "JR-East.Uchibo.Aohori"
+      ]
+    },
+    "kanamachi": {
+      "odpt": [
+        "JR-East.JobanLocal.Kanamachi"
+      ]
+    },
+    "toda-saikyo": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Toda"
+      ]
+    },
+    "kazusakameyama": {
+      "odpt": [
+        "JR-East.Kururi.KazusaKameyama"
+      ]
+    },
+    "gunmaotsu": {
+      "odpt": [
+        "JR-East.Agatsuma.GunmaOtsu"
+      ]
+    },
+    "hitachi": {
+      "odpt": [
+        "JR-East.Joban.Hitachi"
+      ]
+    },
+    "narita-airport-t1": {
+      "odpt": [
+        "JR-East.NaritaAirportBranch.NaritaAirportTerminal1",
+        "JR-East.SobuRapid.NaritaAirportTerminal1"
+      ]
+    },
+    "suetsugi": {
+      "odpt": [
+        "JR-East.Joban.Suetsugi"
+      ]
+    },
+    "tazawa": {
+      "odpt": [
+        "JR-East.Shinonoi.Tazawa"
+      ]
+    },
+    "shinyokohama": {
+      "odpt": [
+        "JR-East.Yokohama.ShinYokohama"
+      ]
+    },
+    "namihana": {
+      "odpt": [
+        "JR-East.Sotobo.Namihana"
+      ]
+    },
+    "nishijo": {
+      "odpt": [
+        "JR-East.Shinonoi.Nishijo"
+      ]
+    },
+    "kamakura": {
+      "odpt": [
+        "JR-East.Yokosuka.Kamakura"
+      ]
+    },
+    "komagawa": {
+      "odpt": [
+        "JR-East.Hachiko.Komagawa",
+        "JR-East.Kawagoe.Komagawa"
+      ]
+    },
+    "yoshikawa": {
+      "odpt": [
+        "JR-East.Musashino.Yoshikawa"
+      ]
+    },
+    "kunitachi": {
+      "odpt": [
+        "JR-East.ChuoRapid.Kunitachi",
+        "JR-East.MusashinoKunitachiBranch.Kunitachi"
+      ]
+    },
+    "mitake": {
+      "odpt": [
+        "JR-East.Ome.Mitake"
+      ]
+    },
+    "torami": {
+      "odpt": [
+        "JR-East.Sotobo.Torami"
+      ]
+    },
+    "nishiurawa": {
+      "odpt": [
+        "JR-East.Musashino.NishiUrawa"
+      ]
+    },
+    "sagamiko": {
+      "odpt": [
+        "JR-East.Chuo.Sagamiko"
+      ]
+    },
+    "minamikoshigaya": {
+      "odpt": [
+        "JR-East.Musashino.MinamiKoshigaya"
+      ]
+    },
+    "anzen": {
+      "odpt": [
+        "JR-East.Tsurumi.Anzen",
+        "JR-East.TsurumiOkawaBranch.Anzen"
+      ]
+    },
+    "kanashima": {
+      "odpt": [
+        "JR-East.Agatsuma.Kanashima"
+      ]
+    },
+    "kaiyamato": {
+      "odpt": [
+        "JR-East.Chuo.KaiYamato"
+      ]
+    },
+    "yokohama": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Yokohama",
+        "JR-East.ShonanShinjuku.Yokohama",
+        "JR-East.Tokaido.Yokohama",
+        "JR-East.Yokosuka.Yokohama"
+      ]
+    },
+    "mejiro": {
+      "odpt": [
+        "JR-East.Yamanote.Mejiro"
+      ]
+    },
+    "honno": {
+      "odpt": [
+        "JR-East.Sotobo.Honno"
+      ]
+    },
+    "numata": {
+      "odpt": [
+        "JR-East.Joetsu.Numata"
+      ]
+    },
+    "hachobori": {
+      "odpt": [
+        "JR-East.Keiyo.Hatchobori",
+        "JR-East.KeiyoFutamataBranch.Hatchobori"
+      ]
+    },
+    "juo": {
+      "odpt": [
+        "JR-East.Joban.Juo"
+      ]
+    },
+    "tomiura": {
+      "odpt": [
+        "JR-East.Uchibo.Tomiura"
+      ]
+    },
+    "ino": {
+      "odpt": [
+        "JR-East.Joetsu.Ino",
+        "JR-East.Ryomo.Ino"
+      ]
+    },
+    "matsudo": {
+      "odpt": [
+        "JR-East.JobanLocal.Matsudo",
+        "JR-East.JobanRapid.Matsudo"
+      ]
+    },
+    "ishigamimae": {
+      "odpt": [
+        "JR-East.Ome.Ishigamimae"
+      ]
+    },
+    "kinshicho": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Kinshicho",
+        "JR-East.SobuRapid.Kinshicho"
+      ]
+    },
+    "inadazutsumi": {
+      "odpt": [
+        "JR-East.Nambu.Inadazutsumi"
+      ]
+    },
+    "tateyama": {
+      "odpt": [
+        "JR-East.Uchibo.Tateyama"
+      ]
+    },
+    "hachiojiminamino": {
+      "odpt": [
+        "JR-East.Yokohama.Hachiojiminamino"
+      ]
+    },
+    "yatsumi": {
+      "odpt": [
+        "JR-East.Sotobo.Yatsumi"
+      ]
+    },
+    "kunisada": {
+      "odpt": [
+        "JR-East.Ryomo.Kunisada"
+      ]
+    },
+    "hitachinoushiku": {
+      "odpt": [
+        "JR-East.Joban.Hitachinoushiku"
+      ]
+    },
+    "iriya": {
+      "odpt": [
+        "JR-East.Sagami.Iriya"
+      ]
+    },
+    "kawanakajima": {
+      "odpt": [
+        "JR-East.ShinetsuNagano.Kawanakajima"
+      ]
+    },
+    "orihara": {
+      "odpt": [
+        "JR-East.Hachiko.Orihara"
+      ]
+    },
+    "koshigayalaketown": {
+      "odpt": [
+        "JR-East.Musashino.KoshigayaLaketown"
+      ]
+    },
+    "hodogaya": {
+      "odpt": [
+        "JR-East.ShonanShinjuku.Hodogaya",
+        "JR-East.Yokosuka.Hodogaya"
+      ]
+    },
+    "kasama": {
+      "odpt": [
+        "JR-East.Mito.Kasama"
+      ]
+    },
+    "mabashi": {
+      "odpt": [
+        "JR-East.JobanLocal.Mabashi"
+      ]
+    },
+    "hasuda": {
+      "odpt": [
+        "JR-East.Utsunomiya.Hasuda"
+      ]
+    },
+    "oyama": {
+      "odpt": [
+        "JR-East.Mito.Oyama",
+        "JR-East.Ryomo.Oyama",
+        "JR-East.Utsunomiya.Oyama"
+      ]
+    },
+    "katsuta": {
+      "odpt": [
+        "JR-East.Joban.Katsuta"
+      ]
+    },
+    "musashinakahara": {
+      "odpt": [
+        "JR-East.Nambu.MusashiNakahara"
+      ]
+    },
+    "oto": {
+      "odpt": [
+        "JR-East.Narita.Oto"
+      ]
+    },
+    "junikyo": {
+      "odpt": [
+        "JR-East.Kashima.Junikyo"
+      ]
+    },
+    "ogikubo": {
+      "odpt": [
+        "JR-East.ChuoRapid.Ogikubo",
+        "JR-East.ChuoSobuLocal.Ogikubo"
+      ]
+    },
+    "odabayashi": {
+      "odpt": [
+        "JR-East.Mito.Otabayashi"
+      ]
+    },
+    "higashikawaguchi": {
+      "odpt": [
+        "JR-East.Musashino.HigashiKawaguchi"
+      ]
+    },
+    "kitakamakura": {
+      "odpt": [
+        "JR-East.Yokosuka.KitaKamakura"
+      ]
+    },
+    "shinakitsu": {
+      "odpt": [
+        "JR-East.Musashino.ShinAkitsu"
+      ]
+    },
+    "hisanohama": {
+      "odpt": [
+        "JR-East.Joban.Hisanohama"
+      ]
+    },
+    "atsugi": {
+      "odpt": [
+        "JR-East.Sagami.Atsugi"
+      ]
+    },
+    "kitachigasaki": {
+      "odpt": [
+        "JR-East.Sagami.KitaChigasaki"
+      ]
+    },
+    "iwajuku": {
+      "odpt": [
+        "JR-East.Ryomo.Iwajuku"
+      ]
+    },
+    "minamiurawa": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.MinamiUrawa",
+        "JR-East.Musashino.MinamiUrawa"
+      ]
+    },
+    "nisshin-kawagoe": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Nisshin"
+      ]
+    },
+    "shinkoiwa": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.ShinKoiwa",
+        "JR-East.SobuRapid.ShinKoiwa"
+      ]
+    },
+    "yamate": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Yamate"
+      ]
+    },
+    "naganoharakusatsuguchi": {
+      "odpt": [
+        "JR-East.Agatsuma.Naganoharakusatsuguchi"
+      ]
+    },
+    "kawagoe": {
+      "odpt": [
+        "JR-East.Kawagoe.Kawagoe",
+        "JR-East.SaikyoKawagoe.Kawagoe"
+      ]
+    },
+    "kazusaichinomiya": {
+      "odpt": [
+        "JR-East.Sotobo.KazusaIchinomiya"
+      ]
+    },
+    "minamisenju": {
+      "odpt": [
+        "JR-East.JobanRapid.MinamiSenju"
+      ]
+    },
+    "ashikaga": {
+      "odpt": [
+        "JR-East.Ryomo.Ashikaga"
+      ]
+    },
+    "matsuhisa": {
+      "odpt": [
+        "JR-East.Hachiko.Matsuhisa"
+      ]
+    },
+    "ubara": {
+      "odpt": [
+        "JR-East.Sotobo.Ubara"
+      ]
+    },
+    "nishifu": {
+      "odpt": [
+        "JR-East.Nambu.Nishifu"
+      ]
+    },
+    "yokoshiba": {
+      "odpt": [
+        "JR-East.Sobu.Yokoshiba"
+      ]
+    },
+    "musashimasuko": {
+      "odpt": [
+        "JR-East.Itsukaichi.MusashiMasuko"
+      ]
+    },
+    "shimousamanzaki": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.ShimosaManzaki"
+      ]
+    },
+    "kamimoku": {
+      "odpt": [
+        "JR-East.Joetsu.Kamimoku"
+      ]
+    },
+    "omika": {
+      "odpt": [
+        "JR-East.Joban.Omika"
+      ]
+    },
+    "omae": {
+      "odpt": [
+        "JR-East.Agatsuma.Omae"
+      ]
+    },
+    "higashiurawa": {
+      "odpt": [
+        "JR-East.Musashino.HigashiUrawa"
+      ]
+    },
+    "kitaageo": {
+      "odpt": [
+        "JR-East.Takasaki.KitaAgeo"
+      ]
+    },
+    "ishikawacho": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Ishikawacho"
+      ]
+    },
+    "maebashioshima": {
+      "odpt": [
+        "JR-East.Ryomo.Maebashioshima"
+      ]
+    },
+    "nozaki": {
+      "odpt": [
+        "JR-East.Utsunomiya.Nozaki"
+      ]
+    },
+    "mitaka": {
+      "odpt": [
+        "JR-East.ChuoRapid.Mitaka",
+        "JR-East.ChuoSobuLocal.Mitaka"
+      ]
+    },
+    "musashihikida": {
+      "odpt": [
+        "JR-East.Itsukaichi.MusashiHikida"
+      ]
+    },
+    "kitamatsudo": {
+      "odpt": [
+        "JR-East.JobanLocal.KitaMatsudo"
+      ]
+    },
+    "higashinakagami": {
+      "odpt": [
+        "JR-East.Ome.HigashiNakagami"
+      ]
+    },
+    "shinyahashira": {
+      "odpt": [
+        "JR-East.Musashino.ShinYahashira"
+      ]
+    },
+    "murai": {
+      "odpt": [
+        "JR-East.Shinonoi.Murai"
+      ]
+    },
+    "kitamatsumoto": {
+      "odpt": [
+        "JR-East.Oito.KitaMatsumoto"
+      ]
+    },
+    "isesaki": {
+      "odpt": [
+        "JR-East.Ryomo.Isesaki"
+      ]
+    },
+    "osaki": {
+      "odpt": [
+        "JR-East.OsakiBranch.Osaki",
+        "JR-East.SaikyoKawagoe.Osaki",
+        "JR-East.ShonanShinjuku.Osaki",
+        "JR-East.SotetsuDirect.Osaki",
+        "JR-East.Yamanote.Osaki"
+      ]
+    },
+    "takanawagateway": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.TakanawaGateway",
+        "JR-East.Yamanote.TakanawaGateway"
+      ]
+    },
+    "koenji": {
+      "odpt": [
+        "JR-East.ChuoRapid.Koenji",
+        "JR-East.ChuoSobuLocal.Koenji"
+      ]
+    },
+    "tomobe": {
+      "odpt": [
+        "JR-East.Joban.Tomobe",
+        "JR-East.Mito.Tomobe"
+      ]
+    },
+    "higata": {
+      "odpt": [
+        "JR-East.Sobu.Higata"
+      ]
+    },
+    "higashizushi": {
+      "odpt": [
+        "JR-East.Yokosuka.HigashiZushi"
+      ]
+    },
+    "ogitsu": {
+      "odpt": [
+        "JR-East.Joban.Ogitsu"
+      ]
+    },
+    "kazusakiyokawa": {
+      "odpt": [
+        "JR-East.Kururi.KazusaKiyokawa"
+      ]
+    },
+    "gumyo": {
+      "odpt": [
+        "JR-East.Togane.Gumyo"
+      ]
+    },
+    "kobana": {
+      "odpt": [
+        "JR-East.Karasuyama.Kobana"
+      ]
+    },
+    "maihama": {
+      "odpt": [
+        "JR-East.Keiyo.Maihama",
+        "JR-East.KeiyoFutamataBranch.Maihama"
+      ]
+    },
+    "nakoso": {
+      "odpt": [
+        "JR-East.Joban.Nakoso"
+      ]
+    },
+    "musashikoganei": {
+      "odpt": [
+        "JR-East.ChuoRapid.MusashiKoganei"
+      ]
+    },
+    "shinkoyasu": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.ShinKoyasu"
+      ]
+    },
+    "narita": {
+      "odpt": [
+        "JR-East.Narita.Narita",
+        "JR-East.NaritaAbikoBranch.Narita",
+        "JR-East.NaritaAirportBranch.Narita",
+        "JR-East.SobuRapid.Narita"
+      ]
+    },
+    "shinanomachi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Shinanomachi"
+      ]
+    },
+    "hachonawate": {
+      "odpt": [
+        "JR-East.NambuBranch.Hatchonawate"
+      ]
+    },
+    "shisui": {
+      "odpt": [
+        "JR-East.Narita.Shisui",
+        "JR-East.SobuRapid.Shisui"
+      ]
+    },
+    "awaamatsu": {
+      "odpt": [
+        "JR-East.Sotobo.AwaAmatsu"
+      ]
+    },
+    "shimauchi": {
+      "odpt": [
+        "JR-East.Oito.Shimauchi"
+      ]
+    },
+    "choshi": {
+      "odpt": [
+        "JR-East.Narita.Choshi",
+        "JR-East.Sobu.Choshi"
+      ]
+    },
+    "makuta": {
+      "odpt": [
+        "JR-East.Kururi.Makuta"
+      ]
+    },
+    "chojamachi": {
+      "odpt": [
+        "JR-East.Sotobo.Chojamachi"
+      ]
+    },
+    "kori": {
+      "odpt": [
+        "JR-East.Ome.Kori"
+      ]
+    },
+    "kitahachioji": {
+      "odpt": [
+        "JR-East.Hachiko.KitaHachioji"
+      ]
+    },
+    "banda": {
+      "odpt": [
+        "JR-East.Sagami.Banda"
+      ]
+    },
+    "gummayawata": {
+      "odpt": [
+        "JR-East.Shinetsu.GummaYawata"
+      ]
+    },
+    "yamanashishi": {
+      "odpt": [
+        "JR-East.Chuo.Yamanashishi"
+      ]
+    },
+    "hakuyacho": {
+      "odpt": [
+        "JR-East.Oito.Hakuyacho"
+      ]
+    },
+    "ome": {
+      "odpt": [
+        "JR-East.Ome.Ome"
+      ]
+    },
+    "nishikawagoe": {
+      "odpt": [
+        "JR-East.Kawagoe.NishiKawagoe"
+      ]
+    },
+    "kurahashi": {
+      "odpt": [
+        "JR-East.Sobu.Kurahashi"
+      ]
+    },
+    "shibuya": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Shibuya",
+        "JR-East.ShonanShinjuku.Shibuya",
+        "JR-East.Yamanote.Shibuya",
+        "JR-East.YamanoteFreight.Shibuya"
+      ]
+    },
+    "fukaya": {
+      "odpt": [
+        "JR-East.Takasaki.Fukaya"
+      ]
+    },
+    "higashiyuki": {
+      "odpt": [
+        "JR-East.Mito.HigashiYuki"
+      ]
+    },
+    "toro": {
+      "odpt": [
+        "JR-East.Utsunomiya.Toro"
+      ]
+    },
+    "kuji": {
+      "odpt": [
+        "JR-East.Nambu.Kuji"
+      ]
+    },
+    "zushi": {
+      "odpt": [
+        "JR-East.Yokosuka.Zushi"
+      ]
+    },
+    "miyayama": {
+      "odpt": [
+        "JR-East.Sagami.Miyayama"
+      ]
+    },
+    "koiwa": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Koiwa"
+      ]
+    },
+    "toride": {
+      "odpt": [
+        "JR-East.Joban.Toride",
+        "JR-East.JobanLocal.Toride",
+        "JR-East.JobanRapid.Toride"
+      ]
+    },
+    "kamuriki": {
+      "odpt": [
+        "JR-East.Shinonoi.Kamuriki"
+      ]
+    },
+    "nagasaka": {
+      "odpt": [
+        "JR-East.Chuo.Nagasaka"
+      ]
+    },
+    "yonomori": {
+      "odpt": [
+        "JR-East.Joban.Yonomori"
+      ]
+    },
+    "hakuba": {
+      "odpt": [
+        "JR-East.Oito.Hakuba"
+      ]
+    },
+    "sawai": {
+      "odpt": [
+        "JR-East.Ome.Sawai"
+      ]
+    },
+    "kanuma": {
+      "odpt": [
+        "JR-East.Nikko.Kanuma"
+      ]
+    },
+    "tsukuda": {
+      "odpt": [
+        "JR-East.Joetsu.Tsukuda"
+      ]
+    },
+    "kashimasoccerstadium": {
+      "odpt": [
+        "JR-East.Kashima.KashimaSoccerStadium"
+      ]
+    },
+    "sasago": {
+      "odpt": [
+        "JR-East.Chuo.Sasago"
+      ]
+    },
+    "ogimachi": {
+      "odpt": [
+        "JR-East.Tsurumi.Ogimachi"
+      ]
+    },
+    "ohara": {
+      "odpt": [
+        "JR-East.Sotobo.Ohara"
+      ]
+    },
+    "hazawayokohamakokudai": {
+      "odpt": [
+        "JR-East.SotetsuDirect.HazawaYokohamaKokudai"
+      ]
+    },
+    "fuchuhonmachi": {
+      "odpt": [
+        "JR-East.Musashino.Fuchuhommachi",
+        "JR-East.Nambu.Fuchuhommachi"
+      ]
+    },
+    "kamisuwa": {
+      "odpt": [
+        "JR-East.Chuo.KamiSuwa"
+      ]
+    },
+    "utsunomiya": {
+      "odpt": [
+        "JR-East.Nikko.Utsunomiya",
+        "JR-East.Utsunomiya.Utsunomiya"
+      ]
+    },
+    "funabashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Funabashi",
+        "JR-East.SobuRapid.Funabashi"
+      ]
+    },
+    "higashiomiya": {
+      "odpt": [
+        "JR-East.Utsunomiya.HigashiOmiya"
+      ]
+    },
+    "kashimajingu": {
+      "odpt": [
+        "JR-East.Kashima.Kashimajingu"
+      ]
+    },
+    "shinkawasaki": {
+      "odpt": [
+        "JR-East.ShonanShinjuku.ShinKawasaki",
+        "JR-East.Yokosuka.ShinKawasaki"
+      ]
+    },
+    "fussa": {
+      "odpt": [
+        "JR-East.Ome.Fussa"
+      ]
+    },
+    "musashiitsukaichi": {
+      "odpt": [
+        "JR-East.Itsukaichi.MusashiItsukaichi"
+      ]
+    },
+    "nishiogikubo": {
+      "odpt": [
+        "JR-East.ChuoRapid.NishiOgikubo",
+        "JR-East.ChuoSobuLocal.NishiOgikubo"
+      ]
+    },
+    "minamitoyoshina": {
+      "odpt": [
+        "JR-East.Oito.MinamiToyoshina"
+      ]
+    },
+    "hongodai": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Hongodai"
+      ]
+    },
+    "higashitotsuka": {
+      "odpt": [
+        "JR-East.ShonanShinjuku.HigashiTotsuka",
+        "JR-East.Yokosuka.HigashiTotsuka"
+      ]
+    },
+    "ishibashi": {
+      "odpt": [
+        "JR-East.Utsunomiya.Ishibashi"
+      ]
+    },
+    "ayase": {
+      "odpt": [
+        "JR-East.JobanLocal.Ayase"
+      ]
+    },
+    "myokaku": {
+      "odpt": [
+        "JR-East.Hachiko.Myokaku"
+      ]
+    },
+    "shinshiraoka": {
+      "odpt": [
+        "JR-East.Utsunomiya.ShinShiraoka"
+      ]
+    },
+    "higashiome": {
+      "odpt": [
+        "JR-East.Ome.HigashiOme"
+      ]
+    },
+    "takahama": {
+      "odpt": [
+        "JR-East.Joban.Takahama"
+      ]
+    },
+    "yokaichiba": {
+      "odpt": [
+        "JR-East.Sobu.Yokaichiba"
+      ]
+    },
+    "syake": {
+      "odpt": [
+        "JR-East.Sagami.Shake"
+      ]
+    },
+    "tennoudai": {
+      "odpt": [
+        "JR-East.JobanLocal.Tennodai",
+        "JR-East.JobanRapid.Tennodai"
+      ]
+    },
+    "itako": {
+      "odpt": [
+        "JR-East.Kashima.Itako"
+      ]
+    },
+    "kawarayuonsen": {
+      "odpt": [
+        "JR-East.Agatsuma.KawarayuOnsen"
+      ]
+    },
+    "nobukata": {
+      "odpt": [
+        "JR-East.Kashima.Nobukata"
+      ]
+    },
+    "hitachitaga": {
+      "odpt": [
+        "JR-East.Joban.HitachiTaga"
+      ]
+    },
+    "kimitsu": {
+      "odpt": [
+        "JR-East.Uchibo.Kimitsu"
+      ]
+    },
+    "shimbashi": {
+      "odpt": [
+        "JR-East.JobanRapid.Shimbashi",
+        "JR-East.KeihinTohokuNegishi.Shimbashi",
+        "JR-East.Tokaido.Shimbashi",
+        "JR-East.Yamanote.Shimbashi",
+        "JR-East.Yokosuka.Shimbashi"
+      ]
+    },
+    "honjo": {
+      "odpt": [
+        "JR-East.Takasaki.Honjo"
+      ]
+    },
+    "nagatsuda": {
+      "odpt": [
+        "JR-East.Yokohama.Nagatsuta"
+      ]
+    },
+    "nishifunabashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.NishiFunabashi",
+        "JR-East.KeiyoFutamataBranch.NishiFunabashi",
+        "JR-East.KeiyoKoyaBranch.NishiFunabashi",
+        "JR-East.Musashino.NishiFunabashi"
+      ]
+    },
+    "tochigi": {
+      "odpt": [
+        "JR-East.Ryomo.Tochigi"
+      ]
+    },
+    "kazusamatsuoka": {
+      "odpt": [
+        "JR-East.Kururi.KazusaMatsuoka"
+      ]
+    },
+    "saruda": {
+      "odpt": [
+        "JR-East.Sobu.Saruda"
+      ]
+    },
+    "bubaigawara": {
+      "odpt": [
+        "JR-East.Nambu.Bubaigawara"
+      ]
+    },
+    "ageo": {
+      "odpt": [
+        "JR-East.Takasaki.Ageo"
+      ]
+    },
+    "shinokubo": {
+      "odpt": [
+        "JR-East.Yamanote.ShinOkubo"
+      ]
+    },
+    "omigawa": {
+      "odpt": [
+        "JR-East.Narita.Omigawa"
+      ]
+    },
+    "kido": {
+      "odpt": [
+        "JR-East.Joban.Kido"
+      ]
+    },
+    "annaka": {
+      "odpt": [
+        "JR-East.Shinetsu.Annaka"
+      ]
+    },
+    "katsunumabudoukyo": {
+      "odpt": [
+        "JR-East.Chuo.Katsunumabudokyo"
+      ]
+    },
+    "asagaya": {
+      "odpt": [
+        "JR-East.ChuoRapid.Asagaya",
+        "JR-East.ChuoSobuLocal.Asagaya"
+      ]
+    },
+    "izumi": {
+      "odpt": [
+        "JR-East.Joban.Izumi"
+      ]
+    },
+    "omori": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Omori"
+      ]
+    },
+    "hamano": {
+      "odpt": [
+        "JR-East.Uchibo.Hamano"
+      ]
+    },
+    "nasushiobara": {
+      "odpt": [
+        "JR-East.Utsunomiya.Nasushiobara"
+      ]
+    },
+    "tsuchiura": {
+      "odpt": [
+        "JR-East.Joban.Tsuchiura"
+      ]
+    },
+    "gyoda": {
+      "odpt": [
+        "JR-East.Takasaki.Gyoda"
+      ]
+    },
+    "shimosatachibana": {
+      "odpt": [
+        "JR-East.Narita.ShimosaTachibana"
+      ]
+    },
+    "todakouen": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.TodaKoen"
+      ]
+    },
+    "kioroshi": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Kioroshi"
+      ]
+    },
+    "nishikawaguchi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.NishiKawaguchi"
+      ]
+    },
+    "oiso": {
+      "odpt": [
+        "JR-East.Tokaido.Oiso"
+      ]
+    },
+    "kamonomiya": {
+      "odpt": [
+        "JR-East.Tokaido.Kamonomiya"
+      ]
+    },
+    "kumagaya": {
+      "odpt": [
+        "JR-East.Takasaki.Kumagaya"
+      ]
+    },
+    "okegawa": {
+      "odpt": [
+        "JR-East.Takasaki.Okegawa"
+      ]
+    },
+    "kagawa": {
+      "odpt": [
+        "JR-East.Sagami.Kagawa"
+      ]
+    },
+    "higashifunabashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.HigashiFunabashi"
+      ]
+    },
+    "akishima": {
+      "odpt": [
+        "JR-East.Ome.Akishima"
+      ]
+    },
+    "enzan": {
+      "odpt": [
+        "JR-East.Chuo.Enzan"
+      ]
+    },
+    "kaihinmakuhari": {
+      "odpt": [
+        "JR-East.Keiyo.Kaihimmakuhari",
+        "JR-East.KeiyoKoyaBranch.Kaihimmakuhari"
+      ]
+    },
+    "urawa": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Urawa",
+        "JR-East.ShonanShinjuku.Urawa",
+        "JR-East.Takasaki.Urawa",
+        "JR-East.Utsunomiya.Urawa"
+      ]
+    },
+    "shinnarashino": {
+      "odpt": [
+        "JR-East.Keiyo.ShinNarashino",
+        "JR-East.KeiyoKoyaBranch.ShinNarashino"
+      ]
+    },
+    "hashimoto-yokohama": {
+      "odpt": [
+        "JR-East.Sagami.Hashimoto",
+        "JR-East.Yokohama.Hashimoto"
+      ]
+    },
+    "kitayono": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.KitaYono"
+      ]
+    },
+    "inariyama": {
+      "odpt": [
+        "JR-East.Shinonoi.Inariyama"
+      ]
+    },
+    "kabe": {
+      "odpt": [
+        "JR-East.Ome.Kabe"
+      ]
+    },
+    "nakagaya": {
+      "odpt": [
+        "JR-East.Oito.Nakagaya"
+      ]
+    },
+    "kohoku": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Kohoku"
+      ]
+    },
+    "motoyawata": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.MotoYawata"
+      ]
+    },
+    "anayama": {
+      "odpt": [
+        "JR-East.Chuo.Anayama"
+      ]
+    },
+    "okaya": {
+      "odpt": [
+        "JR-East.Chuo.Okaya"
+      ]
+    },
+    "shinanosakai": {
+      "odpt": [
+        "JR-East.Chuo.Shinanosakai"
+      ]
+    },
+    "misato-musashino": {
+      "odpt": [
+        "JR-East.Musashino.Misato"
+      ]
+    },
+    "tsurumi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Tsurumi",
+        "JR-East.Tsurumi.Tsurumi"
+      ]
+    },
+    "ito": {
+      "odpt": [
+        "JR-East.Ito.Ito"
+      ]
+    },
+    "namegawa": {
+      "odpt": [
+        "JR-East.Narita.Namegawa"
+      ]
+    },
+    "sasagawa": {
+      "odpt": [
+        "JR-East.Narita.Sasagawa"
+      ]
+    },
+    "minamihara": {
+      "odpt": [
+        "JR-East.Uchibo.Minamihara"
+      ]
+    },
+    "obitsu": {
+      "odpt": [
+        "JR-East.Kururi.Obitsu"
+      ]
+    },
+    "kiryu": {
+      "odpt": [
+        "JR-East.Ryomo.Kiryu"
+      ]
+    },
+    "akabane": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Akabane",
+        "JR-East.SaikyoKawagoe.Akabane",
+        "JR-East.ShonanShinjuku.Akabane",
+        "JR-East.Takasaki.Akabane",
+        "JR-East.Utsunomiya.Akabane"
+      ]
+    },
+    "komagome": {
+      "odpt": [
+        "JR-East.Yamanote.Komagome"
+      ]
+    },
+    "sinmachi": {
+      "odpt": [
+        "JR-East.Takasaki.Shimmachi"
+      ]
+    },
+    "higashikoganei": {
+      "odpt": [
+        "JR-East.ChuoRapid.HigashiKoganei"
+      ]
+    },
+    "maebashi": {
+      "odpt": [
+        "JR-East.Ryomo.Maebashi"
+      ]
+    },
+    "yamato": {
+      "odpt": [
+        "JR-East.Mito.Yamato"
+      ]
+    },
+    "kokonoe": {
+      "odpt": [
+        "JR-East.Uchibo.Kokonoe"
+      ]
+    },
+    "tsuga": {
+      "odpt": [
+        "JR-East.Sobu.Tsuga",
+        "JR-East.SobuRapid.Tsuga"
+      ]
+    },
+    "yaita": {
+      "odpt": [
+        "JR-East.Utsunomiya.Yaita"
+      ]
+    },
+    "chitose": {
+      "odpt": [
+        "JR-East.Uchibo.Chitose"
+      ]
+    },
+    "higashiwashinomiya": {
+      "odpt": [
+        "JR-East.Utsunomiya.HigashiWashinomiya"
+      ]
+    },
+    "ogawamachi": {
+      "odpt": [
+        "JR-East.Hachiko.Ogawamachi"
+      ]
+    },
+    "minamitama": {
+      "odpt": [
+        "JR-East.Nambu.MinamiTama"
+      ]
+    },
+    "shinmaebashi": {
+      "odpt": [
+        "JR-East.Joetsu.ShimMaebashi",
+        "JR-East.Ryomo.ShimMaebashi"
+      ]
+    },
+    "samukawa": {
+      "odpt": [
+        "JR-East.Sagami.Samukawa"
+      ]
+    },
+    "ichikawa": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Ichikawa",
+        "JR-East.SobuRapid.Ichikawa"
+      ]
+    },
+    "chiba": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Chiba",
+        "JR-East.Sobu.Chiba",
+        "JR-East.SobuRapid.Chiba",
+        "JR-East.Sotobo.Chiba",
+        "JR-East.Uchibo.Chiba"
+      ]
+    },
+    "nishikokubunji": {
+      "odpt": [
+        "JR-East.ChuoRapid.NishiKokubunji",
+        "JR-East.Musashino.NishiKokubunji"
+      ]
+    },
+    "nakano": {
+      "odpt": [
+        "JR-East.ChuoRapid.Nakano",
+        "JR-East.ChuoSobuLocal.Nakano"
+      ]
+    },
+    "kandatsu": {
+      "odpt": [
+        "JR-East.Joban.Kandatsu"
+      ]
+    },
+    "komagata": {
+      "odpt": [
+        "JR-East.Ryomo.Komagata"
+      ]
+    },
+    "sawara": {
+      "odpt": [
+        "JR-East.Kashima.Sawara",
+        "JR-East.Narita.Sawara"
+      ]
+    },
+    "okamoto": {
+      "odpt": [
+        "JR-East.Utsunomiya.Okamoto"
+      ]
+    },
+    "kitatakasaki": {
+      "odpt": [
+        "JR-East.Shinetsu.KitaTakasaki"
+      ]
+    },
+    "togane": {
+      "odpt": [
+        "JR-East.Togane.Togane"
+      ]
+    },
+    "kitamoto": {
+      "odpt": [
+        "JR-East.Takasaki.Kitamoto"
+      ]
+    },
+    "midoriko": {
+      "odpt": [
+        "JR-East.Chuo.Midoriko"
+      ]
+    },
+    "yonohonmachi": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.YonoHommachi"
+      ]
+    },
+    "tamado": {
+      "odpt": [
+        "JR-East.Mito.Tamado"
+      ]
+    },
+    "obasute": {
+      "odpt": [
+        "JR-East.Shinonoi.Obasute"
+      ]
+    },
+    "shiojiri": {
+      "odpt": [
+        "JR-East.Chuo.Shiojiri",
+        "JR-East.Shinonoi.Shiojiri"
+      ]
+    },
+    "ichigaya": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Ichigaya"
+      ]
+    },
+    "toke": {
+      "odpt": [
+        "JR-East.Sotobo.Toke"
+      ]
+    },
+    "saitamashintoshin": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.SaitamaShintoshin",
+        "JR-East.Takasaki.SaitamaShintoshin",
+        "JR-East.Utsunomiya.SaitamaShintoshin"
+      ]
+    },
+    "kobayashi-narita": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Kobayashi"
+      ]
+    },
+    "koganei": {
+      "odpt": [
+        "JR-East.Utsunomiya.Koganei"
+      ]
+    },
+    "shimosonanakayama": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.ShimosaNakayama"
+      ]
+    },
+    "sanukimachi": {
+      "odpt": [
+        "JR-East.Uchibo.Sanukimachi"
+      ]
+    },
+    "kitafujioka": {
+      "odpt": [
+        "JR-East.Hachiko.KitaFujioka"
+      ]
+    },
+    "hatonosu": {
+      "odpt": [
+        "JR-East.Ome.Hatonosu"
+      ]
+    },
+    "kinomiya": {
+      "odpt": [
+        "JR-East.Ito.Kinomiya"
+      ]
+    },
+    "jvillage": {
+      "odpt": [
+        "JR-East.Joban.JVillage"
+      ]
+    },
+    "nakanojo": {
+      "odpt": [
+        "JR-East.Agatsuma.Nakanojo"
+      ]
+    },
+    "ichishiro": {
+      "odpt": [
+        "JR-East.Agatsuma.Ichishiro"
+      ]
+    },
+    "ono": {
+      "odpt": [
+        "JR-East.Joban.Ono"
+      ]
+    },
+    "matoba": {
+      "odpt": [
+        "JR-East.Kawagoe.Matoba"
+      ]
+    },
+    "nagata": {
+      "odpt": [
+        "JR-East.Sotobo.Nagata"
+      ]
+    },
+    "kuroiso": {
+      "odpt": [
+        "JR-East.Utsunomiya.Kuroiso"
+      ]
+    },
+    "shinkodaira": {
+      "odpt": [
+        "JR-East.Musashino.ShinKodaira",
+        "JR-East.MusashinoKunitachiBranch.ShinKodaira"
+      ]
+    },
+    "harajuku": {
+      "odpt": [
+        "JR-East.Yamanote.Harajuku"
+      ]
+    },
+    "inaginaganuma": {
+      "odpt": [
+        "JR-East.Nambu.Inaginaganuma"
+      ]
+    },
+    "ogose": {
+      "odpt": [
+        "JR-East.Hachiko.Ogose"
+      ]
+    },
+    "hayakawa": {
+      "odpt": [
+        "JR-East.Tokaido.Hayakawa"
+      ]
+    },
+    "oku": {
+      "odpt": [
+        "JR-East.Takasaki.Oku",
+        "JR-East.Utsunomiya.Oku"
+      ]
+    },
+    "awakatsuyama": {
+      "odpt": [
+        "JR-East.Uchibo.AwaKatsuyama"
+      ]
+    },
+    "hyuga": {
+      "odpt": [
+        "JR-East.Sobu.Hyuga"
+      ]
+    },
+    "kitakonosu": {
+      "odpt": [
+        "JR-East.Takasaki.KitaKonosu"
+      ]
+    },
+    "ebina": {
+      "odpt": [
+        "JR-East.Sagami.Ebina"
+      ]
+    },
+    "manzakazawaguchi": {
+      "odpt": [
+        "JR-East.Agatsuma.ManzaKazawaguchi"
+      ]
+    },
+    "oimachi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Oimachi"
+      ]
+    },
+    "koga": {
+      "odpt": [
+        "JR-East.Utsunomiya.Koga"
+      ]
+    },
+    "hirono": {
+      "odpt": [
+        "JR-East.Joban.Hirono"
+      ]
+    },
+    "shimosakozaki": {
+      "odpt": [
+        "JR-East.Narita.ShimosaKozaki"
+      ]
+    },
+    "fukiage": {
+      "odpt": [
+        "JR-East.Takasaki.Fukiage"
+      ]
+    },
+    "meguro": {
+      "odpt": [
+        "JR-East.Yamanote.Meguro"
+      ]
+    },
+    "takao": {
+      "odpt": [
+        "JR-East.Chuo.Takao",
+        "JR-East.ChuoRapid.Takao"
+      ]
+    },
+    "shiromaru": {
+      "odpt": [
+        "JR-East.Ome.Shiromaru"
+      ]
+    },
+    "kitakashiwa": {
+      "odpt": [
+        "JR-East.JobanLocal.KitaKashiwa"
+      ]
+    },
+    "musashishinjo": {
+      "odpt": [
+        "JR-East.Nambu.MusashiShinjo"
+      ]
+    },
+    "yotsukura": {
+      "odpt": [
+        "JR-East.Joban.Yotsukura"
+      ]
+    },
+    "kawasakishinmachi": {
+      "odpt": [
+        "JR-East.NambuBranch.Kawasakishimmachi"
+      ]
+    },
+    "higashiyamanashi": {
+      "odpt": [
+        "JR-East.Chuo.HigashiYamanashi"
+      ]
+    },
+    "katori": {
+      "odpt": [
+        "JR-East.Kashima.Katori",
+        "JR-East.Narita.Katori"
+      ]
+    },
+    "shimosuwa": {
+      "odpt": [
+        "JR-East.Chuo.ShimoSuwa"
+      ]
+    },
+    "narita-airport-t2-t3": {
+      "odpt": [
+        "JR-East.NaritaAirportBranch.NaritaAirportTerminal2and3",
+        "JR-East.SobuRapid.NaritaAirportTerminal2and3"
+      ]
+    },
+    "okutama": {
+      "odpt": [
+        "JR-East.Ome.OkuTama"
+      ]
+    },
+    "sakuragicho": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Sakuragicho"
+      ]
+    },
+    "musashikosugi": {
+      "odpt": [
+        "JR-East.Nambu.MusashiKosugi",
+        "JR-East.ShonanShinjuku.MusashiKosugi",
+        "JR-East.SotetsuDirect.MusashiKosugi",
+        "JR-East.Yokosuka.MusashiKosugi"
+      ]
+    },
+    "kuzumi": {
+      "odpt": [
+        "JR-East.Narita.Kuzumi"
+      ]
+    },
+    "onogamionsen": {
+      "odpt": [
+        "JR-East.Agatsuma.OnogamiOnsen"
+      ]
+    },
+    "shinanoomachi": {
+      "odpt": [
+        "JR-East.Oito.ShinanoOmachi"
+      ]
+    },
+    "naruse": {
+      "odpt": [
+        "JR-East.Yokohama.Naruse"
+      ]
+    },
+    "musashiurawa": {
+      "odpt": [
+        "JR-East.Musashino.MusashiUrawa",
+        "JR-East.MusashinoNishiUrawaBranch.MusashiUrawa",
+        "JR-East.SaikyoKawagoe.MusashiUrawa"
+      ]
+    },
+    "okabe": {
+      "odpt": [
+        "JR-East.Takasaki.Okabe"
+      ]
+    },
+    "yoshikawaminami": {
+      "odpt": [
+        "JR-East.Musashino.Yoshikawaminami"
+      ]
+    },
+    "ryugasakishi": {
+      "odpt": [
+        "JR-East.Joban.Ryugasakishi"
+      ]
+    },
+    "shinkemigawa": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.ShinKemigawa"
+      ]
+    },
+    "imaichi": {
+      "odpt": [
+        "JR-East.Nikko.Imaichi"
+      ]
+    },
+    "iwase": {
+      "odpt": [
+        "JR-East.Mito.Iwase"
+      ]
+    },
+    "nakaurawa": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.NakaUrawa"
+      ]
+    },
+    "sakakita": {
+      "odpt": [
+        "JR-East.Shinonoi.Sakakita"
+      ]
+    },
+    "ashikagaflowerpark": {
+      "odpt": [
+        "JR-East.Ryomo.AshikagaFlowerPark"
+      ]
+    },
+    "iwane": {
+      "odpt": [
+        "JR-East.Uchibo.Iwane"
+      ]
+    },
+    "kitakogane": {
+      "odpt": [
+        "JR-East.JobanLocal.KitaKogane"
+      ]
+    },
+    "takahagi": {
+      "odpt": [
+        "JR-East.Joban.Takahagi"
+      ]
+    },
+    "kagohara": {
+      "odpt": [
+        "JR-East.Takasaki.Kagohara"
+      ]
+    },
+    "iwashima": {
+      "odpt": [
+        "JR-East.Agatsuma.Iwashima"
+      ]
+    },
+    "bentenbashi": {
+      "odpt": [
+        "JR-East.Tsurumi.Bentembashi"
+      ]
+    },
+    "takezawa": {
+      "odpt": [
+        "JR-East.Hachiko.Takezawa"
+      ]
+    },
+    "azusabashi": {
+      "odpt": [
+        "JR-East.Oito.Azusabashi"
+      ]
+    },
+    "fujishiro": {
+      "odpt": [
+        "JR-East.Joban.Fujishiro"
+      ]
+    },
+    "aihara": {
+      "odpt": [
+        "JR-East.Yokohama.Aihara"
+      ]
+    },
+    "kusano": {
+      "odpt": [
+        "JR-East.Joban.Kusano"
+      ]
+    },
+    "tawarada": {
+      "odpt": [
+        "JR-East.Kururi.Tawarada"
+      ]
+    },
+    "musashishiraishi": {
+      "odpt": [
+        "JR-East.Tsurumi.MusashiShiraishi"
+      ]
+    },
+    "fujimi": {
+      "odpt": [
+        "JR-East.Chuo.Fujimi"
+      ]
+    },
+    "musashitakahagi": {
+      "odpt": [
+        "JR-East.Kawagoe.MusashiTakahagi"
+      ]
+    },
+    "gotanda": {
+      "odpt": [
+        "JR-East.Yamanote.Gotanda"
+      ]
+    },
+    "minamifuruya": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.MinamiFuruya"
+      ]
+    },
+    "shinjuku": {
+      "odpt": [
+        "JR-East.ChuoRapid.Shinjuku",
+        "JR-East.ChuoSobuLocal.Shinjuku",
+        "JR-East.SaikyoKawagoe.Shinjuku",
+        "JR-East.ShonanShinjuku.Shinjuku",
+        "JR-East.Yamanote.Shinjuku"
+      ]
+    },
+    "chino": {
+      "odpt": [
+        "JR-East.Chuo.Chino"
+      ]
+    },
+    "goi": {
+      "odpt": [
+        "JR-East.Uchibo.Goi"
+      ]
+    },
+    "namie": {
+      "odpt": [
+        "JR-East.Joban.Namie"
+      ]
+    },
+    "umishibaura": {
+      "odpt": [
+        "JR-East.TsurumiUmiShibauraBranch.UmiShibaura"
+      ]
+    },
+    "konoyama": {
+      "odpt": [
+        "JR-East.Karasuyama.Konoyama"
+      ]
+    },
+    "kitaakabane": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.KitaAkabane"
+      ]
+    },
+    "suidobashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Suidobashi"
+      ]
+    },
+    "kuragano": {
+      "odpt": [
+        "JR-East.Hachiko.Kuragano",
+        "JR-East.Takasaki.Kuragano"
+      ]
+    },
+    "imai": {
+      "odpt": [
+        "JR-East.ShinetsuNagano.Imai"
+      ]
+    },
+    "katsuura": {
+      "odpt": [
+        "JR-East.Sotobo.Katsuura"
+      ]
+    },
+    "yokodai": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Yokodai"
+      ]
+    },
+    "futamatao": {
+      "odpt": [
+        "JR-East.Ome.Futamatao"
+      ]
+    },
+    "yumoto": {
+      "odpt": [
+        "JR-East.Joban.Yumoto"
+      ]
+    },
+    "kamatori": {
+      "odpt": [
+        "JR-East.Sotobo.Kamatori"
+      ]
+    },
+    "shiraoka": {
+      "odpt": [
+        "JR-East.Utsunomiya.Shiraoka"
+      ]
+    },
+    "tsuruta": {
+      "odpt": [
+        "JR-East.Nikko.Tsuruta"
+      ]
+    },
+    "nakanoshima": {
+      "odpt": [
+        "JR-East.Nambu.Nakanoshima"
+      ]
+    },
+    "nishikunitachi": {
+      "odpt": [
+        "JR-East.Nambu.NishiKunitachi"
+      ]
+    },
+    "makuhari": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Makuhari"
+      ]
+    },
+    "kazusaminato": {
+      "odpt": [
+        "JR-East.Uchibo.KazusaMinato"
+      ]
+    },
+    "ninomiya": {
+      "odpt": [
+        "JR-East.Tokaido.Ninomiya"
+      ]
+    },
+    "shinagawa": {
+      "odpt": [
+        "JR-East.JobanRapid.Shinagawa",
+        "JR-East.KeihinTohokuNegishi.Shinagawa",
+        "JR-East.Tokaido.Shinagawa",
+        "JR-East.TokaidoFreight.Shinagawa",
+        "JR-East.Yamanote.Shinagawa",
+        "JR-East.YamanoteFreight.Shinagawa",
+        "JR-East.Yokosuka.Shinagawa"
+      ]
+    },
+    "matsumoto": {
+      "odpt": [
+        "JR-East.Oito.Matsumoto",
+        "JR-East.Shinonoi.Matsumoto"
+      ]
+    },
+    "shibukawa": {
+      "odpt": [
+        "JR-East.Agatsuma.Shibukawa",
+        "JR-East.Joetsu.Shibukawa"
+      ]
+    },
+    "manaduru": {
+      "odpt": [
+        "JR-East.Tokaido.Manazuru"
+      ]
+    },
+    "takeoka": {
+      "odpt": [
+        "JR-East.Uchibo.Takeoka"
+      ]
+    },
+    "yokota": {
+      "odpt": [
+        "JR-East.Kururi.Yokota"
+      ]
+    },
+    "uenohara": {
+      "odpt": [
+        "JR-East.Chuo.Uenohara"
+      ]
+    },
+    "matsuida": {
+      "odpt": [
+        "JR-East.Shinetsu.Matsuida"
+      ]
+    },
+    "takasaki": {
+      "odpt": [
+        "JR-East.Hachiko.Takasaki",
+        "JR-East.Joetsu.Takasaki",
+        "JR-East.Ryomo.Takasaki",
+        "JR-East.Shinetsu.Takasaki",
+        "JR-East.Takasaki.Takasaki"
+      ]
+    },
+    "ikusabata": {
+      "odpt": [
+        "JR-East.Ome.Ikusabata"
+      ]
+    },
+    "musashisakai": {
+      "odpt": [
+        "JR-East.ChuoRapid.MusashiSakai"
+      ]
+    },
+    "jujo": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Jujo"
+      ]
+    },
+    "ebisu": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Ebisu",
+        "JR-East.ShonanShinjuku.Ebisu",
+        "JR-East.Yamanote.Ebisu"
+      ]
+    },
+    "araki": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Araki"
+      ]
+    },
+    "izutaga": {
+      "odpt": [
+        "JR-East.Ito.IzuTaga"
+      ]
+    },
+    "musashimizonokuchi": {
+      "odpt": [
+        "JR-East.Nambu.MusashiMizonokuchi"
+      ]
+    },
+    "shinnihombashi": {
+      "odpt": [
+        "JR-East.SobuRapid.ShinNihombashi"
+      ]
+    },
+    "ryuo": {
+      "odpt": [
+        "JR-East.Chuo.Ryuo"
+      ]
+    },
+    "machida": {
+      "odpt": [
+        "JR-East.Yokohama.Machida"
+      ]
+    },
+    "futamatashinmachi": {
+      "odpt": [
+        "JR-East.Keiyo.Futamatashimmachi"
+      ]
+    },
+    "ushihama": {
+      "odpt": [
+        "JR-East.Ome.Ushihama"
+      ]
+    },
+    "sakura": {
+      "odpt": [
+        "JR-East.Narita.Sakura",
+        "JR-East.Sobu.Sakura",
+        "JR-East.SobuRapid.Sakura"
+      ]
+    },
+    "shinkiba": {
+      "odpt": [
+        "JR-East.Keiyo.ShinKiba",
+        "JR-East.KeiyoFutamataBranch.ShinKiba"
+      ]
+    },
+    "yanagawa": {
+      "odpt": [
+        "JR-East.Chuo.Yanagawa"
+      ]
+    },
+    "atami": {
+      "odpt": [
+        "JR-East.Ito.Atami",
+        "JR-East.Tokaido.Atami"
+      ]
+    },
+    "kawai": {
+      "odpt": [
+        "JR-East.Ome.Kawai"
+      ]
+    },
+    "oami": {
+      "odpt": [
+        "JR-East.Sotobo.Oami",
+        "JR-East.Togane.Oami"
+      ]
+    },
+    "awakamogawa": {
+      "odpt": [
+        "JR-East.Sotobo.AwaKamogawa",
+        "JR-East.Uchibo.AwaKamogawa"
+      ]
+    },
+    "nihari": {
+      "odpt": [
+        "JR-East.Mito.Niihari"
+      ]
+    },
+    "omiya": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Omiya",
+        "JR-East.MusashinoNishiUrawaBranch.Omiya",
+        "JR-East.MusashinoOmiyaBranch.Omiya",
+        "JR-East.SaikyoKawagoe.Omiya",
+        "JR-East.ShonanShinjuku.Omiya",
+        "JR-East.Takasaki.Omiya",
+        "JR-East.Utsunomiya.Omiya"
+      ]
+    },
+    "shinmatsudo": {
+      "odpt": [
+        "JR-East.JobanLocal.ShimMatsudo",
+        "JR-East.Musashino.ShimMatsudo"
+      ]
+    },
+    "shimpu": {
+      "odpt": [
+        "JR-East.Chuo.Shimpu"
+      ]
+    },
+    "kitatoda": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.KitaToda"
+      ]
+    },
+    "nebukawa": {
+      "odpt": [
+        "JR-East.Tokaido.Nebukawa"
+      ]
+    },
+    "matsugishi": {
+      "odpt": [
+        "JR-East.Narita.Matsugishi",
+        "JR-East.Sobu.Matsugishi"
+      ]
+    },
+    "kitaasaka": {
+      "odpt": [
+        "JR-East.Musashino.KitaAsaka",
+        "JR-East.MusashinoOmiyaBranch.KitaAsaka"
+      ]
+    },
+    "kasahata": {
+      "odpt": [
+        "JR-East.Kawagoe.Kasahata"
+      ]
+    },
+    "hamamatsucho": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Hamamatsucho",
+        "JR-East.Yamanote.Hamamatsucho"
+      ]
+    },
+    "hamakanaya": {
+      "odpt": [
+        "JR-East.Uchibo.HamaKanaya"
+      ]
+    },
+    "miyahara": {
+      "odpt": [
+        "JR-East.Takasaki.Miyahara"
+      ]
+    },
+    "tomita-ryomo": {
+      "odpt": [
+        "JR-East.Ryomo.Tomita"
+      ]
+    },
+    "yaho": {
+      "odpt": [
+        "JR-East.Nambu.Yaho"
+      ]
+    },
+    "kitafuchu": {
+      "odpt": [
+        "JR-East.Musashino.KitaFuchu"
+      ]
+    },
+    "ubashima": {
+      "odpt": [
+        "JR-East.Agatsuma.Ubashima"
+      ]
+    },
+    "shiomi": {
+      "odpt": [
+        "JR-East.Keiyo.Shiomi",
+        "JR-East.KeiyoFutamataBranch.Shiomi"
+      ]
+    },
+    "uguisudani": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Uguisudani",
+        "JR-East.Yamanote.Uguisudani"
+      ]
+    },
+    "kashiwa": {
+      "odpt": [
+        "JR-East.Joban.Kashiwa",
+        "JR-East.JobanLocal.Kashiwa",
+        "JR-East.JobanRapid.Kashiwa"
+      ]
+    },
+    "kawashima": {
+      "odpt": [
+        "JR-East.Mito.Kawashima"
+      ]
+    },
+    "asakusabashi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Asakusabashi"
+      ]
+    },
+    "kataoka": {
+      "odpt": [
+        "JR-East.Utsunomiya.Kataoka"
+      ]
+    },
+    "saruhashi": {
+      "odpt": [
+        "JR-East.Chuo.Saruhashi"
+      ]
+    },
+    "ohirashita": {
+      "odpt": [
+        "JR-East.Ryomo.Ohirashita"
+      ]
+    },
+    "shimatakamatsu": {
+      "odpt": [
+        "JR-East.Oito.Shimatakamatsu"
+      ]
+    },
+    "higashifussa": {
+      "odpt": [
+        "JR-East.Hachiko.HigashiFussa"
+      ]
+    },
+    "konosu": {
+      "odpt": [
+        "JR-East.Takasaki.Konosu"
+      ]
+    },
+    "iwama": {
+      "odpt": [
+        "JR-East.Joban.Iwama"
+      ]
+    },
+    "taura": {
+      "odpt": [
+        "JR-East.Yokosuka.Taura"
+      ]
+    },
+    "nishimatsuida": {
+      "odpt": [
+        "JR-East.Shinetsu.NishiMatsuida"
+      ]
+    },
+    "ichikawaono": {
+      "odpt": [
+        "JR-East.Musashino.Ichikawaono"
+      ]
+    },
+    "totsuka": {
+      "odpt": [
+        "JR-East.ShonanShinjuku.Totsuka",
+        "JR-East.Tokaido.Totsuka",
+        "JR-East.Yokosuka.Totsuka"
+      ]
+    },
+    "sakaori": {
+      "odpt": [
+        "JR-East.Chuo.Sakaori"
+      ]
+    },
+    "gunmaharamachi": {
+      "odpt": [
+        "JR-East.Agatsuma.GunmaHaramachi"
+      ]
+    },
+    "uchigo": {
+      "odpt": [
+        "JR-East.Joban.Uchigo"
+      ]
+    },
+    "okawa": {
+      "odpt": [
+        "JR-East.TsurumiOkawaBranch.Okawa"
+      ]
+    },
+    "gokan": {
+      "odpt": [
+        "JR-East.Joetsu.Gokan"
+      ]
+    },
+    "fukurogura": {
+      "odpt": [
+        "JR-East.Agatsuma.Fukurogura"
+      ]
+    },
+    "kazusaokitsu": {
+      "odpt": [
+        "JR-East.Sotobo.KazusaOkitsu"
+      ]
+    },
+    "hiratsuka": {
+      "odpt": [
+        "JR-East.Tokaido.Hiratsuka"
+      ]
+    },
+    "fujino": {
+      "odpt": [
+        "JR-East.Chuo.Fujino"
+      ]
+    },
+    "minamishisui": {
+      "odpt": [
+        "JR-East.Sobu.MinamiShisui"
+      ]
+    },
+    "itabashi": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Itabashi"
+      ]
+    },
+    "kozukue": {
+      "odpt": [
+        "JR-East.Yokohama.Kozukue"
+      ]
+    },
+    "tokyo": {
+      "odpt": [
+        "JR-East.ChuoRapid.Tokyo",
+        "JR-East.JobanRapid.Tokyo",
+        "JR-East.KeihinTohokuNegishi.Tokyo",
+        "JR-East.Keiyo.Tokyo",
+        "JR-East.KeiyoFutamataBranch.Tokyo",
+        "JR-East.SobuRapid.Tokyo",
+        "JR-East.Takasaki.Tokyo",
+        "JR-East.Tokaido.Tokyo",
+        "JR-East.Utsunomiya.Tokyo",
+        "JR-East.Yamanote.Tokyo",
+        "JR-East.YamanoteFreight.Tokyo",
+        "JR-East.Yokosuka.Tokyo"
+      ]
+    },
+    "nishiomiya": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.NishiOmiya"
+      ]
+    },
+    "minaminakago": {
+      "odpt": [
+        "JR-East.Joban.MinamiNakago"
+      ]
+    },
+    "kinugasa": {
+      "odpt": [
+        "JR-East.Yokosuka.Kinugasa"
+      ]
+    },
+    "yako": {
+      "odpt": [
+        "JR-East.Nambu.Yako"
+      ]
+    },
+    "tsudanuma": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Tsudanuma",
+        "JR-East.SobuRapid.Tsudanuma"
+      ]
+    },
+    "higashinakano": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.HigashiNakano"
+      ]
+    },
+    "kitasenju": {
+      "odpt": [
+        "JR-East.JobanRapid.KitaSenju"
+      ]
+    },
+    "kawaguchi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Kawaguchi"
+      ]
+    },
+    "iigura": {
+      "odpt": [
+        "JR-East.Sobu.Iigura"
+      ]
+    },
+    "nagaura": {
+      "odpt": [
+        "JR-East.Uchibo.Nagaura"
+      ]
+    },
+    "hirama": {
+      "odpt": [
+        "JR-East.Nambu.Hirama"
+      ]
+    },
+    "kuki": {
+      "odpt": [
+        "JR-East.Utsunomiya.Kuki"
+      ]
+    },
+    "tsudayama": {
+      "odpt": [
+        "JR-East.Nambu.Tsudayama"
+      ]
+    },
+    "hachioji": {
+      "odpt": [
+        "JR-East.Chuo.Hachioji",
+        "JR-East.ChuoRapid.Hachioji",
+        "JR-East.Hachiko.Hachioji",
+        "JR-East.MusashinoKunitachiBranch.Hachioji",
+        "JR-East.Yokohama.Hachioji"
+      ]
+    },
+    "sodegaura": {
+      "odpt": [
+        "JR-East.Uchibo.Sodegaura"
+      ]
+    },
+    "tsurumiono": {
+      "odpt": [
+        "JR-East.Tsurumi.Tsurumiono"
+      ]
+    },
+    "kameido": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Kameido"
+      ]
+    },
+    "shimotsukeosawa": {
+      "odpt": [
+        "JR-East.Nikko.ShimotsukeOsawa"
+      ]
+    },
+    "yoyogi": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Yoyogi",
+        "JR-East.Yamanote.Yoyogi"
+      ]
+    },
+    "okubo-chuo": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Okubo"
+      ]
+    },
+    "tatsuta": {
+      "odpt": [
+        "JR-East.Joban.Tatsuta"
+      ]
+    },
+    "minamimatsumoto": {
+      "odpt": [
+        "JR-East.Shinonoi.MinamiMatsumoto"
+      ]
+    },
+    "emi": {
+      "odpt": [
+        "JR-East.Uchibo.Emi"
+      ]
+    },
+    "gunmafujioka": {
+      "odpt": [
+        "JR-East.Hachiko.GummaFujioka"
+      ]
+    },
+    "minaminagareyama": {
+      "odpt": [
+        "JR-East.Musashino.MinamiNagareyama"
+      ]
+    },
+    "isawaonsen": {
+      "odpt": [
+        "JR-East.Chuo.IsawaOnsen"
+      ]
+    },
+    "echujima": {
+      "odpt": [
+        "JR-East.Keiyo.Etchujima",
+        "JR-East.KeiyoFutamataBranch.Etchujima"
+      ]
+    },
+    "kadosawabashi": {
+      "odpt": [
+        "JR-East.Sagami.Kadosawabashi"
+      ]
+    },
+    "ujiie": {
+      "odpt": [
+        "JR-East.Utsunomiya.Ujiie"
+      ]
+    },
+    "kawasaki": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Kawasaki",
+        "JR-East.Nambu.Kawasaki",
+        "JR-East.Tokaido.Kawasaki"
+      ]
+    },
+    "shimogori": {
+      "odpt": [
+        "JR-East.Kururi.Shimogori"
+      ]
+    },
+    "higashiyokota": {
+      "odpt": [
+        "JR-East.Kururi.HigashiYokota"
+      ]
+    },
+    "nippori": {
+      "odpt": [
+        "JR-East.Joban.Nippori",
+        "JR-East.JobanRapid.Nippori",
+        "JR-East.KeihinTohokuNegishi.Nippori",
+        "JR-East.Yamanote.Nippori"
+      ]
+    },
+    "kasugaicho": {
+      "odpt": [
+        "JR-East.Chuo.Kasugaicho"
+      ]
+    },
+    "kisarazu": {
+      "odpt": [
+        "JR-East.Kururi.Kisarazu",
+        "JR-East.Uchibo.Kisarazu"
+      ]
+    },
+    "omoigawa": {
+      "odpt": [
+        "JR-East.Ryomo.Omoigawa"
+      ]
+    },
+    "ikebukuro": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Ikebukuro",
+        "JR-East.ShonanShinjuku.Ikebukuro",
+        "JR-East.Yamanote.Ikebukuro"
+      ]
+    },
+    "syukugawara": {
+      "odpt": [
+        "JR-East.Nambu.Shukugawara"
+      ]
+    },
+    "oguchi": {
+      "odpt": [
+        "JR-East.Yokohama.Oguchi"
+      ]
+    },
+    "ofuna": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Ofuna",
+        "JR-East.ShonanShinjuku.Ofuna",
+        "JR-East.Tokaido.Ofuna",
+        "JR-East.Yokosuka.Ofuna"
+      ]
+    },
+    "hinoharu": {
+      "odpt": [
+        "JR-East.Chuo.Hinoharu"
+      ]
+    },
+    "amori": {
+      "odpt": [
+        "JR-East.ShinetsuNagano.Amori"
+      ]
+    },
+    "niza": {
+      "odpt": [
+        "JR-East.Musashino.Niiza"
+      ]
+    },
+    "kitaurawa": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.KitaUrawa"
+      ]
+    },
+    "ukimafunato": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.Ukimafunado"
+      ]
+    },
+    "kurihashi": {
+      "odpt": [
+        "JR-East.Utsunomiya.Kurihashi"
+      ]
+    },
+    "awakominato": {
+      "odpt": [
+        "JR-East.Sotobo.AwaKominato"
+      ]
+    },
+    "yotsuya": {
+      "odpt": [
+        "JR-East.ChuoRapid.Yotsuya",
+        "JR-East.ChuoSobuLocal.Yotsuya"
+      ]
+    },
+    "tansyo": {
+      "odpt": [
+        "JR-East.Hachiko.Tansho"
+      ]
+    },
+    "shimomizo": {
+      "odpt": [
+        "JR-East.Sagami.Shimomizo"
+      ]
+    },
+    "higashijujo": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.HigashiJujo"
+      ]
+    },
+    "kamasusaka": {
+      "odpt": [
+        "JR-East.Utsunomiya.Kamasusaka"
+      ]
+    },
+    "naruto": {
+      "odpt": [
+        "JR-East.Sobu.Naruto",
+        "JR-East.Togane.Naruto"
+      ]
+    },
+    "arakawaoki": {
+      "odpt": [
+        "JR-East.Joban.Arakawaoki"
+      ]
+    },
+    "yodo": {
+      "odpt": [
+        "JR-East.Hachiko.Yodo"
+      ]
+    },
+    "ozaku": {
+      "odpt": [
+        "JR-East.Ome.Ozaku"
+      ]
+    },
+    "yagura": {
+      "odpt": [
+        "JR-East.Agatsuma.Yagura"
+      ]
+    },
+    "kokudo": {
+      "odpt": [
+        "JR-East.Tsurumi.Kokudo"
+      ]
+    },
+    "shinmobara": {
+      "odpt": [
+        "JR-East.Sotobo.ShimMobara"
+      ]
+    },
+    "usami": {
+      "odpt": [
+        "JR-East.Ito.Usami"
+      ]
+    },
+    "kobuchi": {
+      "odpt": [
+        "JR-East.Yokohama.Kobuchi"
+      ]
+    },
+    "aoyagi": {
+      "odpt": [
+        "JR-East.Chuo.Aoyagi"
+      ]
+    },
+    "mito": {
+      "odpt": [
+        "JR-East.Joban.Mito"
+      ]
+    },
+    "chibaminato": {
+      "odpt": [
+        "JR-East.Keiyo.Chibaminato"
+      ]
+    },
+    "hamakawasaki": {
+      "odpt": [
+        "JR-East.NambuBranch.HamaKawasaki",
+        "JR-East.Tsurumi.HamaKawasaki"
+      ]
+    },
+    "makuharihongo": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Makuharihongo"
+      ]
+    },
+    "nakayama": {
+      "odpt": [
+        "JR-East.Yokohama.Nakayama"
+      ]
+    },
+    "tomioka": {
+      "odpt": [
+        "JR-East.Joban.Tomioka"
+      ]
+    },
+    "okachimachi": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Okachimachi",
+        "JR-East.Yamanote.Okachimachi"
+      ]
+    },
+    "minamiyono": {
+      "odpt": [
+        "JR-East.SaikyoKawagoe.MinamiYono"
+      ]
+    },
+    "ueno": {
+      "odpt": [
+        "JR-East.Joban.Ueno",
+        "JR-East.JobanRapid.Ueno",
+        "JR-East.KeihinTohokuNegishi.Ueno",
+        "JR-East.Takasaki.Ueno",
+        "JR-East.Utsunomiya.Ueno",
+        "JR-East.Yamanote.Ueno"
+      ]
+    },
+    "yagawa": {
+      "odpt": [
+        "JR-East.Nambu.Yagawa"
+      ]
+    },
+    "toyoda": {
+      "odpt": [
+        "JR-East.ChuoRapid.Toyoda",
+        "JR-East.MusashinoKunitachiBranch.Toyoda"
+      ]
+    },
+    "tokai": {
+      "odpt": [
+        "JR-East.Joban.Tokai"
+      ]
+    },
+    "yawatajuku": {
+      "odpt": [
+        "JR-East.Uchibo.Yawatajuku"
+      ]
+    },
+    "sagamihara": {
+      "odpt": [
+        "JR-East.Yokohama.Sagamihara"
+      ]
+    },
+    "gion": {
+      "odpt": [
+        "JR-East.Kururi.Gion"
+      ]
+    },
+    "tabata": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Tabata",
+        "JR-East.Yamanote.Tabata"
+      ]
+    },
+    "kamoi": {
+      "odpt": [
+        "JR-East.Yokohama.Kamoi"
+      ]
+    },
+    "asano": {
+      "odpt": [
+        "JR-East.Tsurumi.Asano",
+        "JR-East.TsurumiUmiShibauraBranch.Asano"
+      ]
+    },
+    "takadanobaba": {
+      "odpt": [
+        "JR-East.Yamanote.Takadanobaba"
+      ]
+    },
+    "nishitachikawa": {
+      "odpt": [
+        "JR-East.Ome.NishiTachikawa"
+      ]
+    },
+    "hirai": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Hirai"
+      ]
+    },
+    "yono": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Yono"
+      ]
+    },
+    "inada": {
+      "odpt": [
+        "JR-East.Mito.Inada"
+      ]
+    },
+    "yugawara": {
+      "odpt": [
+        "JR-East.Tokaido.Yugawara"
+      ]
+    },
+    "iioka": {
+      "odpt": [
+        "JR-East.Sobu.Iioka"
+      ]
+    },
+    "ajiki": {
+      "odpt": [
+        "JR-East.NaritaAbikoBranch.Ajiki"
+      ]
+    },
+    "sano": {
+      "odpt": [
+        "JR-East.Ryomo.Sano"
+      ]
+    },
+    "mikado": {
+      "odpt": [
+        "JR-East.Sotobo.Mikado"
+      ]
+    },
+    "fujisawa": {
+      "odpt": [
+        "JR-East.OsakiBranch.Fujisawa",
+        "JR-East.Tokaido.Fujisawa",
+        "JR-East.TokaidoFreight.Fujisawa"
+      ]
+    },
+    "toyoshina": {
+      "odpt": [
+        "JR-East.Oito.Toyoshina"
+      ]
+    },
+    "jichimedicaluniv": {
+      "odpt": [
+        "JR-East.Utsunomiya.Jichiidai"
+      ]
+    },
+    "honchiba": {
+      "odpt": [
+        "JR-East.Sotobo.HonChiba",
+        "JR-East.Uchibo.HonChiba"
+      ]
+    },
+    "isohara": {
+      "odpt": [
+        "JR-East.Joban.Isohara"
+      ]
+    },
+    "konandai": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.Konandai"
+      ]
+    },
+    "torisawa": {
+      "odpt": [
+        "JR-East.Chuo.Torisawa"
+      ]
+    },
+    "kasairinkaipark": {
+      "odpt": [
+        "JR-East.Keiyo.Kasairinkaikoen",
+        "JR-East.KeiyoFutamataBranch.Kasairinkaikoen"
+      ]
+    },
+    "suzumenomiya": {
+      "odpt": [
+        "JR-East.Utsunomiya.Suzumenomiya"
+      ]
+    },
+    "hamura": {
+      "odpt": [
+        "JR-East.Ome.Hamura"
+      ]
+    },
+    "kairakuen": {
+      "odpt": [
+        "JR-East.Joban.Kairakuen"
+      ]
+    },
+    "higashichiba": {
+      "odpt": [
+        "JR-East.Sobu.HigashiChiba"
+      ]
+    },
+    "kobuchizawa": {
+      "odpt": [
+        "JR-East.Chuo.Kobuchizawa"
+      ]
+    },
+    "kurami": {
+      "odpt": [
+        "JR-East.Sagami.Kurami"
+      ]
+    },
+    "hakonegasaki": {
+      "odpt": [
+        "JR-East.Hachiko.Hakonegasaki"
+      ]
+    },
+    "yamamae": {
+      "odpt": [
+        "JR-East.Ryomo.Yamamae"
+      ]
+    },
+    "ueda": {
+      "odpt": [
+        "JR-East.Joban.Ueda"
+      ]
+    },
+    "otsuka": {
+      "odpt": [
+        "JR-East.Yamanote.Otsuka"
+      ]
+    },
+    "higashikanagawa": {
+      "odpt": [
+        "JR-East.KeihinTohokuNegishi.HigashiKanagawa",
+        "JR-East.Yokohama.HigashiKanagawa"
+      ]
+    },
+    "yorii": {
+      "odpt": [
+        "JR-East.Hachiko.Yorii"
+      ]
+    },
+    "ajiro": {
+      "odpt": [
+        "JR-East.Ito.Ajiro"
+      ]
+    },
+    "shinonoi": {
+      "odpt": [
+        "JR-East.ShinetsuNagano.Shinonoi",
+        "JR-East.Shinonoi.Shinonoi"
+      ]
+    },
+    "yanokuchi": {
+      "odpt": [
+        "JR-East.Nambu.Yanokuchi"
+      ]
+    },
+    "futaba": {
+      "odpt": [
+        "JR-East.Joban.Futaba"
+      ]
+    },
+    "nakagami": {
+      "odpt": [
+        "JR-East.Ome.Nakagami"
+      ]
+    },
+    "uchihara": {
+      "odpt": [
+        "JR-East.Joban.Uchihara"
+      ]
+    },
+    "moro": {
+      "odpt": [
+        "JR-East.Hachiko.Moro"
+      ]
+    },
+    "monoi": {
+      "odpt": [
+        "JR-East.Sobu.Monoi",
+        "JR-East.SobuRapid.Monoi"
+      ]
+    },
+    "ryogoku": {
+      "odpt": [
+        "JR-East.ChuoSobuLocal.Ryogoku"
+      ]
+    },
+    "fuchinobe": {
+      "odpt": [
+        "JR-East.Yokohama.Fuchinobe"
+      ]
+    },
+    "shinshibaura": {
+      "odpt": [
+        "JR-East.TsurumiUmiShibauraBranch.ShinShibaura"
+      ]
+    },
+    "bakurocho": {
+      "odpt": [
+        "JR-East.SobuRapid.Bakurocho"
+      ]
+    },
+    "fubasami": {
+      "odpt": [
+        "JR-East.Nikko.Fubasami"
+      ]
+    }
+  }
+}

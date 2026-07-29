@@ -2,7 +2,7 @@
   import { loadNetwork, destinationsFrom } from './lib/data.js';
   import { fareOf } from './lib/fare.js';
   import { candidateRoutes, operatorsFor, priceRoutes, rankRoutes } from './lib/route.js';
-  import { LABELS, stationName, stationSub } from './lib/i18n.js';
+  import { LABELS, facet, stationName, stationSub } from './lib/i18n.js';
   import FareMap from './lib/FareMap.svelte';
   import Panel from './lib/Panel.svelte';
   import Legend from './lib/Legend.svelte';
@@ -26,8 +26,6 @@
   let originMember = $state(0);
   let detailMember = $state(0);
 
-  // The picked station of a complex, or the node itself when it isn't one.
-  const facet = (idx, m) => stations[idx].members?.[m] ?? stations[idx];
   let network = $state(null);
   let detailPricing = $state(null);
 
@@ -135,6 +133,7 @@
   <FareMap
     {stations}
     {rows}
+    {range}
     {origin}
     {selected}
     hovered={hoverDest}
@@ -170,12 +169,10 @@
     <StationDetails
       {t}
       {lang}
-      {fareMode}
-      {passenger}
       {activeOperator}
-      stationName={stationName(facet(detailTarget, detailMember), lang)}
-      stationSub={stationSub(facet(detailTarget, detailMember), lang)}
-      originName={origin === null ? null : stationName(facet(origin, originMember), lang)}
+      stationName={stationName(facet(stations, detailTarget, detailMember), lang)}
+      stationSub={stationSub(facet(stations, detailTarget, detailMember), lang)}
+      originName={stationName(facet(stations, origin, originMember), lang)}
       isOrigin={detailTarget === origin}
       lines={detailLines}
       lineMeta={meta.lines}

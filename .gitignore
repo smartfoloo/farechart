@@ -2,5 +2,3 @@ node_modules
 dist
 public/data
 .DS_Store
-data/jr-east
-scripts/jr-east

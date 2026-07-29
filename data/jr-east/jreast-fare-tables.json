@@ -1,0 +1,396 @@
+{
+  "kansen": [
+    {
+      "from_km": 1,
+      "to_km": 3,
+      "ic": 155,
+      "ticket": 160
+    },
+    {
+      "from_km": 4,
+      "to_km": 6,
+      "ic": 199,
+      "ticket": 200
+    },
+    {
+      "from_km": 7,
+      "to_km": 10,
+      "ic": 209,
+      "ticket": 210
+    },
+    {
+      "from_km": 11,
+      "to_km": 15,
+      "ic": 253,
+      "ticket": 260
+    },
+    {
+      "from_km": 16,
+      "to_km": 20,
+      "ic": 341,
+      "ticket": 350
+    },
+    {
+      "from_km": 21,
+      "to_km": 25,
+      "ic": 440,
+      "ticket": 440
+    },
+    {
+      "from_km": 26,
+      "to_km": 30,
+      "ic": 528,
+      "ticket": 530
+    },
+    {
+      "from_km": 31,
+      "to_km": 35,
+      "ic": 616,
+      "ticket": 620
+    },
+    {
+      "from_km": 36,
+      "to_km": 40,
+      "ic": 715,
+      "ticket": 720
+    },
+    {
+      "from_km": 41,
+      "to_km": 45,
+      "ic": 803,
+      "ticket": 810
+    },
+    {
+      "from_km": 46,
+      "to_km": 50,
+      "ic": 902,
+      "ticket": 910
+    },
+    {
+      "from_km": 51,
+      "to_km": 60,
+      "ic": 1034,
+      "ticket": 1040
+    },
+    {
+      "from_km": 61,
+      "to_km": 70,
+      "ic": 1221,
+      "ticket": 1230
+    },
+    {
+      "from_km": 71,
+      "to_km": 80,
+      "ic": 1408,
+      "ticket": 1410
+    },
+    {
+      "from_km": 81,
+      "to_km": 90,
+      "ic": 1595,
+      "ticket": 1600
+    },
+    {
+      "from_km": 91,
+      "to_km": 100,
+      "ic": 1782,
+      "ticket": 1790
+    },
+    {
+      "from_km": 101,
+      "to_km": 120,
+      "ic": 2090,
+      "ticket": 2090
+    },
+    {
+      "from_km": 121,
+      "to_km": 140,
+      "ic": 2420,
+      "ticket": 2420
+    },
+    {
+      "from_km": 141,
+      "to_km": 160,
+      "ic": 2750,
+      "ticket": 2750
+    },
+    {
+      "from_km": 161,
+      "to_km": 180,
+      "ic": 3190,
+      "ticket": 3190
+    },
+    {
+      "from_km": 181,
+      "to_km": 200,
+      "ic": 3520,
+      "ticket": 3520
+    },
+    {
+      "from_km": 201,
+      "to_km": 220,
+      "ic": 3850,
+      "ticket": 3850
+    },
+    {
+      "from_km": 221,
+      "to_km": 240,
+      "ic": 4180,
+      "ticket": 4180
+    },
+    {
+      "from_km": 241,
+      "to_km": 260,
+      "ic": 4620,
+      "ticket": 4620
+    },
+    {
+      "from_km": 261,
+      "to_km": 280,
+      "ic": 5060,
+      "ticket": 5060
+    },
+    {
+      "from_km": 281,
+      "to_km": 300,
+      "ic": 5390,
+      "ticket": 5390
+    },
+    {
+      "from_km": 301,
+      "to_km": 320,
+      "ic": 5720,
+      "ticket": 5720
+    },
+    {
+      "from_km": 321,
+      "to_km": 340,
+      "ic": 5940,
+      "ticket": 5940
+    },
+    {
+      "from_km": 341,
+      "to_km": 360,
+      "ic": 6270,
+      "ticket": 6270
+    },
+    {
+      "from_km": 361,
+      "to_km": 380,
+      "ic": 6600,
+      "ticket": 6600
+    },
+    {
+      "from_km": 381,
+      "to_km": 400,
+      "ic": 6930,
+      "ticket": 6930
+    },
+    {
+      "from_km": 401,
+      "to_km": 420,
+      "ic": 7260,
+      "ticket": 7260
+    },
+    {
+      "from_km": 421,
+      "to_km": 440,
+      "ic": 7480,
+      "ticket": 7480
+    },
+    {
+      "from_km": 441,
+      "to_km": 460,
+      "ic": 7810,
+      "ticket": 7810
+    },
+    {
+      "from_km": 461,
+      "to_km": 480,
+      "ic": 8030,
+      "ticket": 8030
+    },
+    {
+      "from_km": 481,
+      "to_km": 500,
+      "ic": 8360,
+      "ticket": 8360
+    },
+    {
+      "from_km": 501,
+      "to_km": 520,
+      "ic": 8690,
+      "ticket": 8690
+    },
+    {
+      "from_km": 521,
+      "to_km": 540,
+      "ic": 9020,
+      "ticket": 9020
+    },
+    {
+      "from_km": 541,
+      "to_km": 560,
+      "ic": 9350,
+      "ticket": 9350
+    },
+    {
+      "from_km": 561,
+      "to_km": 580,
+      "ic": 9570,
+      "ticket": 9570
+    },
+    {
+      "from_km": 581,
+      "to_km": 600,
+      "ic": 9900,
+      "ticket": 9900
+    },
+    {
+      "from_km": 601,
+      "to_km": 640,
+      "ic": 10230,
+      "ticket": 10230
+    }
+  ],
+  "chihou_kotsusen": [
+    {
+      "from_km": 1,
+      "to_km": 3,
+      "ic": 155,
+      "ticket": 160
+    },
+    {
+      "from_km": 4,
+      "to_km": 6,
+      "ic": 199,
+      "ticket": 200
+    },
+    {
+      "from_km": 7,
+      "to_km": 10,
+      "ic": null,
+      "ticket": 220
+    },
+    {
+      "from_km": 11,
+      "to_km": 15,
+      "ic": 253,
+      "ticket": 260
+    },
+    {
+      "from_km": 16,
+      "to_km": 20,
+      "ic": 341,
+      "ticket": 350
+    },
+    {
+      "from_km": 21,
+      "to_km": 23,
+      "ic": 440,
+      "ticket": 440
+    },
+    {
+      "from_km": 24,
+      "to_km": 28,
+      "ic": 528,
+      "ticket": 530
+    },
+    {
+      "from_km": 29,
+      "to_km": 32,
+      "ic": 616,
+      "ticket": 620
+    },
+    {
+      "from_km": 33,
+      "to_km": 37,
+      "ic": 715,
+      "ticket": 720
+    },
+    {
+      "from_km": 38,
+      "to_km": 41,
+      "ic": 803,
+      "ticket": 810
+    },
+    {
+      "from_km": 42,
+      "to_km": 46,
+      "ic": 902,
+      "ticket": 910
+    },
+    {
+      "from_km": 47,
+      "to_km": 55,
+      "ic": 1034,
+      "ticket": 1040
+    },
+    {
+      "from_km": 56,
+      "to_km": 64,
+      "ic": 1221,
+      "ticket": 1230
+    },
+    {
+      "from_km": 65,
+      "to_km": 73,
+      "ic": 1408,
+      "ticket": 1410
+    },
+    {
+      "from_km": 74,
+      "to_km": 82,
+      "ic": 1595,
+      "ticket": 1600
+    },
+    {
+      "from_km": 83,
+      "to_km": 91,
+      "ic": 1782,
+      "ticket": 1790
+    },
+    {
+      "from_km": 92,
+      "to_km": 100,
+      "ic": null,
+      "ticket": 1980
+    },
+    {
+      "from_km": 101,
+      "to_km": 110,
+      "ic": 2090,
+      "ticket": 2090
+    },
+    {
+      "from_km": 111,
+      "to_km": 128,
+      "ic": 2420,
+      "ticket": 2420
+    },
+    {
+      "from_km": 129,
+      "to_km": 146,
+      "ic": 2750,
+      "ticket": 2750
+    },
+    {
+      "from_km": 147,
+      "to_km": 164,
+      "ic": 3190,
+      "ticket": 3190
+    },
+    {
+      "from_km": 165,
+      "to_km": 182,
+      "ic": 3520,
+      "ticket": 3520
+    },
+    {
+      "from_km": 183,
+      "to_km": 200,
+      "ic": 3850,
+      "ticket": 3850
+    }
+  ]
+}

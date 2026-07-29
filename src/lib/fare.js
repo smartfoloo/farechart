@@ -4,18 +4,19 @@ export const ACCENT = '#3182CE';
 const HUE_MIN = 0;
 const HUE_MAX = 145;
 
+// t runs 0 (cheapest) to 1 (dearest).
+const ramp = (t) => `hsl(${(HUE_MAX - (HUE_MAX - HUE_MIN) * t).toFixed(0)} 66% 43%)`;
+
 export function fareColor(fare, min, max) {
-  if (max <= min) return `hsl(${HUE_MAX} 66% 43%)`;
-  const t = Math.max(0, Math.min(1, (fare - min) / (max - min)));
-  return `hsl(${(HUE_MAX - (HUE_MAX - HUE_MIN) * t).toFixed(0)} 66% 43%)`;
+  if (max <= min) return ramp(0);
+  return ramp(Math.max(0, Math.min(1, (fare - min) / (max - min))));
 }
 
-export function fareGradient(stops = 6) {
+const GRADIENT_STOPS = 6;
+
+export function fareGradient() {
   const parts = [];
-  for (let i = 0; i < stops; i++) {
-    const t = i / (stops - 1);
-    parts.push(`hsl(${(HUE_MAX - (HUE_MAX - HUE_MIN) * t).toFixed(0)} 66% 43%)`);
-  }
+  for (let i = 0; i < GRADIENT_STOPS; i++) parts.push(ramp(i / (GRADIENT_STOPS - 1)));
   return `linear-gradient(90deg, ${parts.join(', ')})`;
 }
 

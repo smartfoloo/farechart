@@ -1,0 +1,9082 @@
+{
+  "stations": {
+    "shinsugita": {
+      "ja": "新杉田",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "minamifunabashi": {
+      "ja": "南船橋",
+      "suica": true
+    },
+    "nikko": {
+      "ja": "日光",
+      "suica": true
+    },
+    "yagihara": {
+      "ja": "八木原",
+      "suica": true
+    },
+    "nishinippori": {
+      "ja": "西日暮里",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "honda": {
+      "ja": "誉田",
+      "suica": true
+    },
+    "akihabara": {
+      "ja": "秋葉原",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "akashina": {
+      "ja": "明科",
+      "suica": true
+    },
+    "hatsukari": {
+      "ja": "初狩",
+      "suica": true
+    },
+    "nagano": {
+      "ja": "長野",
+      "suica": true
+    },
+    "higashitokorozawa": {
+      "ja": "東所沢",
+      "suica": true
+    },
+    "odasakae": {
+      "ja": "小田栄",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "sendagaya": {
+      "ja": "千駄ケ谷",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "warabi": {
+      "ja": "蕨",
+      "suica": true
+    },
+    "sawa": {
+      "ja": "佐和",
+      "suica": true
+    },
+    "wadaura": {
+      "ja": "和田浦",
+      "suica": true
+    },
+    "hotaka": {
+      "ja": "穂高",
+      "suica": true
+    },
+    "hijirikogen": {
+      "ja": "聖高原",
+      "suica": true
+    },
+    "mikawashima": {
+      "ja": "三河島",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "suigo": {
+      "ja": "水郷",
+      "suica": true
+    },
+    "sashiogi": {
+      "ja": "指扇",
+      "suica": true
+    },
+    "higashikiyokawa": {
+      "ja": "東清川",
+      "suica": false
+    },
+    "shiozaki": {
+      "ja": "塩崎",
+      "suica": true
+    },
+    "namegawaisland": {
+      "ja": "行川アイランド",
+      "suica": true
+    },
+    "oji": {
+      "ja": "王子",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "fukuhara": {
+      "ja": "福原",
+      "suica": true
+    },
+    "nishihachioji": {
+      "ja": "西八王子",
+      "suica": true
+    },
+    "shikishima": {
+      "ja": "敷島",
+      "suica": true
+    },
+    "higashiabiko": {
+      "ja": "東我孫子",
+      "suica": true
+    },
+    "kashimada": {
+      "ja": "鹿島田",
+      "suica": true
+    },
+    "yotsukaido": {
+      "ja": "四街道",
+      "suica": true
+    },
+    "sobudaishita": {
+      "ja": "相武台下",
+      "suica": true
+    },
+    "enokido": {
+      "ja": "榎戸",
+      "suica": true
+    },
+    "harataima": {
+      "ja": "原当麻",
+      "suica": true
+    },
+    "anegasaki": {
+      "ja": "姉ケ崎",
+      "suica": true
+    },
+    "higashihano": {
+      "ja": "東飯能",
+      "suica": true
+    },
+    "haguro": {
+      "ja": "羽黒",
+      "suica": true
+    },
+    "iwai": {
+      "ja": "岩井",
+      "suica": true
+    },
+    "nirasaki": {
+      "ja": "韮崎",
+      "suica": true
+    },
+    "yokokawa": {
+      "ja": "横川",
+      "suica": true
+    },
+    "omata": {
+      "ja": "小俣",
+      "suica": true
+    },
+    "kaminakazato": {
+      "ja": "上中里",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "ichikawashiohama": {
+      "ja": "市川塩浜",
+      "suica": true
+    },
+    "hota": {
+      "ja": "保田",
+      "suica": true
+    },
+    "shimosatoyosato": {
+      "ja": "下総豊里",
+      "suica": true
+    },
+    "hirooka": {
+      "ja": "広丘",
+      "suica": true
+    },
+    "nakofunakata": {
+      "ja": "那古船形",
+      "suica": true
+    },
+    "kururi": {
+      "ja": "久留里",
+      "suica": false
+    },
+    "kanda": {
+      "ja": "神田",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "katakura": {
+      "ja": "片倉",
+      "suica": true
+    },
+    "kofu": {
+      "ja": "甲府",
+      "suica": true
+    },
+    "iidabashi": {
+      "ja": "飯田橋",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "nishioi": {
+      "ja": "西大井",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kodama": {
+      "ja": "児玉",
+      "suica": true
+    },
+    "kameari": {
+      "ja": "亀有",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "iwaki": {
+      "ja": "いわき",
+      "suica": true
+    },
+    "mukaigawara": {
+      "ja": "向河原",
+      "suica": true
+    },
+    "isogo": {
+      "ja": "磯子",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "takasakitonyacho": {
+      "ja": "高崎問屋町",
+      "suica": true
+    },
+    "hitoichiba": {
+      "ja": "一日市場",
+      "suica": true
+    },
+    "fusa": {
+      "ja": "布佐",
+      "suica": true
+    },
+    "iwafune": {
+      "ja": "岩舟",
+      "suica": true
+    },
+    "suzurannosato": {
+      "ja": "すずらんの里",
+      "suica": true
+    },
+    "negishi-negishi": {
+      "ja": "根岸",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "yokosuka": {
+      "ja": "横須賀",
+      "suica": true
+    },
+    "kamimizo": {
+      "ja": "上溝",
+      "suica": true
+    },
+    "inage": {
+      "ja": "稲毛",
+      "suica": true
+    },
+    "minamihashimoto": {
+      "ja": "南橋本",
+      "suica": true
+    },
+    "ishioka": {
+      "ja": "石岡",
+      "suica": true
+    },
+    "shimodate": {
+      "ja": "下館",
+      "suica": true
+    },
+    "hoshakuji": {
+      "ja": "宝積寺",
+      "suica": true
+    },
+    "makuharitoyosuna": {
+      "ja": "幕張豊砂",
+      "suica": true
+    },
+    "shiishiba": {
+      "ja": "椎柴",
+      "suica": true
+    },
+    "ogane": {
+      "ja": "大金",
+      "suica": false
+    },
+    "shiotsu": {
+      "ja": "四方津",
+      "suica": true
+    },
+    "yachimata": {
+      "ja": "八街",
+      "suica": true
+    },
+    "kokubunji": {
+      "ja": "国分寺",
+      "suica": true
+    },
+    "haneo": {
+      "ja": "羽根尾",
+      "suica": false
+    },
+    "miyanohira": {
+      "ja": "宮ノ平",
+      "suica": true
+    },
+    "fukutawara": {
+      "ja": "福俵",
+      "suica": true
+    },
+    "akatsuka": {
+      "ja": "赤塚",
+      "suica": true
+    },
+    "karasuyama": {
+      "ja": "烏山",
+      "suica": false
+    },
+    "haijima": {
+      "ja": "拝島",
+      "suica": true
+    },
+    "yabe": {
+      "ja": "矢部",
+      "suica": true
+    },
+    "isobe": {
+      "ja": "磯部",
+      "suica": true
+    },
+    "minamikashiwa": {
+      "ja": "南柏",
+      "suica": true
+    },
+    "tachikawa": {
+      "ja": "立川",
+      "suica": true
+    },
+    "showa": {
+      "ja": "昭和",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "komiya": {
+      "ja": "小宮",
+      "suica": true
+    },
+    "hatori": {
+      "ja": "羽鳥",
+      "suica": true
+    },
+    "abiko": {
+      "ja": "我孫子",
+      "suica": true
+    },
+    "sugamo": {
+      "ja": "巣鴨",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "chigasaki": {
+      "ja": "茅ケ崎",
+      "suica": true
+    },
+    "shimotsukehanaoka": {
+      "ja": "下野花岡",
+      "suica": false
+    },
+    "chikura": {
+      "ja": "千倉",
+      "suica": true
+    },
+    "kikuna": {
+      "ja": "菊名",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "mobara": {
+      "ja": "茂原",
+      "suica": true
+    },
+    "higashiakiru": {
+      "ja": "東秋留",
+      "suica": true
+    },
+    "odawara": {
+      "ja": "小田原",
+      "suica": true
+    },
+    "shishido": {
+      "ja": "宍戸",
+      "suica": true
+    },
+    "akigawa": {
+      "ja": "秋川",
+      "suica": true
+    },
+    "nishichiba": {
+      "ja": "西千葉",
+      "suica": true
+    },
+    "futomi": {
+      "ja": "太海",
+      "suica": true
+    },
+    "onogami": {
+      "ja": "小野上",
+      "suica": false
+    },
+    "funabashihoden": {
+      "ja": "船橋法典",
+      "suica": true
+    },
+    "asahi": {
+      "ja": "旭",
+      "suica": true
+    },
+    "inagekaigan": {
+      "ja": "稲毛海岸",
+      "suica": true
+    },
+    "jinbohara": {
+      "ja": "神保原",
+      "suica": true
+    },
+    "onjuku": {
+      "ja": "御宿",
+      "suica": true
+    },
+    "minakami": {
+      "ja": "水上",
+      "suica": true
+    },
+    "kumagawa": {
+      "ja": "熊川",
+      "suica": true
+    },
+    "kemigawahama": {
+      "ja": "検見川浜",
+      "suica": true
+    },
+    "taki": {
+      "ja": "滝",
+      "suica": false
+    },
+    "otsuki": {
+      "ja": "大月",
+      "suica": true
+    },
+    "onuki": {
+      "ja": "大貫",
+      "suica": true
+    },
+    "kichijoji": {
+      "ja": "吉祥寺",
+      "suica": true
+    },
+    "hino": {
+      "ja": "日野",
+      "suica": true
+    },
+    "nogi": {
+      "ja": "野木",
+      "suica": true
+    },
+    "shitte": {
+      "ja": "尻手",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "kannai": {
+      "ja": "関内",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "kurihama": {
+      "ja": "久里浜",
+      "suica": true
+    },
+    "gobara": {
+      "ja": "郷原",
+      "suica": false
+    },
+    "hinatawada": {
+      "ja": "日向和田",
+      "suica": true
+    },
+    "soga": {
+      "ja": "蘇我",
+      "suica": true
+    },
+    "tsujido": {
+      "ja": "辻堂",
+      "suica": true
+    },
+    "yuki": {
+      "ja": "結城",
+      "suica": true
+    },
+    "mamada": {
+      "ja": "間々田",
+      "suica": true
+    },
+    "noborito": {
+      "ja": "登戸",
+      "suica": true
+    },
+    "taito": {
+      "ja": "太東",
+      "suica": true
+    },
+    "hirayama": {
+      "ja": "平山",
+      "suica": false
+    },
+    "tokaichiba": {
+      "ja": "十日市場",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "shinurayasu": {
+      "ja": "新浦安",
+      "suica": true
+    },
+    "ushiku": {
+      "ja": "牛久",
+      "suica": true
+    },
+    "hirata": {
+      "ja": "平田",
+      "suica": true
+    },
+    "yurakucho": {
+      "ja": "有楽町",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "gunmasosya": {
+      "ja": "群馬総社",
+      "suica": true
+    },
+    "higashimatsudo": {
+      "ja": "東松戸",
+      "suica": true
+    },
+    "iwamoto": {
+      "ja": "岩本",
+      "suica": true
+    },
+    "kamata": {
+      "ja": "蒲田",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "otsuko": {
+      "ja": "大津港",
+      "suica": true
+    },
+    "tamachi": {
+      "ja": "田町",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kodu": {
+      "ja": "国府津",
+      "suica": true
+    },
+    "niita": {
+      "ja": "仁井田",
+      "suica": false
+    },
+    "ochanomizu": {
+      "ja": "御茶ノ水",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kaneko": {
+      "ja": "金子",
+      "suica": true
+    },
+    "matsuo": {
+      "ja": "松尾",
+      "suica": true
+    },
+    "nishinasuno": {
+      "ja": "西那須野",
+      "suica": true
+    },
+    "shinmisato": {
+      "ja": "新三郷",
+      "suica": true
+    },
+    "aohori": {
+      "ja": "青堀",
+      "suica": true
+    },
+    "kanamachi": {
+      "ja": "金町",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "toda-saikyo": {
+      "ja": "戸田",
+      "suica": true
+    },
+    "kazusakameyama": {
+      "ja": "上総亀山",
+      "suica": false
+    },
+    "gunmaotsu": {
+      "ja": "群馬大津",
+      "suica": false
+    },
+    "hitachi": {
+      "ja": "日立",
+      "suica": true
+    },
+    "narita-airport-t1": {
+      "ja": "成田空港",
+      "suica": true
+    },
+    "suetsugi": {
+      "ja": "末続",
+      "suica": true
+    },
+    "tazawa": {
+      "ja": "田沢",
+      "suica": true
+    },
+    "shinyokohama": {
+      "ja": "新横浜",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "namihana": {
+      "ja": "浪花",
+      "suica": true
+    },
+    "nishijo": {
+      "ja": "西条",
+      "suica": true
+    },
+    "kamakura": {
+      "ja": "鎌倉",
+      "suica": true
+    },
+    "komagawa": {
+      "ja": "高麗川",
+      "suica": true
+    },
+    "yoshikawa": {
+      "ja": "吉川",
+      "suica": true
+    },
+    "kunitachi": {
+      "ja": "国立",
+      "suica": true
+    },
+    "mitake": {
+      "ja": "御嶽",
+      "suica": true
+    },
+    "torami": {
+      "ja": "東浪見",
+      "suica": true
+    },
+    "nishiurawa": {
+      "ja": "西浦和",
+      "suica": true
+    },
+    "sagamiko": {
+      "ja": "相模湖",
+      "suica": true
+    },
+    "minamikoshigaya": {
+      "ja": "南越谷",
+      "suica": true
+    },
+    "anzen": {
+      "ja": "安善",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "kanashima": {
+      "ja": "金島",
+      "suica": false
+    },
+    "kaiyamato": {
+      "ja": "甲斐大和",
+      "suica": true
+    },
+    "yokohama": {
+      "ja": "横浜",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "mejiro": {
+      "ja": "目白",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "honno": {
+      "ja": "本納",
+      "suica": true
+    },
+    "numata": {
+      "ja": "沼田",
+      "suica": true
+    },
+    "hachobori": {
+      "ja": "八丁堀",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "juo": {
+      "ja": "十王",
+      "suica": true
+    },
+    "tomiura": {
+      "ja": "富浦",
+      "suica": true
+    },
+    "ino": {
+      "ja": "井野",
+      "suica": true
+    },
+    "matsudo": {
+      "ja": "松戸",
+      "suica": true
+    },
+    "ishigamimae": {
+      "ja": "石神前",
+      "suica": true
+    },
+    "kinshicho": {
+      "ja": "錦糸町",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "inadazutsumi": {
+      "ja": "稲田堤",
+      "suica": true
+    },
+    "tateyama": {
+      "ja": "館山",
+      "suica": true
+    },
+    "hachiojiminamino": {
+      "ja": "八王子みなみ野",
+      "suica": true
+    },
+    "yatsumi": {
+      "ja": "八積",
+      "suica": true
+    },
+    "kunisada": {
+      "ja": "国定",
+      "suica": true
+    },
+    "hitachinoushiku": {
+      "ja": "ひたち野うしく",
+      "suica": true
+    },
+    "iriya": {
+      "ja": "入谷",
+      "suica": true
+    },
+    "kawanakajima": {
+      "ja": "川中島",
+      "suica": true
+    },
+    "orihara": {
+      "ja": "折原",
+      "suica": true
+    },
+    "koshigayalaketown": {
+      "ja": "越谷レイクタウン",
+      "suica": true
+    },
+    "hodogaya": {
+      "ja": "保土ケ谷",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "kasama": {
+      "ja": "笠間",
+      "suica": true
+    },
+    "mabashi": {
+      "ja": "馬橋",
+      "suica": true
+    },
+    "hasuda": {
+      "ja": "蓮田",
+      "suica": true
+    },
+    "oyama": {
+      "ja": "小山",
+      "suica": true
+    },
+    "katsuta": {
+      "ja": "勝田",
+      "suica": true
+    },
+    "musashinakahara": {
+      "ja": "武蔵中原",
+      "suica": true
+    },
+    "oto": {
+      "ja": "大戸",
+      "suica": true
+    },
+    "junikyo": {
+      "ja": "十二橋",
+      "suica": true
+    },
+    "ogikubo": {
+      "ja": "荻窪",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "odabayashi": {
+      "ja": "小田林",
+      "suica": true
+    },
+    "higashikawaguchi": {
+      "ja": "東川口",
+      "suica": true
+    },
+    "kitakamakura": {
+      "ja": "北鎌倉",
+      "suica": true
+    },
+    "shinakitsu": {
+      "ja": "新秋津",
+      "suica": true
+    },
+    "hisanohama": {
+      "ja": "久ノ浜",
+      "suica": true
+    },
+    "atsugi": {
+      "ja": "厚木",
+      "suica": true
+    },
+    "kitachigasaki": {
+      "ja": "北茅ケ崎",
+      "suica": true
+    },
+    "iwajuku": {
+      "ja": "岩宿",
+      "suica": true
+    },
+    "minamiurawa": {
+      "ja": "南浦和",
+      "suica": true
+    },
+    "nisshin-kawagoe": {
+      "ja": "日進",
+      "suica": true
+    },
+    "shinkoiwa": {
+      "ja": "新小岩",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "yamate": {
+      "ja": "山手",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "naganoharakusatsuguchi": {
+      "ja": "長野原草津口",
+      "suica": false
+    },
+    "kawagoe": {
+      "ja": "川越",
+      "suica": true
+    },
+    "kazusaichinomiya": {
+      "ja": "上総一ノ宮",
+      "suica": true
+    },
+    "minamisenju": {
+      "ja": "南千住",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "ashikaga": {
+      "ja": "足利",
+      "suica": true
+    },
+    "matsuhisa": {
+      "ja": "松久",
+      "suica": true
+    },
+    "ubara": {
+      "ja": "鵜原",
+      "suica": true
+    },
+    "nishifu": {
+      "ja": "西府",
+      "suica": true
+    },
+    "yokoshiba": {
+      "ja": "横芝",
+      "suica": true
+    },
+    "musashimasuko": {
+      "ja": "武蔵増戸",
+      "suica": true
+    },
+    "shimousamanzaki": {
+      "ja": "下総松崎",
+      "suica": true
+    },
+    "kamimoku": {
+      "ja": "上牧",
+      "suica": true
+    },
+    "omika": {
+      "ja": "大甕",
+      "suica": true
+    },
+    "omae": {
+      "ja": "大前",
+      "suica": false
+    },
+    "higashiurawa": {
+      "ja": "東浦和",
+      "suica": true
+    },
+    "kitaageo": {
+      "ja": "北上尾",
+      "suica": true
+    },
+    "ishikawacho": {
+      "ja": "石川町",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "maebashioshima": {
+      "ja": "前橋大島",
+      "suica": true
+    },
+    "nozaki": {
+      "ja": "野崎",
+      "suica": true
+    },
+    "mitaka": {
+      "ja": "三鷹",
+      "suica": true
+    },
+    "musashihikida": {
+      "ja": "武蔵引田",
+      "suica": true
+    },
+    "kitamatsudo": {
+      "ja": "北松戸",
+      "suica": true
+    },
+    "higashinakagami": {
+      "ja": "東中神",
+      "suica": true
+    },
+    "shinyahashira": {
+      "ja": "新八柱",
+      "suica": true
+    },
+    "murai": {
+      "ja": "村井",
+      "suica": true
+    },
+    "kitamatsumoto": {
+      "ja": "北松本",
+      "suica": true
+    },
+    "isesaki": {
+      "ja": "伊勢崎",
+      "suica": true
+    },
+    "osaki": {
+      "ja": "大崎",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "takanawagateway": {
+      "ja": "高輪ゲートウェイ",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "koenji": {
+      "ja": "高円寺",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "tomobe": {
+      "ja": "友部",
+      "suica": true
+    },
+    "higata": {
+      "ja": "干潟",
+      "suica": true
+    },
+    "higashizushi": {
+      "ja": "東逗子",
+      "suica": true
+    },
+    "ogitsu": {
+      "ja": "小木津",
+      "suica": true
+    },
+    "kazusakiyokawa": {
+      "ja": "上総清川",
+      "suica": false
+    },
+    "gumyo": {
+      "ja": "求名",
+      "suica": true
+    },
+    "kobana": {
+      "ja": "小塙",
+      "suica": false
+    },
+    "maihama": {
+      "ja": "舞浜",
+      "suica": true
+    },
+    "nakoso": {
+      "ja": "勿来",
+      "suica": true
+    },
+    "musashikoganei": {
+      "ja": "武蔵小金井",
+      "suica": true
+    },
+    "shinkoyasu": {
+      "ja": "新子安",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "narita": {
+      "ja": "成田",
+      "suica": true
+    },
+    "shinanomachi": {
+      "ja": "信濃町",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "hachonawate": {
+      "ja": "八丁畷",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "shisui": {
+      "ja": "酒々井",
+      "suica": true
+    },
+    "awaamatsu": {
+      "ja": "安房天津",
+      "suica": true
+    },
+    "shimauchi": {
+      "ja": "島内",
+      "suica": true
+    },
+    "choshi": {
+      "ja": "銚子",
+      "suica": true
+    },
+    "makuta": {
+      "ja": "馬来田",
+      "suica": false
+    },
+    "chojamachi": {
+      "ja": "長者町",
+      "suica": true
+    },
+    "kori": {
+      "ja": "古里",
+      "suica": true
+    },
+    "kitahachioji": {
+      "ja": "北八王子",
+      "suica": true
+    },
+    "banda": {
+      "ja": "番田",
+      "suica": true
+    },
+    "gummayawata": {
+      "ja": "群馬八幡",
+      "suica": true
+    },
+    "yamanashishi": {
+      "ja": "山梨市",
+      "suica": true
+    },
+    "hakuyacho": {
+      "ja": "柏矢町",
+      "suica": true
+    },
+    "ome": {
+      "ja": "青梅",
+      "suica": true
+    },
+    "nishikawagoe": {
+      "ja": "西川越",
+      "suica": true
+    },
+    "kurahashi": {
+      "ja": "倉橋",
+      "suica": true
+    },
+    "shibuya": {
+      "ja": "渋谷",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "fukaya": {
+      "ja": "深谷",
+      "suica": true
+    },
+    "higashiyuki": {
+      "ja": "東結城",
+      "suica": true
+    },
+    "toro": {
+      "ja": "土呂",
+      "suica": true
+    },
+    "kuji": {
+      "ja": "久地",
+      "suica": true
+    },
+    "zushi": {
+      "ja": "逗子",
+      "suica": true
+    },
+    "miyayama": {
+      "ja": "宮山",
+      "suica": true
+    },
+    "koiwa": {
+      "ja": "小岩",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "toride": {
+      "ja": "取手",
+      "suica": true
+    },
+    "kamuriki": {
+      "ja": "冠着",
+      "suica": true
+    },
+    "nagasaka": {
+      "ja": "長坂",
+      "suica": true
+    },
+    "yonomori": {
+      "ja": "夜ノ森",
+      "suica": true
+    },
+    "hakuba": {
+      "ja": "白馬",
+      "suica": true
+    },
+    "sawai": {
+      "ja": "沢井",
+      "suica": true
+    },
+    "kanuma": {
+      "ja": "鹿沼",
+      "suica": true
+    },
+    "tsukuda": {
+      "ja": "津久田",
+      "suica": true
+    },
+    "kashimasoccerstadium": {
+      "ja": "鹿島サッカースタジアム",
+      "suica": true
+    },
+    "sasago": {
+      "ja": "笹子",
+      "suica": true
+    },
+    "ogimachi": {
+      "ja": "扇町",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "ohara": {
+      "ja": "大原",
+      "suica": true
+    },
+    "hazawayokohamakokudai": {
+      "ja": "羽沢横浜国大",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "fuchuhonmachi": {
+      "ja": "府中本町",
+      "suica": true
+    },
+    "kamisuwa": {
+      "ja": "上諏訪",
+      "suica": true
+    },
+    "utsunomiya": {
+      "ja": "宇都宮",
+      "suica": true
+    },
+    "funabashi": {
+      "ja": "船橋",
+      "suica": true
+    },
+    "higashiomiya": {
+      "ja": "東大宮",
+      "suica": true
+    },
+    "kashimajingu": {
+      "ja": "鹿島神宮",
+      "suica": true
+    },
+    "shinkawasaki": {
+      "ja": "新川崎",
+      "suica": true
+    },
+    "fussa": {
+      "ja": "福生",
+      "suica": true
+    },
+    "musashiitsukaichi": {
+      "ja": "武蔵五日市",
+      "suica": true
+    },
+    "nishiogikubo": {
+      "ja": "西荻窪",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "minamitoyoshina": {
+      "ja": "南豊科",
+      "suica": true
+    },
+    "hongodai": {
+      "ja": "本郷台",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "higashitotsuka": {
+      "ja": "東戸塚",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "ishibashi": {
+      "ja": "石橋",
+      "suica": true
+    },
+    "ayase": {
+      "ja": "綾瀬",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "myokaku": {
+      "ja": "明覚",
+      "suica": true
+    },
+    "shinshiraoka": {
+      "ja": "新白岡",
+      "suica": true
+    },
+    "higashiome": {
+      "ja": "東青梅",
+      "suica": true
+    },
+    "takahama": {
+      "ja": "高浜",
+      "suica": true
+    },
+    "yokaichiba": {
+      "ja": "八日市場",
+      "suica": true
+    },
+    "syake": {
+      "ja": "社家",
+      "suica": true
+    },
+    "tennoudai": {
+      "ja": "天王台",
+      "suica": true
+    },
+    "itako": {
+      "ja": "潮来",
+      "suica": true
+    },
+    "kawarayuonsen": {
+      "ja": "川原湯温泉",
+      "suica": false
+    },
+    "nobukata": {
+      "ja": "延方",
+      "suica": true
+    },
+    "hitachitaga": {
+      "ja": "常陸多賀",
+      "suica": true
+    },
+    "kimitsu": {
+      "ja": "君津",
+      "suica": true
+    },
+    "shimbashi": {
+      "ja": "新橋",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "honjo": {
+      "ja": "本庄",
+      "suica": true
+    },
+    "nagatsuda": {
+      "ja": "長津田",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "nishifunabashi": {
+      "ja": "西船橋",
+      "suica": true
+    },
+    "tochigi": {
+      "ja": "栃木",
+      "suica": true
+    },
+    "kazusamatsuoka": {
+      "ja": "上総松丘",
+      "suica": false
+    },
+    "saruda": {
+      "ja": "猿田",
+      "suica": true
+    },
+    "bubaigawara": {
+      "ja": "分倍河原",
+      "suica": true
+    },
+    "ageo": {
+      "ja": "上尾",
+      "suica": true
+    },
+    "shinokubo": {
+      "ja": "新大久保",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "omigawa": {
+      "ja": "小見川",
+      "suica": true
+    },
+    "kido": {
+      "ja": "木戸",
+      "suica": true
+    },
+    "annaka": {
+      "ja": "安中",
+      "suica": true
+    },
+    "katsunumabudoukyo": {
+      "ja": "勝沼ぶどう郷",
+      "suica": true
+    },
+    "asagaya": {
+      "ja": "阿佐ケ谷",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "izumi": {
+      "ja": "泉",
+      "suica": true
+    },
+    "omori": {
+      "ja": "大森",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "hamano": {
+      "ja": "浜野",
+      "suica": true
+    },
+    "nasushiobara": {
+      "ja": "那須塩原",
+      "suica": true
+    },
+    "tsuchiura": {
+      "ja": "土浦",
+      "suica": true
+    },
+    "gyoda": {
+      "ja": "行田",
+      "suica": true
+    },
+    "shimosatachibana": {
+      "ja": "下総橘",
+      "suica": true
+    },
+    "todakouen": {
+      "ja": "戸田公園",
+      "suica": true
+    },
+    "kioroshi": {
+      "ja": "木下",
+      "suica": true
+    },
+    "nishikawaguchi": {
+      "ja": "西川口",
+      "suica": true
+    },
+    "oiso": {
+      "ja": "大磯",
+      "suica": true
+    },
+    "kamonomiya": {
+      "ja": "鴨宮",
+      "suica": true
+    },
+    "kumagaya": {
+      "ja": "熊谷",
+      "suica": true
+    },
+    "okegawa": {
+      "ja": "桶川",
+      "suica": true
+    },
+    "kagawa": {
+      "ja": "香川",
+      "suica": true
+    },
+    "higashifunabashi": {
+      "ja": "東船橋",
+      "suica": true
+    },
+    "akishima": {
+      "ja": "昭島",
+      "suica": true
+    },
+    "enzan": {
+      "ja": "塩山",
+      "suica": true
+    },
+    "kaihinmakuhari": {
+      "ja": "海浜幕張",
+      "suica": true
+    },
+    "urawa": {
+      "ja": "浦和",
+      "suica": true
+    },
+    "shinnarashino": {
+      "ja": "新習志野",
+      "suica": true
+    },
+    "hashimoto-yokohama": {
+      "ja": "橋本",
+      "suica": true
+    },
+    "kitayono": {
+      "ja": "北与野",
+      "suica": true
+    },
+    "inariyama": {
+      "ja": "稲荷山",
+      "suica": true
+    },
+    "kabe": {
+      "ja": "河辺",
+      "suica": true
+    },
+    "nakagaya": {
+      "ja": "中萱",
+      "suica": true
+    },
+    "kohoku": {
+      "ja": "湖北",
+      "suica": true
+    },
+    "motoyawata": {
+      "ja": "本八幡",
+      "suica": true
+    },
+    "anayama": {
+      "ja": "穴山",
+      "suica": true
+    },
+    "okaya": {
+      "ja": "岡谷",
+      "suica": true
+    },
+    "shinanosakai": {
+      "ja": "信濃境",
+      "suica": true
+    },
+    "misato-musashino": {
+      "ja": "三郷",
+      "suica": true
+    },
+    "tsurumi": {
+      "ja": "鶴見",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "ito": {
+      "ja": "伊東",
+      "suica": true
+    },
+    "namegawa": {
+      "ja": "滑河",
+      "suica": true
+    },
+    "sasagawa": {
+      "ja": "笹川",
+      "suica": true
+    },
+    "minamihara": {
+      "ja": "南三原",
+      "suica": true
+    },
+    "obitsu": {
+      "ja": "小櫃",
+      "suica": false
+    },
+    "kiryu": {
+      "ja": "桐生",
+      "suica": true
+    },
+    "akabane": {
+      "ja": "赤羽",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "komagome": {
+      "ja": "駒込",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "sinmachi": {
+      "ja": "新町",
+      "suica": true
+    },
+    "higashikoganei": {
+      "ja": "東小金井",
+      "suica": true
+    },
+    "maebashi": {
+      "ja": "前橋",
+      "suica": true
+    },
+    "yamato": {
+      "ja": "大和",
+      "suica": true
+    },
+    "kokonoe": {
+      "ja": "九重",
+      "suica": true
+    },
+    "tsuga": {
+      "ja": "都賀",
+      "suica": true
+    },
+    "yaita": {
+      "ja": "矢板",
+      "suica": true
+    },
+    "chitose": {
+      "ja": "千歳",
+      "suica": true
+    },
+    "higashiwashinomiya": {
+      "ja": "東鷲宮",
+      "suica": true
+    },
+    "ogawamachi": {
+      "ja": "小川町",
+      "suica": true
+    },
+    "minamitama": {
+      "ja": "南多摩",
+      "suica": true
+    },
+    "shinmaebashi": {
+      "ja": "新前橋",
+      "suica": true
+    },
+    "samukawa": {
+      "ja": "寒川",
+      "suica": true
+    },
+    "ichikawa": {
+      "ja": "市川",
+      "suica": true
+    },
+    "chiba": {
+      "ja": "千葉",
+      "suica": true
+    },
+    "nishikokubunji": {
+      "ja": "西国分寺",
+      "suica": true
+    },
+    "nakano": {
+      "ja": "中野",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kandatsu": {
+      "ja": "神立",
+      "suica": true
+    },
+    "komagata": {
+      "ja": "駒形",
+      "suica": true
+    },
+    "sawara": {
+      "ja": "佐原",
+      "suica": true
+    },
+    "okamoto": {
+      "ja": "岡本",
+      "suica": true
+    },
+    "kitatakasaki": {
+      "ja": "北高崎",
+      "suica": true
+    },
+    "togane": {
+      "ja": "東金",
+      "suica": true
+    },
+    "kitamoto": {
+      "ja": "北本",
+      "suica": true
+    },
+    "midoriko": {
+      "ja": "みどり湖",
+      "suica": true
+    },
+    "yonohonmachi": {
+      "ja": "与野本町",
+      "suica": true
+    },
+    "tamado": {
+      "ja": "玉戸",
+      "suica": true
+    },
+    "obasute": {
+      "ja": "姨捨",
+      "suica": true
+    },
+    "shiojiri": {
+      "ja": "塩尻",
+      "suica": true
+    },
+    "ichigaya": {
+      "ja": "市ケ谷",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "toke": {
+      "ja": "土気",
+      "suica": true
+    },
+    "saitamashintoshin": {
+      "ja": "さいたま新都心",
+      "suica": true
+    },
+    "kobayashi-narita": {
+      "ja": "小林",
+      "suica": true
+    },
+    "koganei": {
+      "ja": "小金井",
+      "suica": true
+    },
+    "shimosonanakayama": {
+      "ja": "下総中山",
+      "suica": true
+    },
+    "sanukimachi": {
+      "ja": "佐貫町",
+      "suica": true
+    },
+    "kitafujioka": {
+      "ja": "北藤岡",
+      "suica": true
+    },
+    "hatonosu": {
+      "ja": "鳩ノ巣",
+      "suica": true
+    },
+    "kinomiya": {
+      "ja": "来宮",
+      "suica": true
+    },
+    "jvillage": {
+      "ja": "Ｊヴィレッジ",
+      "suica": true
+    },
+    "nakanojo": {
+      "ja": "中之条",
+      "suica": false
+    },
+    "ichishiro": {
+      "ja": "市城",
+      "suica": false
+    },
+    "ono": {
+      "ja": "大野",
+      "suica": true
+    },
+    "matoba": {
+      "ja": "的場",
+      "suica": true
+    },
+    "nagata": {
+      "ja": "永田",
+      "suica": true
+    },
+    "kuroiso": {
+      "ja": "黒磯",
+      "suica": true
+    },
+    "shinkodaira": {
+      "ja": "新小平",
+      "suica": true
+    },
+    "harajuku": {
+      "ja": "原宿",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "inaginaganuma": {
+      "ja": "稲城長沼",
+      "suica": true
+    },
+    "ogose": {
+      "ja": "越生",
+      "suica": true
+    },
+    "hayakawa": {
+      "ja": "早川",
+      "suica": true
+    },
+    "oku": {
+      "ja": "尾久",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "awakatsuyama": {
+      "ja": "安房勝山",
+      "suica": true
+    },
+    "hyuga": {
+      "ja": "日向",
+      "suica": true
+    },
+    "kitakonosu": {
+      "ja": "北鴻巣",
+      "suica": true
+    },
+    "ebina": {
+      "ja": "海老名",
+      "suica": true
+    },
+    "manzakazawaguchi": {
+      "ja": "万座・鹿沢口",
+      "suica": false
+    },
+    "oimachi": {
+      "ja": "大井町",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "koga": {
+      "ja": "古河",
+      "suica": true
+    },
+    "hirono": {
+      "ja": "広野",
+      "suica": true
+    },
+    "shimosakozaki": {
+      "ja": "下総神崎",
+      "suica": true
+    },
+    "fukiage": {
+      "ja": "吹上",
+      "suica": true
+    },
+    "meguro": {
+      "ja": "目黒",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "takao": {
+      "ja": "高尾",
+      "suica": true
+    },
+    "shiromaru": {
+      "ja": "白丸",
+      "suica": true
+    },
+    "kitakashiwa": {
+      "ja": "北柏",
+      "suica": true
+    },
+    "musashishinjo": {
+      "ja": "武蔵新城",
+      "suica": true
+    },
+    "yotsukura": {
+      "ja": "四ツ倉",
+      "suica": true
+    },
+    "kawasakishinmachi": {
+      "ja": "川崎新町",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "higashiyamanashi": {
+      "ja": "東山梨",
+      "suica": true
+    },
+    "katori": {
+      "ja": "香取",
+      "suica": true
+    },
+    "shimosuwa": {
+      "ja": "下諏訪",
+      "suica": true
+    },
+    "narita-airport-t2-t3": {
+      "ja": "空港第２ビル",
+      "suica": true
+    },
+    "okutama": {
+      "ja": "奥多摩",
+      "suica": true
+    },
+    "sakuragicho": {
+      "ja": "桜木町",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "musashikosugi": {
+      "ja": "武蔵小杉",
+      "suica": true
+    },
+    "kuzumi": {
+      "ja": "久住",
+      "suica": true
+    },
+    "onogamionsen": {
+      "ja": "小野上温泉",
+      "suica": false
+    },
+    "shinanoomachi": {
+      "ja": "信濃大町",
+      "suica": true
+    },
+    "naruse": {
+      "ja": "成瀬",
+      "suica": true
+    },
+    "musashiurawa": {
+      "ja": "武蔵浦和",
+      "suica": true
+    },
+    "okabe": {
+      "ja": "岡部",
+      "suica": true
+    },
+    "yoshikawaminami": {
+      "ja": "吉川美南",
+      "suica": true
+    },
+    "ryugasakishi": {
+      "ja": "龍ケ崎市",
+      "suica": true
+    },
+    "shinkemigawa": {
+      "ja": "新検見川",
+      "suica": true
+    },
+    "imaichi": {
+      "ja": "今市",
+      "suica": true
+    },
+    "iwase": {
+      "ja": "岩瀬",
+      "suica": true
+    },
+    "nakaurawa": {
+      "ja": "中浦和",
+      "suica": true
+    },
+    "sakakita": {
+      "ja": "坂北",
+      "suica": true
+    },
+    "ashikagaflowerpark": {
+      "ja": "あしかがフラワーパーク",
+      "suica": true
+    },
+    "iwane": {
+      "ja": "巌根",
+      "suica": true
+    },
+    "kitakogane": {
+      "ja": "北小金",
+      "suica": true
+    },
+    "takahagi": {
+      "ja": "高萩",
+      "suica": true
+    },
+    "kagohara": {
+      "ja": "籠原",
+      "suica": true
+    },
+    "iwashima": {
+      "ja": "岩島",
+      "suica": false
+    },
+    "bentenbashi": {
+      "ja": "弁天橋",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "takezawa": {
+      "ja": "竹沢",
+      "suica": true
+    },
+    "azusabashi": {
+      "ja": "梓橋",
+      "suica": true
+    },
+    "fujishiro": {
+      "ja": "藤代",
+      "suica": true
+    },
+    "aihara": {
+      "ja": "相原",
+      "suica": true
+    },
+    "kusano": {
+      "ja": "草野",
+      "suica": true
+    },
+    "tawarada": {
+      "ja": "俵田",
+      "suica": false
+    },
+    "musashishiraishi": {
+      "ja": "武蔵白石",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "fujimi": {
+      "ja": "富士見",
+      "suica": true
+    },
+    "musashitakahagi": {
+      "ja": "武蔵高萩",
+      "suica": true
+    },
+    "gotanda": {
+      "ja": "五反田",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "minamifuruya": {
+      "ja": "南古谷",
+      "suica": true
+    },
+    "shinjuku": {
+      "ja": "新宿",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "chino": {
+      "ja": "茅野",
+      "suica": true
+    },
+    "goi": {
+      "ja": "五井",
+      "suica": true
+    },
+    "namie": {
+      "ja": "浪江",
+      "suica": true
+    },
+    "umishibaura": {
+      "ja": "海芝浦",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "konoyama": {
+      "ja": "鴻野山",
+      "suica": false
+    },
+    "kitaakabane": {
+      "ja": "北赤羽",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "suidobashi": {
+      "ja": "水道橋",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kuragano": {
+      "ja": "倉賀野",
+      "suica": true
+    },
+    "imai": {
+      "ja": "今井",
+      "suica": true
+    },
+    "katsuura": {
+      "ja": "勝浦",
+      "suica": true
+    },
+    "yokodai": {
+      "ja": "洋光台",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "futamatao": {
+      "ja": "二俣尾",
+      "suica": true
+    },
+    "yumoto": {
+      "ja": "湯本",
+      "suica": true
+    },
+    "kamatori": {
+      "ja": "鎌取",
+      "suica": true
+    },
+    "shiraoka": {
+      "ja": "白岡",
+      "suica": true
+    },
+    "tsuruta": {
+      "ja": "鶴田",
+      "suica": true
+    },
+    "nakanoshima": {
+      "ja": "中野島",
+      "suica": true
+    },
+    "nishikunitachi": {
+      "ja": "西国立",
+      "suica": true
+    },
+    "makuhari": {
+      "ja": "幕張",
+      "suica": true
+    },
+    "kazusaminato": {
+      "ja": "上総湊",
+      "suica": true
+    },
+    "ninomiya": {
+      "ja": "二宮",
+      "suica": true
+    },
+    "shinagawa": {
+      "ja": "品川",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "matsumoto": {
+      "ja": "松本",
+      "suica": true
+    },
+    "shibukawa": {
+      "ja": "渋川",
+      "suica": true
+    },
+    "manaduru": {
+      "ja": "真鶴",
+      "suica": true
+    },
+    "takeoka": {
+      "ja": "竹岡",
+      "suica": true
+    },
+    "yokota": {
+      "ja": "横田",
+      "suica": false
+    },
+    "uenohara": {
+      "ja": "上野原",
+      "suica": true
+    },
+    "matsuida": {
+      "ja": "松井田",
+      "suica": true
+    },
+    "takasaki": {
+      "ja": "高崎",
+      "suica": true
+    },
+    "ikusabata": {
+      "ja": "軍畑",
+      "suica": true
+    },
+    "musashisakai": {
+      "ja": "武蔵境",
+      "suica": true
+    },
+    "jujo": {
+      "ja": "十条",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "ebisu": {
+      "ja": "恵比寿",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "araki": {
+      "ja": "新木",
+      "suica": true
+    },
+    "izutaga": {
+      "ja": "伊豆多賀",
+      "suica": true
+    },
+    "musashimizonokuchi": {
+      "ja": "武蔵溝ノ口",
+      "suica": true
+    },
+    "shinnihombashi": {
+      "ja": "新日本橋",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "ryuo": {
+      "ja": "竜王",
+      "suica": true
+    },
+    "machida": {
+      "ja": "町田",
+      "suica": true
+    },
+    "futamatashinmachi": {
+      "ja": "二俣新町",
+      "suica": true
+    },
+    "ushihama": {
+      "ja": "牛浜",
+      "suica": true
+    },
+    "sakura": {
+      "ja": "佐倉",
+      "suica": true
+    },
+    "shinkiba": {
+      "ja": "新木場",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "yanagawa": {
+      "ja": "梁川",
+      "suica": true
+    },
+    "atami": {
+      "ja": "熱海",
+      "suica": true
+    },
+    "kawai": {
+      "ja": "川井",
+      "suica": true
+    },
+    "oami": {
+      "ja": "大網",
+      "suica": true
+    },
+    "awakamogawa": {
+      "ja": "安房鴨川",
+      "suica": true
+    },
+    "nihari": {
+      "ja": "新治",
+      "suica": true
+    },
+    "omiya": {
+      "ja": "大宮",
+      "suica": true
+    },
+    "shinmatsudo": {
+      "ja": "新松戸",
+      "suica": true
+    },
+    "shimpu": {
+      "ja": "新府",
+      "suica": true
+    },
+    "kitatoda": {
+      "ja": "北戸田",
+      "suica": true
+    },
+    "nebukawa": {
+      "ja": "根府川",
+      "suica": true
+    },
+    "matsugishi": {
+      "ja": "松岸",
+      "suica": true
+    },
+    "kitaasaka": {
+      "ja": "北朝霞",
+      "suica": true
+    },
+    "kasahata": {
+      "ja": "笠幡",
+      "suica": true
+    },
+    "hamamatsucho": {
+      "ja": "浜松町",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "hamakanaya": {
+      "ja": "浜金谷",
+      "suica": true
+    },
+    "miyahara": {
+      "ja": "宮原",
+      "suica": true
+    },
+    "tomita-ryomo": {
+      "ja": "富田",
+      "suica": true
+    },
+    "yaho": {
+      "ja": "谷保",
+      "suica": true
+    },
+    "kitafuchu": {
+      "ja": "北府中",
+      "suica": true
+    },
+    "ubashima": {
+      "ja": "祖母島",
+      "suica": false
+    },
+    "shiomi": {
+      "ja": "潮見",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "uguisudani": {
+      "ja": "鶯谷",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kashiwa": {
+      "ja": "柏",
+      "suica": true
+    },
+    "kawashima": {
+      "ja": "川島",
+      "suica": true
+    },
+    "asakusabashi": {
+      "ja": "浅草橋",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kataoka": {
+      "ja": "片岡",
+      "suica": true
+    },
+    "saruhashi": {
+      "ja": "猿橋",
+      "suica": true
+    },
+    "ohirashita": {
+      "ja": "大平下",
+      "suica": true
+    },
+    "shimatakamatsu": {
+      "ja": "島高松",
+      "suica": true
+    },
+    "higashifussa": {
+      "ja": "東福生",
+      "suica": true
+    },
+    "konosu": {
+      "ja": "鴻巣",
+      "suica": true
+    },
+    "iwama": {
+      "ja": "岩間",
+      "suica": true
+    },
+    "taura": {
+      "ja": "田浦",
+      "suica": true
+    },
+    "nishimatsuida": {
+      "ja": "西松井田",
+      "suica": true
+    },
+    "ichikawaono": {
+      "ja": "市川大野",
+      "suica": true
+    },
+    "totsuka": {
+      "ja": "戸塚",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "sakaori": {
+      "ja": "酒折",
+      "suica": true
+    },
+    "gunmaharamachi": {
+      "ja": "群馬原町",
+      "suica": false
+    },
+    "uchigo": {
+      "ja": "内郷",
+      "suica": true
+    },
+    "okawa": {
+      "ja": "大川",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "gokan": {
+      "ja": "後閑",
+      "suica": true
+    },
+    "fukurogura": {
+      "ja": "袋倉",
+      "suica": false
+    },
+    "kazusaokitsu": {
+      "ja": "上総興津",
+      "suica": true
+    },
+    "hiratsuka": {
+      "ja": "平塚",
+      "suica": true
+    },
+    "fujino": {
+      "ja": "藤野",
+      "suica": true
+    },
+    "minamishisui": {
+      "ja": "南酒々井",
+      "suica": true
+    },
+    "itabashi": {
+      "ja": "板橋",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kozukue": {
+      "ja": "小机",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "tokyo": {
+      "ja": "東京",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "nishiomiya": {
+      "ja": "西大宮",
+      "suica": true
+    },
+    "minaminakago": {
+      "ja": "南中郷",
+      "suica": true
+    },
+    "kinugasa": {
+      "ja": "衣笠",
+      "suica": true
+    },
+    "yako": {
+      "ja": "矢向",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "tsudanuma": {
+      "ja": "津田沼",
+      "suica": true
+    },
+    "higashinakano": {
+      "ja": "東中野",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kitasenju": {
+      "ja": "北千住",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kawaguchi": {
+      "ja": "川口",
+      "suica": true
+    },
+    "iigura": {
+      "ja": "飯倉",
+      "suica": true
+    },
+    "nagaura": {
+      "ja": "長浦",
+      "suica": true
+    },
+    "hirama": {
+      "ja": "平間",
+      "suica": true
+    },
+    "kuki": {
+      "ja": "久喜",
+      "suica": true
+    },
+    "tsudayama": {
+      "ja": "津田山",
+      "suica": true
+    },
+    "hachioji": {
+      "ja": "八王子",
+      "suica": true
+    },
+    "sodegaura": {
+      "ja": "袖ケ浦",
+      "suica": true
+    },
+    "tsurumiono": {
+      "ja": "鶴見小野",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "kameido": {
+      "ja": "亀戸",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "shimotsukeosawa": {
+      "ja": "下野大沢",
+      "suica": true
+    },
+    "yoyogi": {
+      "ja": "代々木",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "okubo-chuo": {
+      "ja": "大久保",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "tatsuta": {
+      "ja": "竜田",
+      "suica": true
+    },
+    "minamimatsumoto": {
+      "ja": "南松本",
+      "suica": true
+    },
+    "emi": {
+      "ja": "江見",
+      "suica": true
+    },
+    "gunmafujioka": {
+      "ja": "群馬藤岡",
+      "suica": true
+    },
+    "minaminagareyama": {
+      "ja": "南流山",
+      "suica": true
+    },
+    "isawaonsen": {
+      "ja": "石和温泉",
+      "suica": true
+    },
+    "echujima": {
+      "ja": "越中島",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kadosawabashi": {
+      "ja": "門沢橋",
+      "suica": true
+    },
+    "ujiie": {
+      "ja": "氏家",
+      "suica": true
+    },
+    "kawasaki": {
+      "ja": "川崎",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "shimogori": {
+      "ja": "下郡",
+      "suica": false
+    },
+    "higashiyokota": {
+      "ja": "東横田",
+      "suica": false
+    },
+    "nippori": {
+      "ja": "日暮里",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kasugaicho": {
+      "ja": "春日居町",
+      "suica": true
+    },
+    "kisarazu": {
+      "ja": "木更津",
+      "suica": true
+    },
+    "omoigawa": {
+      "ja": "思川",
+      "suica": true
+    },
+    "ikebukuro": {
+      "ja": "池袋",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "syukugawara": {
+      "ja": "宿河原",
+      "suica": true
+    },
+    "oguchi": {
+      "ja": "大口",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "ofuna": {
+      "ja": "大船",
+      "suica": true
+    },
+    "hinoharu": {
+      "ja": "日野春",
+      "suica": true
+    },
+    "amori": {
+      "ja": "安茂里",
+      "suica": true
+    },
+    "niza": {
+      "ja": "新座",
+      "suica": true
+    },
+    "kitaurawa": {
+      "ja": "北浦和",
+      "suica": true
+    },
+    "ukimafunato": {
+      "ja": "浮間舟渡",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kurihashi": {
+      "ja": "栗橋",
+      "suica": true
+    },
+    "awakominato": {
+      "ja": "安房小湊",
+      "suica": true
+    },
+    "yotsuya": {
+      "ja": "四ツ谷",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "tansyo": {
+      "ja": "丹荘",
+      "suica": true
+    },
+    "shimomizo": {
+      "ja": "下溝",
+      "suica": true
+    },
+    "higashijujo": {
+      "ja": "東十条",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kamasusaka": {
+      "ja": "蒲須坂",
+      "suica": true
+    },
+    "naruto": {
+      "ja": "成東",
+      "suica": true
+    },
+    "arakawaoki": {
+      "ja": "荒川沖",
+      "suica": true
+    },
+    "yodo": {
+      "ja": "用土",
+      "suica": true
+    },
+    "ozaku": {
+      "ja": "小作",
+      "suica": true
+    },
+    "yagura": {
+      "ja": "矢倉",
+      "suica": false
+    },
+    "kokudo": {
+      "ja": "国道",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "shinmobara": {
+      "ja": "新茂原",
+      "suica": true
+    },
+    "usami": {
+      "ja": "宇佐美",
+      "suica": true
+    },
+    "kobuchi": {
+      "ja": "古淵",
+      "suica": true
+    },
+    "aoyagi": {
+      "ja": "青柳",
+      "suica": true
+    },
+    "mito": {
+      "ja": "水戸",
+      "suica": true
+    },
+    "chibaminato": {
+      "ja": "千葉みなと",
+      "suica": true
+    },
+    "hamakawasaki": {
+      "ja": "浜川崎",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "makuharihongo": {
+      "ja": "幕張本郷",
+      "suica": true
+    },
+    "nakayama": {
+      "ja": "中山",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "tomioka": {
+      "ja": "富岡",
+      "suica": true
+    },
+    "okachimachi": {
+      "ja": "御徒町",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "minamiyono": {
+      "ja": "南与野",
+      "suica": true
+    },
+    "ueno": {
+      "ja": "上野",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "yagawa": {
+      "ja": "矢川",
+      "suica": true
+    },
+    "toyoda": {
+      "ja": "豊田",
+      "suica": true
+    },
+    "tokai": {
+      "ja": "東海",
+      "suica": true
+    },
+    "yawatajuku": {
+      "ja": "八幡宿",
+      "suica": true
+    },
+    "sagamihara": {
+      "ja": "相模原",
+      "suica": true
+    },
+    "gion": {
+      "ja": "祇園",
+      "suica": false
+    },
+    "tabata": {
+      "ja": "田端",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "kamoi": {
+      "ja": "鴨居",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "asano": {
+      "ja": "浅野",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "takadanobaba": {
+      "ja": "高田馬場",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "nishitachikawa": {
+      "ja": "西立川",
+      "suica": true
+    },
+    "hirai": {
+      "ja": "平井",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "yono": {
+      "ja": "与野",
+      "suica": true
+    },
+    "inada": {
+      "ja": "稲田",
+      "suica": true
+    },
+    "yugawara": {
+      "ja": "湯河原",
+      "suica": true
+    },
+    "iioka": {
+      "ja": "飯岡",
+      "suica": true
+    },
+    "ajiki": {
+      "ja": "安食",
+      "suica": true
+    },
+    "sano": {
+      "ja": "佐野",
+      "suica": true
+    },
+    "mikado": {
+      "ja": "三門",
+      "suica": true
+    },
+    "fujisawa": {
+      "ja": "藤沢",
+      "suica": true
+    },
+    "toyoshina": {
+      "ja": "豊科",
+      "suica": true
+    },
+    "jichimedicaluniv": {
+      "ja": "自治医大",
+      "suica": true
+    },
+    "honchiba": {
+      "ja": "本千葉",
+      "suica": true
+    },
+    "isohara": {
+      "ja": "磯原",
+      "suica": true
+    },
+    "konandai": {
+      "ja": "港南台",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "torisawa": {
+      "ja": "鳥沢",
+      "suica": true
+    },
+    "kasairinkaipark": {
+      "ja": "葛西臨海公園",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "suzumenomiya": {
+      "ja": "雀宮",
+      "suica": true
+    },
+    "hamura": {
+      "ja": "羽村",
+      "suica": true
+    },
+    "kairakuen": {
+      "ja": "偕楽園",
+      "suica": true
+    },
+    "higashichiba": {
+      "ja": "東千葉",
+      "suica": true
+    },
+    "kobuchizawa": {
+      "ja": "小淵沢",
+      "suica": true
+    },
+    "kurami": {
+      "ja": "倉見",
+      "suica": true
+    },
+    "hakonegasaki": {
+      "ja": "箱根ケ崎",
+      "suica": true
+    },
+    "yamamae": {
+      "ja": "山前",
+      "suica": true
+    },
+    "ueda": {
+      "ja": "植田",
+      "suica": true
+    },
+    "otsuka": {
+      "ja": "大塚",
+      "zones": [
+        "yamanote",
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "higashikanagawa": {
+      "ja": "東神奈川",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "yorii": {
+      "ja": "寄居",
+      "suica": true
+    },
+    "ajiro": {
+      "ja": "網代",
+      "suica": true
+    },
+    "shinonoi": {
+      "ja": "篠ノ井",
+      "suica": true
+    },
+    "yanokuchi": {
+      "ja": "矢野口",
+      "suica": true
+    },
+    "futaba": {
+      "ja": "双葉",
+      "suica": true
+    },
+    "nakagami": {
+      "ja": "中神",
+      "suica": true
+    },
+    "uchihara": {
+      "ja": "内原",
+      "suica": true
+    },
+    "moro": {
+      "ja": "毛呂",
+      "suica": true
+    },
+    "monoi": {
+      "ja": "物井",
+      "suica": true
+    },
+    "ryogoku": {
+      "ja": "両国",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "fuchinobe": {
+      "ja": "淵野辺",
+      "suica": true
+    },
+    "shinshibaura": {
+      "ja": "新芝浦",
+      "zones": [
+        "yokohama"
+      ],
+      "suica": true
+    },
+    "bakurocho": {
+      "ja": "馬喰町",
+      "zones": [
+        "tokunai"
+      ],
+      "suica": true
+    },
+    "fubasami": {
+      "ja": "文挟",
+      "suica": true
+    }
+  },
+  "edges": [
+    {
+      "a": "takasaki",
+      "b": "kitatakasaki",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "gummayawata",
+      "b": "kitatakasaki",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "annaka",
+      "b": "gummayawata",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "annaka",
+      "b": "isobe",
+      "km": 70,
+      "fkm": 70,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "isobe",
+      "b": "matsuida",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "matsuida",
+      "b": "nishimatsuida",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "nishimatsuida",
+      "b": "yokokawa",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 15
+    },
+    {
+      "a": "kanda",
+      "b": "tokyo",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kanda",
+      "b": "akihabara",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "akihabara",
+      "b": "okachimachi",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "ueno",
+      "b": "okachimachi",
+      "km": 6,
+      "fkm": 6,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "ueno",
+      "b": "uguisudani",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nippori",
+      "b": "uguisudani",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nippori",
+      "b": "nishinippori",
+      "km": 5,
+      "fkm": 5,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nishinippori",
+      "b": "tabata",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kaminakazato",
+      "b": "tabata",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kaminakazato",
+      "b": "oji",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "higashijujo",
+      "b": "oji",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "akabane",
+      "b": "higashijujo",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "akabane",
+      "b": "kawaguchi",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kawaguchi",
+      "b": "nishikawaguchi",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nishikawaguchi",
+      "b": "warabi",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "minamiurawa",
+      "b": "warabi",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "minamiurawa",
+      "b": "urawa",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kitaurawa",
+      "b": "urawa",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kitaurawa",
+      "b": "yono",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "saitamashintoshin",
+      "b": "yono",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "omiya",
+      "b": "saitamashintoshin",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "omiya",
+      "b": "toro",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "higashiomiya",
+      "b": "toro",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "hasuda",
+      "b": "higashiomiya",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "hasuda",
+      "b": "shiraoka",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "shinshiraoka",
+      "b": "shiraoka",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kuki",
+      "b": "shinshiraoka",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "higashiwashinomiya",
+      "b": "kuki",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "higashiwashinomiya",
+      "b": "kurihashi",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "koga",
+      "b": "kurihashi",
+      "km": 75,
+      "fkm": 75,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "koga",
+      "b": "nogi",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "mamada",
+      "b": "nogi",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "oyama",
+      "b": "mamada",
+      "km": 73,
+      "fkm": 73,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "oyama",
+      "b": "koganei",
+      "km": 75,
+      "fkm": 75,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "jichimedicaluniv",
+      "b": "koganei",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "ishibashi",
+      "b": "jichimedicaluniv",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "ishibashi",
+      "b": "suzumenomiya",
+      "km": 64,
+      "fkm": 64,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "utsunomiya",
+      "b": "suzumenomiya",
+      "km": 77,
+      "fkm": 77,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "utsunomiya",
+      "b": "okamoto",
+      "km": 62,
+      "fkm": 62,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "hoshakuji",
+      "b": "okamoto",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "hoshakuji",
+      "b": "ujiie",
+      "km": 59,
+      "fkm": 59,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kamasusaka",
+      "b": "ujiie",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kamasusaka",
+      "b": "kataoka",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kataoka",
+      "b": "yaita",
+      "km": 63,
+      "fkm": 63,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nozaki",
+      "b": "yaita",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nishinasuno",
+      "b": "nozaki",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nasushiobara",
+      "b": "nishinasuno",
+      "km": 60,
+      "fkm": 60,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "kuroiso",
+      "b": "nasushiobara",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 22
+    },
+    {
+      "a": "nippori",
+      "b": "mikawashima",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "mikawashima",
+      "b": "minamisenju",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kitasenju",
+      "b": "minamisenju",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "ayase",
+      "b": "kitasenju",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "ayase",
+      "b": "kameari",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kameari",
+      "b": "kanamachi",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kanamachi",
+      "b": "matsudo",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kitamatsudo",
+      "b": "matsudo",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kitamatsudo",
+      "b": "mabashi",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "mabashi",
+      "b": "shinmatsudo",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kitakogane",
+      "b": "shinmatsudo",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kitakogane",
+      "b": "minamikashiwa",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kashiwa",
+      "b": "minamikashiwa",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kashiwa",
+      "b": "kitakashiwa",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "abiko",
+      "b": "kitakashiwa",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "abiko",
+      "b": "tennoudai",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "toride",
+      "b": "tennoudai",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "fujishiro",
+      "b": "toride",
+      "km": 60,
+      "fkm": 60,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "fujishiro",
+      "b": "ryugasakishi",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "ryugasakishi",
+      "b": "ushiku",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hitachinoushiku",
+      "b": "ushiku",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "arakawaoki",
+      "b": "hitachinoushiku",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "arakawaoki",
+      "b": "tsuchiura",
+      "km": 66,
+      "fkm": 66,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kandatsu",
+      "b": "tsuchiura",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kandatsu",
+      "b": "takahama",
+      "km": 65,
+      "fkm": 65,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "ishioka",
+      "b": "takahama",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hatori",
+      "b": "ishioka",
+      "km": 65,
+      "fkm": 65,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hatori",
+      "b": "iwama",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "iwama",
+      "b": "tomobe",
+      "km": 69,
+      "fkm": 69,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "tomobe",
+      "b": "uchihara",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "akatsuka",
+      "b": "uchihara",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "akatsuka",
+      "b": "kairakuen",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kairakuen",
+      "b": "mito",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "katsuta",
+      "b": "mito",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "katsuta",
+      "b": "sawa",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "sawa",
+      "b": "tokai",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "omika",
+      "b": "tokai",
+      "km": 74,
+      "fkm": 74,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hitachitaga",
+      "b": "omika",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hitachi",
+      "b": "hitachitaga",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hitachi",
+      "b": "ogitsu",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "juo",
+      "b": "ogitsu",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "juo",
+      "b": "takahagi",
+      "km": 59,
+      "fkm": 59,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "minaminakago",
+      "b": "takahagi",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "isohara",
+      "b": "minaminakago",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "isohara",
+      "b": "otsuko",
+      "km": 71,
+      "fkm": 71,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "nakoso",
+      "b": "otsuko",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "nakoso",
+      "b": "ueda",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "izumi",
+      "b": "ueda",
+      "km": 72,
+      "fkm": 72,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "izumi",
+      "b": "yumoto",
+      "km": 65,
+      "fkm": 65,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "uchigo",
+      "b": "yumoto",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "iwaki",
+      "b": "uchigo",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "iwaki",
+      "b": "kusano",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kusano",
+      "b": "yotsukura",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hisanohama",
+      "b": "yotsukura",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hisanohama",
+      "b": "suetsugi",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hirono",
+      "b": "suetsugi",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "hirono",
+      "b": "jvillage",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "jvillage",
+      "b": "kido",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "kido",
+      "b": "tatsuta",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "tatsuta",
+      "b": "tomioka",
+      "km": 69,
+      "fkm": 69,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "tomioka",
+      "b": "yonomori",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "ono",
+      "b": "yonomori",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "futaba",
+      "b": "ono",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "futaba",
+      "b": "namie",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 45
+    },
+    {
+      "a": "takasaki",
+      "b": "takasakitonyacho",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "ino",
+      "b": "takasakitonyacho",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "ino",
+      "b": "shinmaebashi",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "gunmasosya",
+      "b": "shinmaebashi",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "gunmasosya",
+      "b": "yagihara",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "shibukawa",
+      "b": "yagihara",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "shibukawa",
+      "b": "shikishima",
+      "km": 64,
+      "fkm": 64,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "shikishima",
+      "b": "tsukuda",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "iwamoto",
+      "b": "tsukuda",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "iwamoto",
+      "b": "numata",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "gokan",
+      "b": "numata",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "gokan",
+      "b": "kamimoku",
+      "km": 71,
+      "fkm": 71,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "kamimoku",
+      "b": "minakami",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 51
+    },
+    {
+      "a": "kanashima",
+      "b": "shibukawa",
+      "km": 55,
+      "fkm": 61,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "kanashima",
+      "b": "ubashima",
+      "km": 22,
+      "fkm": 24,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "onogami",
+      "b": "ubashima",
+      "km": 42,
+      "fkm": 46,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "onogami",
+      "b": "onogamionsen",
+      "km": 18,
+      "fkm": 20,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "ichishiro",
+      "b": "onogamionsen",
+      "km": 27,
+      "fkm": 29,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "ichishiro",
+      "b": "nakanojo",
+      "km": 34,
+      "fkm": 38,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "gunmaharamachi",
+      "b": "nakanojo",
+      "km": 31,
+      "fkm": 34,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "gobara",
+      "b": "gunmaharamachi",
+      "km": 34,
+      "fkm": 37,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "gobara",
+      "b": "yagura",
+      "km": 17,
+      "fkm": 19,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "iwashima",
+      "b": "yagura",
+      "km": 25,
+      "fkm": 28,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "iwashima",
+      "b": "kawarayuonsen",
+      "km": 65,
+      "fkm": 71,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "kawarayuonsen",
+      "b": "naganoharakusatsuguchi",
+      "km": 50,
+      "fkm": 55,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "gunmaotsu",
+      "b": "naganoharakusatsuguchi",
+      "km": 22,
+      "fkm": 24,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "gunmaotsu",
+      "b": "haneo",
+      "km": 22,
+      "fkm": 24,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "fukurogura",
+      "b": "haneo",
+      "km": 29,
+      "fkm": 32,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "fukurogura",
+      "b": "manzakazawaguchi",
+      "km": 29,
+      "fkm": 32,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "manzakazawaguchi",
+      "b": "omae",
+      "km": 31,
+      "fkm": 34,
+      "chihou": true,
+      "src": 57
+    },
+    {
+      "a": "shinmaebashi",
+      "b": "maebashi",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "maebashi",
+      "b": "maebashioshima",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "komagata",
+      "b": "maebashioshima",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "isesaki",
+      "b": "komagata",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "isesaki",
+      "b": "kunisada",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "iwajuku",
+      "b": "kunisada",
+      "km": 64,
+      "fkm": 64,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "iwajuku",
+      "b": "kiryu",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "kiryu",
+      "b": "omata",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "omata",
+      "b": "yamamae",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "ashikaga",
+      "b": "yamamae",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "ashikaga",
+      "b": "ashikagaflowerpark",
+      "km": 62,
+      "fkm": 62,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "ashikagaflowerpark",
+      "b": "tomita-ryomo",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "sano",
+      "b": "tomita-ryomo",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "iwafune",
+      "b": "sano",
+      "km": 73,
+      "fkm": 73,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "iwafune",
+      "b": "ohirashita",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "ohirashita",
+      "b": "tochigi",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "omoigawa",
+      "b": "tochigi",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "oyama",
+      "b": "omoigawa",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 58
+    },
+    {
+      "a": "odabayashi",
+      "b": "oyama",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "odabayashi",
+      "b": "yuki",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "higashiyuki",
+      "b": "yuki",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "higashiyuki",
+      "b": "kawashima",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "kawashima",
+      "b": "tamado",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "shimodate",
+      "b": "tamado",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "nihari",
+      "b": "shimodate",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "nihari",
+      "b": "yamato",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "iwase",
+      "b": "yamato",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "haguro",
+      "b": "iwase",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "fukuhara",
+      "b": "haguro",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "fukuhara",
+      "b": "inada",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "inada",
+      "b": "kasama",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "kasama",
+      "b": "shishido",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "tomobe",
+      "b": "shishido",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 61
+    },
+    {
+      "a": "hoshakuji",
+      "b": "shimotsukehanaoka",
+      "km": 39,
+      "fkm": 43,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "niita",
+      "b": "shimotsukehanaoka",
+      "km": 20,
+      "fkm": 22,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "konoyama",
+      "b": "niita",
+      "km": 24,
+      "fkm": 26,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "konoyama",
+      "b": "ogane",
+      "km": 44,
+      "fkm": 49,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "kobana",
+      "b": "ogane",
+      "km": 26,
+      "fkm": 28,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "kobana",
+      "b": "taki",
+      "km": 22,
+      "fkm": 25,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "karasuyama",
+      "b": "taki",
+      "km": 29,
+      "fkm": 31,
+      "chihou": true,
+      "src": 62
+    },
+    {
+      "a": "tsuruta",
+      "b": "utsunomiya",
+      "km": 48,
+      "fkm": 53,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "kanuma",
+      "b": "tsuruta",
+      "km": 95,
+      "fkm": 104,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "fubasami",
+      "b": "kanuma",
+      "km": 81,
+      "fkm": 89,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "fubasami",
+      "b": "shimotsukeosawa",
+      "km": 58,
+      "fkm": 64,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "imaichi",
+      "b": "shimotsukeosawa",
+      "km": 57,
+      "fkm": 63,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "imaichi",
+      "b": "nikko",
+      "km": 66,
+      "fkm": 73,
+      "chihou": true,
+      "src": 63
+    },
+    {
+      "a": "omiya",
+      "b": "miyahara",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "ageo",
+      "b": "miyahara",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "ageo",
+      "b": "kitaageo",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kitaageo",
+      "b": "okegawa",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kitamoto",
+      "b": "okegawa",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kitamoto",
+      "b": "konosu",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kitakonosu",
+      "b": "konosu",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "fukiage",
+      "b": "kitakonosu",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "fukiage",
+      "b": "gyoda",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "gyoda",
+      "b": "kumagaya",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kagohara",
+      "b": "kumagaya",
+      "km": 66,
+      "fkm": 66,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "fukaya",
+      "b": "kagohara",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "fukaya",
+      "b": "okabe",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "honjo",
+      "b": "okabe",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "honjo",
+      "b": "jinbohara",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "jinbohara",
+      "b": "sinmachi",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kuragano",
+      "b": "sinmachi",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "kuragano",
+      "b": "takasaki",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 64
+    },
+    {
+      "a": "tokyo",
+      "b": "yurakucho",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "shimbashi",
+      "b": "yurakucho",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "shimbashi",
+      "b": "hamamatsucho",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "hamamatsucho",
+      "b": "tamachi",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "takanawagateway",
+      "b": "tamachi",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "shinagawa",
+      "b": "takanawagateway",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "shinagawa",
+      "b": "oimachi",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "oimachi",
+      "b": "omori",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kamata",
+      "b": "omori",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kamata",
+      "b": "kawasaki",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kawasaki",
+      "b": "tsurumi",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "shinkoyasu",
+      "b": "tsurumi",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "higashikanagawa",
+      "b": "shinkoyasu",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "higashikanagawa",
+      "b": "yokohama",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "yokohama",
+      "b": "hodogaya",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "higashitotsuka",
+      "b": "hodogaya",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "higashitotsuka",
+      "b": "totsuka",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "ofuna",
+      "b": "totsuka",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "ofuna",
+      "b": "fujisawa",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "fujisawa",
+      "b": "tsujido",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "chigasaki",
+      "b": "tsujido",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "chigasaki",
+      "b": "hiratsuka",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "hiratsuka",
+      "b": "oiso",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "ninomiya",
+      "b": "oiso",
+      "km": 53,
+      "fkm": 53,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kodu",
+      "b": "ninomiya",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kamonomiya",
+      "b": "kodu",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "kamonomiya",
+      "b": "odawara",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "hayakawa",
+      "b": "odawara",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "hayakawa",
+      "b": "nebukawa",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "manaduru",
+      "b": "nebukawa",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "manaduru",
+      "b": "yugawara",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "atami",
+      "b": "yugawara",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 66
+    },
+    {
+      "a": "tokyo",
+      "b": "shinnihombashi",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "bakurocho",
+      "b": "shinnihombashi",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "kinshicho",
+      "b": "bakurocho",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "kameido",
+      "b": "kinshicho",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "hirai",
+      "b": "kameido",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "hirai",
+      "b": "shinkoiwa",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "koiwa",
+      "b": "shinkoiwa",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "ichikawa",
+      "b": "koiwa",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "ichikawa",
+      "b": "motoyawata",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "motoyawata",
+      "b": "shimosonanakayama",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "nishifunabashi",
+      "b": "shimosonanakayama",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "funabashi",
+      "b": "nishifunabashi",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "funabashi",
+      "b": "higashifunabashi",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "higashifunabashi",
+      "b": "tsudanuma",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "makuharihongo",
+      "b": "tsudanuma",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "makuhari",
+      "b": "makuharihongo",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "makuhari",
+      "b": "shinkemigawa",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "inage",
+      "b": "shinkemigawa",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "inage",
+      "b": "nishichiba",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "chiba",
+      "b": "nishichiba",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "chiba",
+      "b": "higashichiba",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "higashichiba",
+      "b": "tsuga",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "tsuga",
+      "b": "yotsukaido",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "monoi",
+      "b": "yotsukaido",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "sakura",
+      "b": "monoi",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "sakura",
+      "b": "minamishisui",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "enokido",
+      "b": "minamishisui",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "enokido",
+      "b": "yachimata",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "hyuga",
+      "b": "yachimata",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "hyuga",
+      "b": "naruto",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "matsuo",
+      "b": "naruto",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "matsuo",
+      "b": "yokoshiba",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "iigura",
+      "b": "yokoshiba",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "iigura",
+      "b": "yokaichiba",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "higata",
+      "b": "yokaichiba",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "asahi",
+      "b": "higata",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "asahi",
+      "b": "iioka",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "iioka",
+      "b": "kurahashi",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "kurahashi",
+      "b": "saruda",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "matsugishi",
+      "b": "saruda",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "choshi",
+      "b": "matsugishi",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 67
+    },
+    {
+      "a": "ochanomizu",
+      "b": "akihabara",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 68
+    },
+    {
+      "a": "akihabara",
+      "b": "asakusabashi",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 68
+    },
+    {
+      "a": "asakusabashi",
+      "b": "ryogoku",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 68
+    },
+    {
+      "a": "kinshicho",
+      "b": "ryogoku",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 68
+    },
+    {
+      "a": "sakura",
+      "b": "shisui",
+      "km": 64,
+      "fkm": 64,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "narita",
+      "b": "shisui",
+      "km": 67,
+      "fkm": 67,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "kuzumi",
+      "b": "narita",
+      "km": 69,
+      "fkm": 69,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "kuzumi",
+      "b": "namegawa",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "namegawa",
+      "b": "shimosakozaki",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "oto",
+      "b": "shimosakozaki",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "sawara",
+      "b": "oto",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "katori",
+      "b": "sawara",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "katori",
+      "b": "suigo",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "omigawa",
+      "b": "suigo",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "omigawa",
+      "b": "sasagawa",
+      "km": 50,
+      "fkm": 50,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "sasagawa",
+      "b": "shimosatachibana",
+      "km": 52,
+      "fkm": 52,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "shimosatachibana",
+      "b": "shimosatoyosato",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "shiishiba",
+      "b": "shimosatoyosato",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "matsugishi",
+      "b": "shiishiba",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 69
+    },
+    {
+      "a": "abiko",
+      "b": "higashiabiko",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "higashiabiko",
+      "b": "kohoku",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "araki",
+      "b": "kohoku",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "araki",
+      "b": "fusa",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "fusa",
+      "b": "kioroshi",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "kioroshi",
+      "b": "kobayashi-narita",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "ajiki",
+      "b": "kobayashi-narita",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "ajiki",
+      "b": "shimousamanzaki",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "narita",
+      "b": "shimousamanzaki",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 70
+    },
+    {
+      "a": "narita",
+      "b": "narita-airport-t2-t3",
+      "km": 98,
+      "fkm": 98,
+      "chihou": false,
+      "src": 71
+    },
+    {
+      "a": "narita-airport-t1",
+      "b": "narita-airport-t2-t3",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 71
+    },
+    {
+      "a": "junikyo",
+      "b": "katori",
+      "km": 30,
+      "fkm": 33,
+      "chihou": true,
+      "src": 72
+    },
+    {
+      "a": "itako",
+      "b": "junikyo",
+      "km": 22,
+      "fkm": 24,
+      "chihou": true,
+      "src": 72
+    },
+    {
+      "a": "itako",
+      "b": "nobukata",
+      "km": 52,
+      "fkm": 57,
+      "chihou": true,
+      "src": 72
+    },
+    {
+      "a": "kashimajingu",
+      "b": "nobukata",
+      "km": 38,
+      "fkm": 42,
+      "chihou": true,
+      "src": 72
+    },
+    {
+      "a": "kashimasoccerstadium",
+      "b": "kashimajingu",
+      "km": 32,
+      "fkm": 35,
+      "chihou": true,
+      "src": 72
+    },
+    {
+      "a": "tokyo",
+      "b": "hachobori",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "echujima",
+      "b": "hachobori",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "echujima",
+      "b": "shiomi",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "shinkiba",
+      "b": "shiomi",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "kasairinkaipark",
+      "b": "shinkiba",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "kasairinkaipark",
+      "b": "maihama",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "maihama",
+      "b": "shinurayasu",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "ichikawashiohama",
+      "b": "shinurayasu",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "futamatashinmachi",
+      "b": "ichikawashiohama",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "futamatashinmachi",
+      "b": "minamifunabashi",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "minamifunabashi",
+      "b": "shinnarashino",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "makuharitoyosuna",
+      "b": "shinnarashino",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "kaihinmakuhari",
+      "b": "makuharitoyosuna",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "kaihinmakuhari",
+      "b": "kemigawahama",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "inagekaigan",
+      "b": "kemigawahama",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "chibaminato",
+      "b": "inagekaigan",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "chibaminato",
+      "b": "soga",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 73
+    },
+    {
+      "a": "nishifunabashi",
+      "b": "ichikawashiohama",
+      "km": 59,
+      "fkm": 59,
+      "chihou": false,
+      "src": 74
+    },
+    {
+      "a": "nishifunabashi",
+      "b": "minamifunabashi",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 74
+    },
+    {
+      "a": "soga",
+      "b": "hamano",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "hamano",
+      "b": "yawatajuku",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "goi",
+      "b": "yawatajuku",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "anegasaki",
+      "b": "goi",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "anegasaki",
+      "b": "nagaura",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "nagaura",
+      "b": "sodegaura",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "iwane",
+      "b": "sodegaura",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "kisarazu",
+      "b": "iwane",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "kisarazu",
+      "b": "kimitsu",
+      "km": 70,
+      "fkm": 70,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "aohori",
+      "b": "kimitsu",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "aohori",
+      "b": "onuki",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "onuki",
+      "b": "sanukimachi",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "kazusaminato",
+      "b": "sanukimachi",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "kazusaminato",
+      "b": "takeoka",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "hamakanaya",
+      "b": "takeoka",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "hamakanaya",
+      "b": "hota",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "awakatsuyama",
+      "b": "hota",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "awakatsuyama",
+      "b": "iwai",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "iwai",
+      "b": "tomiura",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "nakofunakata",
+      "b": "tomiura",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "nakofunakata",
+      "b": "tateyama",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "kokonoe",
+      "b": "tateyama",
+      "km": 58,
+      "fkm": 58,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "chikura",
+      "b": "kokonoe",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "chikura",
+      "b": "chitose",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "chitose",
+      "b": "minamihara",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "minamihara",
+      "b": "wadaura",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "emi",
+      "b": "wadaura",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "emi",
+      "b": "futomi",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "awakamogawa",
+      "b": "futomi",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 75
+    },
+    {
+      "a": "chiba",
+      "b": "honchiba",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "soga",
+      "b": "honchiba",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "soga",
+      "b": "kamatori",
+      "km": 50,
+      "fkm": 50,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "honda",
+      "b": "kamatori",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "honda",
+      "b": "toke",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "oami",
+      "b": "toke",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "nagata",
+      "b": "oami",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "honno",
+      "b": "nagata",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "honno",
+      "b": "shinmobara",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "mobara",
+      "b": "shinmobara",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "mobara",
+      "b": "yatsumi",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "kazusaichinomiya",
+      "b": "yatsumi",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "kazusaichinomiya",
+      "b": "torami",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "taito",
+      "b": "torami",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "chojamachi",
+      "b": "taito",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "chojamachi",
+      "b": "mikado",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "mikado",
+      "b": "ohara",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "namihana",
+      "b": "ohara",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "namihana",
+      "b": "onjuku",
+      "km": 49,
+      "fkm": 49,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "katsuura",
+      "b": "onjuku",
+      "km": 55,
+      "fkm": 55,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "katsuura",
+      "b": "ubara",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "kazusaokitsu",
+      "b": "ubara",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "kazusaokitsu",
+      "b": "namegawaisland",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "awakominato",
+      "b": "namegawaisland",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "awaamatsu",
+      "b": "awakominato",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "awaamatsu",
+      "b": "awakamogawa",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 76
+    },
+    {
+      "a": "oami",
+      "b": "fukutawara",
+      "km": 33,
+      "fkm": 36,
+      "chihou": true,
+      "src": 77
+    },
+    {
+      "a": "fukutawara",
+      "b": "togane",
+      "km": 25,
+      "fkm": 28,
+      "chihou": true,
+      "src": 77
+    },
+    {
+      "a": "gumyo",
+      "b": "togane",
+      "km": 38,
+      "fkm": 42,
+      "chihou": true,
+      "src": 77
+    },
+    {
+      "a": "naruto",
+      "b": "gumyo",
+      "km": 42,
+      "fkm": 46,
+      "chihou": true,
+      "src": 77
+    },
+    {
+      "a": "gion",
+      "b": "kisarazu",
+      "km": 26,
+      "fkm": 29,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "gion",
+      "b": "kazusakiyokawa",
+      "km": 16,
+      "fkm": 17,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "higashikiyokawa",
+      "b": "kazusakiyokawa",
+      "km": 19,
+      "fkm": 21,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "higashikiyokawa",
+      "b": "yokota",
+      "km": 32,
+      "fkm": 35,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "higashiyokota",
+      "b": "yokota",
+      "km": 15,
+      "fkm": 17,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "higashiyokota",
+      "b": "makuta",
+      "km": 31,
+      "fkm": 34,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "makuta",
+      "b": "shimogori",
+      "km": 13,
+      "fkm": 14,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "obitsu",
+      "b": "shimogori",
+      "km": 30,
+      "fkm": 33,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "obitsu",
+      "b": "tawarada",
+      "km": 18,
+      "fkm": 20,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "kururi",
+      "b": "tawarada",
+      "km": 26,
+      "fkm": 29,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "hirayama",
+      "b": "kururi",
+      "km": 31,
+      "fkm": 34,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "hirayama",
+      "b": "kazusamatsuoka",
+      "km": 26,
+      "fkm": 28,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "kazusakameyama",
+      "b": "kazusamatsuoka",
+      "km": 39,
+      "fkm": 43,
+      "chihou": true,
+      "src": 78
+    },
+    {
+      "a": "fuchuhonmachi",
+      "b": "kitafuchu",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "nishikokubunji",
+      "b": "kitafuchu",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "nishikokubunji",
+      "b": "shinkodaira",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "shinakitsu",
+      "b": "shinkodaira",
+      "km": 56,
+      "fkm": 56,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashitokorozawa",
+      "b": "shinakitsu",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashitokorozawa",
+      "b": "niza",
+      "km": 40,
+      "fkm": 40,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "kitaasaka",
+      "b": "niza",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "kitaasaka",
+      "b": "nishiurawa",
+      "km": 50,
+      "fkm": 50,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "musashiurawa",
+      "b": "nishiurawa",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "minamiurawa",
+      "b": "musashiurawa",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "minamiurawa",
+      "b": "higashiurawa",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashikawaguchi",
+      "b": "higashiurawa",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashikawaguchi",
+      "b": "minamikoshigaya",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "koshigayalaketown",
+      "b": "minamikoshigaya",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "koshigayalaketown",
+      "b": "yoshikawa",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "yoshikawa",
+      "b": "yoshikawaminami",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "shinmisato",
+      "b": "yoshikawaminami",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "misato-musashino",
+      "b": "shinmisato",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "minaminagareyama",
+      "b": "misato-musashino",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "shinmatsudo",
+      "b": "minaminagareyama",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "shinmatsudo",
+      "b": "shinyahashira",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashimatsudo",
+      "b": "shinyahashira",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "higashimatsudo",
+      "b": "ichikawaono",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "funabashihoden",
+      "b": "ichikawaono",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "nishifunabashi",
+      "b": "funabashihoden",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 79
+    },
+    {
+      "a": "nippori",
+      "b": "oku",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 80
+    },
+    {
+      "a": "akabane",
+      "b": "oku",
+      "km": 50,
+      "fkm": 50,
+      "chihou": false,
+      "src": 80
+    },
+    {
+      "a": "ikebukuro",
+      "b": "itabashi",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "itabashi",
+      "b": "jujo",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "akabane",
+      "b": "jujo",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "akabane",
+      "b": "kitaakabane",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "kitaakabane",
+      "b": "ukimafunato",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "todakouen",
+      "b": "ukimafunato",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "toda-saikyo",
+      "b": "todakouen",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "kitatoda",
+      "b": "toda-saikyo",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "musashiurawa",
+      "b": "kitatoda",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "musashiurawa",
+      "b": "nakaurawa",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "minamiyono",
+      "b": "nakaurawa",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "minamiyono",
+      "b": "yonohonmachi",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "kitayono",
+      "b": "yonohonmachi",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "omiya",
+      "b": "kitayono",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 81
+    },
+    {
+      "a": "shinjuku",
+      "b": "shinokubo",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "shinokubo",
+      "b": "takadanobaba",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "mejiro",
+      "b": "takadanobaba",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "ikebukuro",
+      "b": "mejiro",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "ikebukuro",
+      "b": "otsuka",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "otsuka",
+      "b": "sugamo",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "komagome",
+      "b": "sugamo",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "tabata",
+      "b": "komagome",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 82
+    },
+    {
+      "a": "kanda",
+      "b": "ochanomizu",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "ochanomizu",
+      "b": "suidobashi",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "iidabashi",
+      "b": "suidobashi",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "ichigaya",
+      "b": "iidabashi",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "yotsuya",
+      "b": "ichigaya",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "yotsuya",
+      "b": "shinanomachi",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "sendagaya",
+      "b": "shinanomachi",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "sendagaya",
+      "b": "yoyogi",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "shinjuku",
+      "b": "okubo-chuo",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "higashinakano",
+      "b": "okubo-chuo",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "nakano",
+      "b": "higashinakano",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "koenji",
+      "b": "nakano",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "asagaya",
+      "b": "koenji",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "asagaya",
+      "b": "ogikubo",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "nishiogikubo",
+      "b": "ogikubo",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kichijoji",
+      "b": "nishiogikubo",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kichijoji",
+      "b": "mitaka",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "mitaka",
+      "b": "musashisakai",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "higashikoganei",
+      "b": "musashisakai",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "higashikoganei",
+      "b": "musashikoganei",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kokubunji",
+      "b": "musashikoganei",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kokubunji",
+      "b": "nishikokubunji",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kunitachi",
+      "b": "nishikokubunji",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kunitachi",
+      "b": "tachikawa",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hino",
+      "b": "tachikawa",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hino",
+      "b": "toyoda",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hachioji",
+      "b": "toyoda",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hachioji",
+      "b": "nishihachioji",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "takao",
+      "b": "nishihachioji",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "sagamiko",
+      "b": "takao",
+      "km": 95,
+      "fkm": 95,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "fujino",
+      "b": "sagamiko",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "fujino",
+      "b": "uenohara",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "shiotsu",
+      "b": "uenohara",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "shiotsu",
+      "b": "yanagawa",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "torisawa",
+      "b": "yanagawa",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "saruhashi",
+      "b": "torisawa",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "otsuki",
+      "b": "saruhashi",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hatsukari",
+      "b": "otsuki",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hatsukari",
+      "b": "sasago",
+      "km": 65,
+      "fkm": 65,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kaiyamato",
+      "b": "sasago",
+      "km": 61,
+      "fkm": 61,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kaiyamato",
+      "b": "katsunumabudoukyo",
+      "km": 60,
+      "fkm": 60,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "enzan",
+      "b": "katsunumabudoukyo",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "enzan",
+      "b": "higashiyamanashi",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "higashiyamanashi",
+      "b": "yamanashishi",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kasugaicho",
+      "b": "yamanashishi",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "isawaonsen",
+      "b": "kasugaicho",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "isawaonsen",
+      "b": "sakaori",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kofu",
+      "b": "sakaori",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kofu",
+      "b": "ryuo",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "ryuo",
+      "b": "shiozaki",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "nirasaki",
+      "b": "shiozaki",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "nirasaki",
+      "b": "shimpu",
+      "km": 42,
+      "fkm": 42,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "anayama",
+      "b": "shimpu",
+      "km": 35,
+      "fkm": 35,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "anayama",
+      "b": "hinoharu",
+      "km": 54,
+      "fkm": 54,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "hinoharu",
+      "b": "nagasaka",
+      "km": 62,
+      "fkm": 62,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kobuchizawa",
+      "b": "nagasaka",
+      "km": 74,
+      "fkm": 74,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kobuchizawa",
+      "b": "shinanosakai",
+      "km": 45,
+      "fkm": 45,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "fujimi",
+      "b": "shinanosakai",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "fujimi",
+      "b": "suzurannosato",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "aoyagi",
+      "b": "suzurannosato",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "aoyagi",
+      "b": "chino",
+      "km": 72,
+      "fkm": 72,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "chino",
+      "b": "kamisuwa",
+      "km": 67,
+      "fkm": 67,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "kamisuwa",
+      "b": "shimosuwa",
+      "km": 44,
+      "fkm": 44,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "okaya",
+      "b": "shimosuwa",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "midoriko",
+      "b": "okaya",
+      "km": 78,
+      "fkm": 78,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "midoriko",
+      "b": "shiojiri",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 83
+    },
+    {
+      "a": "shinagawa",
+      "b": "nishioi",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 85
+    },
+    {
+      "a": "musashikosugi",
+      "b": "nishioi",
+      "km": 64,
+      "fkm": 64,
+      "chihou": false,
+      "src": 85
+    },
+    {
+      "a": "musashikosugi",
+      "b": "shinkawasaki",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 85
+    },
+    {
+      "a": "tsurumi",
+      "b": "shinkawasaki",
+      "km": 51,
+      "fkm": 51,
+      "chihou": false,
+      "src": 85
+    },
+    {
+      "a": "tsurumi",
+      "b": "hazawayokohamakokudai",
+      "km": 88,
+      "fkm": 88,
+      "chihou": false,
+      "src": 85
+    },
+    {
+      "a": "kawasaki",
+      "b": "shitte",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "shitte",
+      "b": "yako",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "kashimada",
+      "b": "yako",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "hirama",
+      "b": "kashimada",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "hirama",
+      "b": "mukaigawara",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "mukaigawara",
+      "b": "musashikosugi",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "musashikosugi",
+      "b": "musashinakahara",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "musashinakahara",
+      "b": "musashishinjo",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "musashimizonokuchi",
+      "b": "musashishinjo",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "musashimizonokuchi",
+      "b": "tsudayama",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "kuji",
+      "b": "tsudayama",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "kuji",
+      "b": "syukugawara",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "noborito",
+      "b": "syukugawara",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "nakanoshima",
+      "b": "noborito",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "inadazutsumi",
+      "b": "nakanoshima",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "inadazutsumi",
+      "b": "yanokuchi",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "inaginaganuma",
+      "b": "yanokuchi",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "inaginaganuma",
+      "b": "minamitama",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "fuchuhonmachi",
+      "b": "minamitama",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "fuchuhonmachi",
+      "b": "bubaigawara",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "bubaigawara",
+      "b": "nishifu",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "nishifu",
+      "b": "yaho",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "yagawa",
+      "b": "yaho",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "nishikunitachi",
+      "b": "yagawa",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "tachikawa",
+      "b": "nishikunitachi",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 86
+    },
+    {
+      "a": "shitte",
+      "b": "hachonawate",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 87
+    },
+    {
+      "a": "hachonawate",
+      "b": "kawasakishinmachi",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 87
+    },
+    {
+      "a": "kawasakishinmachi",
+      "b": "odasakae",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": 87
+    },
+    {
+      "a": "hamakawasaki",
+      "b": "odasakae",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 87
+    },
+    {
+      "a": "omiya",
+      "b": "nisshin-kawagoe",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "nishiomiya",
+      "b": "nisshin-kawagoe",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "nishiomiya",
+      "b": "sashiogi",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "minamifuruya",
+      "b": "sashiogi",
+      "km": 47,
+      "fkm": 47,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "kawagoe",
+      "b": "minamifuruya",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "kawagoe",
+      "b": "nishikawagoe",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "matoba",
+      "b": "nishikawagoe",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "kasahata",
+      "b": "matoba",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "kasahata",
+      "b": "musashitakahagi",
+      "km": 32,
+      "fkm": 32,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "komagawa",
+      "b": "musashitakahagi",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 88
+    },
+    {
+      "a": "hachioji",
+      "b": "kitahachioji",
+      "km": 31,
+      "fkm": 34,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "kitahachioji",
+      "b": "komiya",
+      "km": 20,
+      "fkm": 22,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "haijima",
+      "b": "komiya",
+      "km": 48,
+      "fkm": 53,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "haijima",
+      "b": "higashifussa",
+      "km": 28,
+      "fkm": 31,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "hakonegasaki",
+      "b": "higashifussa",
+      "km": 30,
+      "fkm": 33,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "hakonegasaki",
+      "b": "kaneko",
+      "km": 48,
+      "fkm": 53,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "higashihano",
+      "b": "kaneko",
+      "km": 51,
+      "fkm": 56,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "higashihano",
+      "b": "komagawa",
+      "km": 55,
+      "fkm": 60,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "komagawa",
+      "b": "moro",
+      "km": 58,
+      "fkm": 64,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "moro",
+      "b": "ogose",
+      "km": 27,
+      "fkm": 30,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "myokaku",
+      "b": "ogose",
+      "km": 52,
+      "fkm": 57,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "myokaku",
+      "b": "ogawamachi",
+      "km": 80,
+      "fkm": 88,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "ogawamachi",
+      "b": "takezawa",
+      "km": 35,
+      "fkm": 38,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "orihara",
+      "b": "takezawa",
+      "km": 40,
+      "fkm": 44,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "orihara",
+      "b": "yorii",
+      "km": 36,
+      "fkm": 40,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "yodo",
+      "b": "yorii",
+      "km": 45,
+      "fkm": 49,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "matsuhisa",
+      "b": "yodo",
+      "km": 27,
+      "fkm": 30,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "kodama",
+      "b": "matsuhisa",
+      "km": 48,
+      "fkm": 53,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "kodama",
+      "b": "tansyo",
+      "km": 41,
+      "fkm": 45,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "gunmafujioka",
+      "b": "tansyo",
+      "km": 47,
+      "fkm": 52,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "gunmafujioka",
+      "b": "kitafujioka",
+      "km": 37,
+      "fkm": 40,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "kitafujioka",
+      "b": "kuragano",
+      "km": 36,
+      "fkm": 40,
+      "chihou": true,
+      "src": 89
+    },
+    {
+      "a": "tachikawa",
+      "b": "nishitachikawa",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "higashinakagami",
+      "b": "nishitachikawa",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "higashinakagami",
+      "b": "nakagami",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "akishima",
+      "b": "nakagami",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "haijima",
+      "b": "akishima",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "haijima",
+      "b": "ushihama",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "fussa",
+      "b": "ushihama",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "fussa",
+      "b": "hamura",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "hamura",
+      "b": "ozaku",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "kabe",
+      "b": "ozaku",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "higashiome",
+      "b": "kabe",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "higashiome",
+      "b": "ome",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "miyanohira",
+      "b": "ome",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "hinatawada",
+      "b": "miyanohira",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "hinatawada",
+      "b": "ishigamimae",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "futamatao",
+      "b": "ishigamimae",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "futamatao",
+      "b": "ikusabata",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "ikusabata",
+      "b": "sawai",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "mitake",
+      "b": "sawai",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "kawai",
+      "b": "mitake",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "kawai",
+      "b": "kori",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "hatonosu",
+      "b": "kori",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "hatonosu",
+      "b": "shiromaru",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "okutama",
+      "b": "shiromaru",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 90
+    },
+    {
+      "a": "haijima",
+      "b": "kumagawa",
+      "km": 11,
+      "fkm": 11,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "higashiakiru",
+      "b": "kumagawa",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "akigawa",
+      "b": "higashiakiru",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "akigawa",
+      "b": "musashihikida",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "musashihikida",
+      "b": "musashimasuko",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "musashiitsukaichi",
+      "b": "musashimasuko",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 91
+    },
+    {
+      "a": "tsurumi",
+      "b": "kokudo",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "kokudo",
+      "b": "tsurumiono",
+      "km": 6,
+      "fkm": 6,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "bentenbashi",
+      "b": "tsurumiono",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "asano",
+      "b": "bentenbashi",
+      "km": 6,
+      "fkm": 6,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "anzen",
+      "b": "asano",
+      "km": 5,
+      "fkm": 5,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "anzen",
+      "b": "musashishiraishi",
+      "km": 6,
+      "fkm": 6,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "hamakawasaki",
+      "b": "musashishiraishi",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "hamakawasaki",
+      "b": "showa",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "ogimachi",
+      "b": "showa",
+      "km": 6,
+      "fkm": 6,
+      "chihou": false,
+      "src": 92
+    },
+    {
+      "a": "asano",
+      "b": "shinshibaura",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 93
+    },
+    {
+      "a": "shinshibaura",
+      "b": "umishibaura",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 93
+    },
+    {
+      "a": "musashishiraishi",
+      "b": "okawa",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 94
+    },
+    {
+      "a": "higashikanagawa",
+      "b": "oguchi",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kikuna",
+      "b": "oguchi",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kikuna",
+      "b": "shinyokohama",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kozukue",
+      "b": "shinyokohama",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kamoi",
+      "b": "kozukue",
+      "km": 31,
+      "fkm": 31,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kamoi",
+      "b": "nakayama",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "nakayama",
+      "b": "tokaichiba",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "nagatsuda",
+      "b": "tokaichiba",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "nagatsuda",
+      "b": "naruse",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "machida",
+      "b": "naruse",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "kobuchi",
+      "b": "machida",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "fuchinobe",
+      "b": "kobuchi",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "fuchinobe",
+      "b": "yabe",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "sagamihara",
+      "b": "yabe",
+      "km": 18,
+      "fkm": 18,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "hashimoto-yokohama",
+      "b": "sagamihara",
+      "km": 28,
+      "fkm": 28,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "hashimoto-yokohama",
+      "b": "aihara",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "aihara",
+      "b": "hachiojiminamino",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "hachiojiminamino",
+      "b": "katakura",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "hachioji",
+      "b": "katakura",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 95
+    },
+    {
+      "a": "ofuna",
+      "b": "kitakamakura",
+      "km": 23,
+      "fkm": 23,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "kamakura",
+      "b": "kitakamakura",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "kamakura",
+      "b": "zushi",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "higashizushi",
+      "b": "zushi",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "higashizushi",
+      "b": "taura",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "taura",
+      "b": "yokosuka",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "kinugasa",
+      "b": "yokosuka",
+      "km": 34,
+      "fkm": 34,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "kinugasa",
+      "b": "kurihama",
+      "km": 46,
+      "fkm": 46,
+      "chihou": false,
+      "src": 96
+    },
+    {
+      "a": "sakuragicho",
+      "b": "yokohama",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "kannai",
+      "b": "sakuragicho",
+      "km": 10,
+      "fkm": 10,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "ishikawacho",
+      "b": "kannai",
+      "km": 8,
+      "fkm": 8,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "ishikawacho",
+      "b": "yamate",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "negishi-negishi",
+      "b": "yamate",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "isogo",
+      "b": "negishi-negishi",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "isogo",
+      "b": "shinsugita",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "shinsugita",
+      "b": "yokodai",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "konandai",
+      "b": "yokodai",
+      "km": 19,
+      "fkm": 19,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "hongodai",
+      "b": "konandai",
+      "km": 25,
+      "fkm": 25,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "hongodai",
+      "b": "ofuna",
+      "km": 36,
+      "fkm": 36,
+      "chihou": false,
+      "src": 97
+    },
+    {
+      "a": "chigasaki",
+      "b": "kitachigasaki",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kagawa",
+      "b": "kitachigasaki",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kagawa",
+      "b": "samukawa",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "miyayama",
+      "b": "samukawa",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kurami",
+      "b": "miyayama",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kadosawabashi",
+      "b": "kurami",
+      "km": 14,
+      "fkm": 14,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kadosawabashi",
+      "b": "syake",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "atsugi",
+      "b": "syake",
+      "km": 26,
+      "fkm": 26,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "atsugi",
+      "b": "ebina",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "ebina",
+      "b": "iriya",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "iriya",
+      "b": "sobudaishita",
+      "km": 17,
+      "fkm": 17,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "shimomizo",
+      "b": "sobudaishita",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "harataima",
+      "b": "shimomizo",
+      "km": 13,
+      "fkm": 13,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "banda",
+      "b": "harataima",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "banda",
+      "b": "kamimizo",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "kamimizo",
+      "b": "minamihashimoto",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "hashimoto-yokohama",
+      "b": "minamihashimoto",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 98
+    },
+    {
+      "a": "atami",
+      "b": "kinomiya",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 101
+    },
+    {
+      "a": "izutaga",
+      "b": "kinomiya",
+      "km": 48,
+      "fkm": 48,
+      "chihou": false,
+      "src": 101
+    },
+    {
+      "a": "ajiro",
+      "b": "izutaga",
+      "km": 27,
+      "fkm": 27,
+      "chihou": false,
+      "src": 101
+    },
+    {
+      "a": "ajiro",
+      "b": "usami",
+      "km": 43,
+      "fkm": 43,
+      "chihou": false,
+      "src": 101
+    },
+    {
+      "a": "ito",
+      "b": "usami",
+      "km": 39,
+      "fkm": 39,
+      "chihou": false,
+      "src": 101
+    },
+    {
+      "a": "shiojiri",
+      "b": "hirooka",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "hirooka",
+      "b": "murai",
+      "km": 30,
+      "fkm": 30,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "hirata",
+      "b": "murai",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "hirata",
+      "b": "minamimatsumoto",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "matsumoto",
+      "b": "minamimatsumoto",
+      "km": 24,
+      "fkm": 24,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "matsumoto",
+      "b": "tazawa",
+      "km": 83,
+      "fkm": 83,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "akashina",
+      "b": "tazawa",
+      "km": 66,
+      "fkm": 66,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "akashina",
+      "b": "nishijo",
+      "km": 90,
+      "fkm": 90,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "nishijo",
+      "b": "sakakita",
+      "km": 37,
+      "fkm": 37,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "hijirikogen",
+      "b": "sakakita",
+      "km": 41,
+      "fkm": 41,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "hijirikogen",
+      "b": "kamuriki",
+      "km": 33,
+      "fkm": 33,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "kamuriki",
+      "b": "obasute",
+      "km": 59,
+      "fkm": 59,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "inariyama",
+      "b": "obasute",
+      "km": 87,
+      "fkm": 87,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "shinonoi",
+      "b": "inariyama",
+      "km": 38,
+      "fkm": 38,
+      "chihou": false,
+      "src": 106
+    },
+    {
+      "a": "kitamatsumoto",
+      "b": "matsumoto",
+      "km": 7,
+      "fkm": 8,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "kitamatsumoto",
+      "b": "shimauchi",
+      "km": 19,
+      "fkm": 21,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "shimatakamatsu",
+      "b": "shimauchi",
+      "km": 12,
+      "fkm": 13,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "azusabashi",
+      "b": "shimatakamatsu",
+      "km": 14,
+      "fkm": 15,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "azusabashi",
+      "b": "hitoichiba",
+      "km": 16,
+      "fkm": 18,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "hitoichiba",
+      "b": "nakagaya",
+      "km": 16,
+      "fkm": 17,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "minamitoyoshina",
+      "b": "nakagaya",
+      "km": 20,
+      "fkm": 22,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "minamitoyoshina",
+      "b": "toyoshina",
+      "km": 10,
+      "fkm": 11,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "hakuyacho",
+      "b": "toyoshina",
+      "km": 28,
+      "fkm": 31,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "hakuyacho",
+      "b": "hotaka",
+      "km": 20,
+      "fkm": 22,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "hotaka",
+      "b": "shinanoomachi",
+      "km": 189,
+      "fkm": 208,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "hakuba",
+      "b": "shinanoomachi",
+      "km": 246,
+      "fkm": 271,
+      "chihou": true,
+      "src": 108
+    },
+    {
+      "a": "shinagawa",
+      "b": "osaki",
+      "km": 20,
+      "fkm": 20,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "osaki",
+      "b": "gotanda",
+      "km": 9,
+      "fkm": 9,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "gotanda",
+      "b": "meguro",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "ebisu",
+      "b": "meguro",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "ebisu",
+      "b": "shibuya",
+      "km": 16,
+      "fkm": 16,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "shibuya",
+      "b": "harajuku",
+      "km": 12,
+      "fkm": 12,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "yoyogi",
+      "b": "harajuku",
+      "km": 15,
+      "fkm": 15,
+      "chihou": false,
+      "src": 197
+    },
+    {
+      "a": "imai",
+      "b": "shinonoi",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 210
+    },
+    {
+      "a": "imai",
+      "b": "kawanakajima",
+      "km": 22,
+      "fkm": 22,
+      "chihou": false,
+      "src": 210
+    },
+    {
+      "a": "amori",
+      "b": "kawanakajima",
+      "km": 21,
+      "fkm": 21,
+      "chihou": false,
+      "src": 210
+    },
+    {
+      "a": "amori",
+      "b": "nagano",
+      "km": 29,
+      "fkm": 29,
+      "chihou": false,
+      "src": 210
+    },
+    {
+      "a": "shinjuku",
+      "b": "yoyogi",
+      "km": 7,
+      "fkm": 7,
+      "chihou": false,
+      "src": "external-constant-yoyogi-shinjuku-0.7km"
+    }
+  ]
+}

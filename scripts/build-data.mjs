@@ -8,7 +8,7 @@
 // emitted per operator as a CSR adjacency in a binary blob so the app only
 // fetches the network it needs.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,14 +46,40 @@ const round5 = (n) => Math.round(n * 1e5) / 1e5;
 const stations = json(join(SRC, 'stations.json'));
 const groups = json(join(SRC, 'station-groups.json'));
 const railwayLines = json(join(SRC, 'railway-lines.json'));
+// JR East is computed, not sourced: ODPT publishes no JR fare data. Generated
+// by scripts/jr-east/jreast-gen-fares.py from the MARS-derived distance graph
+// (both 営業キロ and 換算キロ, so 地方交通線 are priced too), the 幹線 and
+// 地方交通線 tables, 特定都区市内 zone rules and 特定区間運賃. Restricted to the
+// Suica 首都圏エリア, so 烏山線, 久留里線 and 吾妻線 carry no fares at all.
+//
+// It ships in a compact form rather than one record per directed ODPT pair,
+// because the flat form was 96 MB of almost entirely redundant text: `op` and
+// `iss` are constant across every row, the fare is symmetric, and both child
+// fares are exact functions of the adult ones. **This shape is agreed with the
+// generator, not shared with it** -- changing either side requires changing the
+// other, exactly like the binary fare format.
+function expandJREast({ op, iss, nodes, pairs }) {
+  const out = [];
+  for (const [i, j, ic, tk] of pairs) {
+    // JR floors both child fares -- IC to ¥1, ticket to ¥10 (see
+    // jreastfaq.jreast.co.jp/faq/show/1177 and jr-group.jp/child-fare/). Toei
+    // rounds its child ticket fare UP, so this must not become a shared helper.
+    const cic = Math.floor(ic / 2);
+    const ctk = Math.floor(tk / 20) * 10;
+    const a = nodes[i];
+    const b = nodes[j];
+    // Every id of a complex appears as an origin, so each ODPT platform joins
+    // the logical node below; one canonical id per complex is the destination.
+    for (const from of a) out.push({ op, from, to: b[0], ic, tk, cic, ctk, iss });
+    for (const from of b) out.push({ op, from, to: a[0], ic, tk, cic, ctk, iss });
+  }
+  return out;
+}
+
 const fares = [
   ...json(join(SRC, 'RailwayFares.Challenge2026.slim.json')),
   ...json(join(SRC, 'RailwayFares.ODPT.slim.json')),
-  // JR East is computed, not sourced: ODPT publishes no JR fare data. Generated
-  // by scripts/jreast-gen-fares.py from 営業キロ + the 幹線 table + 特定都区市内
-  // zone rules. 幹線 only -- the 10 地方交通線 are excluded because pricing them
-  // needs 換算キロ, which is not collected.
-  ...json(join(SRC, 'RailwayFares.JREast.slim.json')),
+  ...expandJREast(json(join(SRC, 'RailwayFares.JREast.slim.json'))),
 ];
 
 const opOrder = new Map(OPERATORS.map((o, i) => [o.key, i]));
@@ -290,19 +316,35 @@ for (const op of OPERATORS) {
 
 // ---- line geometry ----------------------------------------------------------
 
+// A feature's coordinates are nested one level deeper for MultiLineString than
+// for LineString; round5 needs to land on the [x, y] pairs either way.
+const roundCoords = (type, coordinates) =>
+  type === 'LineString'
+    ? coordinates.map(([x, y]) => [round5(x), round5(y)])
+    : coordinates.map((part) => part.map(([x, y]) => [round5(x), round5(y)]));
+
+const toLineFeature = (op, f, special) => {
+  const name = f.properties.ja ?? f.properties.name;
+  const rawColor = f.properties.color;
+  const color = rawColor ? (rawColor.startsWith('#') ? rawColor : `#${rawColor}`) : op.fallback;
+  return {
+    type: 'Feature',
+    properties: { operator: op.key, name, color, ...(special && { special: true }) },
+    geometry: { type: f.geometry.type, coordinates: roundCoords(f.geometry.type, f.geometry.coordinates) },
+  };
+};
+
 const features = [];
 for (const op of OPERATORS) {
   const fc = json(join(SRC, 'polygons', `${op.key}.geojson`));
-  for (const f of fc.features) {
-    const color = f.properties.color ? `#${f.properties.color}` : op.fallback;
-    features.push({
-      type: 'Feature',
-      properties: { operator: op.key, name: f.properties.name, color },
-      geometry: {
-        type: f.geometry.type,
-        coordinates: f.geometry.coordinates.map((part) => part.map(([x, y]) => [round5(x), round5(y)])),
-      },
-    });
+  for (const f of fc.features) features.push(toLineFeature(op, f, false));
+
+  // Hand-drawn through-service lines (e.g. Yamanote, Saikyo/Kawagoe) that overlay
+  // the scraped per-railway data above rather than replacing it; kept in a
+  // separate file so they load and tag distinctly from the rest of the operator's set.
+  const specialPath = join(SRC, 'polygons', `${op.key}-special.geojson`);
+  if (existsSync(specialPath)) {
+    for (const f of json(specialPath).features) features.push(toLineFeature(op, f, true));
   }
 }
 writeFileSync(join(OUT, 'lines.geojson'), JSON.stringify({ type: 'FeatureCollection', features }));
@@ -349,12 +391,19 @@ function resolveStationName(name, operator, context) {
   throw new Error(`${context}: station "${name}"${operator ? ` (${operator})` : ''} did not resolve to a fare node`);
 }
 
+// 乗継割引. Transcribed from the Tokyo Metro fare guide p.10, section 13
+// 「他の鉄道線に連絡する乗車券の発売」 -- from the printed image, so verify against
+// the table before trusting an amount. Amounts are yen subtracted from the summed
+// fares. A conditional row applies only when the journey transfers at `via` AND
+// one end is in `a.stations` and the other in `b.stations`; direction-agnostic.
 const discountsSrc = json(join(SRC, 'transfer-discounts.json'));
 
 const discountsFlat = discountsSrc.flat.map((f) => ({ ops: f.operators, adult: f.adult, child: f.child }));
 
 const discountsConditional = [];
 for (const row of discountsSrc.conditional) {
+  // Rows for an operator this app has no fare data for are kept for fidelity
+  // but never resolved -- resolveStationName would throw on their stations.
   if ('_skip' in row) continue;
   const via = resolveStationName(row.via, undefined, `discount via "${row.via}"`);
   const aStations = [...new Set(

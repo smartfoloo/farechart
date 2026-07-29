@@ -911,6 +911,150 @@
 		"zh-Hant": "甲府"
 	}
 }, {
+	"id": "JR-East.Chuo.Ryuo",
+	"railway": "JR-East.Chuo",
+	"coord": [138.519298, 35.668764],
+	"title": {
+		"ja": "竜王",
+		"en": "Ryuo"
+	}
+}, {
+	"id": "JR-East.Chuo.Shiozaki",
+	"railway": "JR-East.Chuo",
+	"coord": [138.487521, 35.687734],
+	"title": {
+		"ja": "塩崎",
+		"en": "Shiozaki"
+	}
+}, {
+	"id": "JR-East.Chuo.Nirasaki",
+	"railway": "JR-East.Chuo",
+	"coord": [138.451357, 35.709711],
+	"title": {
+		"ja": "韮崎",
+		"en": "Nirasaki"
+	}
+}, {
+	"id": "JR-East.Chuo.Shimpu",
+	"railway": "JR-East.Chuo",
+	"coord": [138.433093, 35.736802],
+	"title": {
+		"ja": "新府",
+		"en": "Shimpu"
+	}
+}, {
+	"id": "JR-East.Chuo.Anayama",
+	"railway": "JR-East.Chuo",
+	"coord": [138.413858, 35.75107],
+	"title": {
+		"ja": "穴山",
+		"en": "Anayama"
+	}
+}, {
+	"id": "JR-East.Chuo.Hinoharu",
+	"railway": "JR-East.Chuo",
+	"coord": [138.394316, 35.79065],
+	"title": {
+		"ja": "日野春",
+		"en": "Hinoharu"
+	}
+}, {
+	"id": "JR-East.Chuo.Nagasaka",
+	"railway": "JR-East.Chuo",
+	"coord": [138.366459, 35.827061],
+	"title": {
+		"ja": "長坂",
+		"en": "Nagasaka"
+	}
+}, {
+	"id": "JR-East.Chuo.Kobuchizawa",
+	"railway": "JR-East.Chuo",
+	"coord": [138.316351, 35.863808],
+	"title": {
+		"ja": "小淵沢",
+		"en": "Kobuchizawa"
+	}
+}, {
+	"id": "JR-East.Chuo.Shinanosakai",
+	"railway": "JR-East.Chuo",
+	"coord": [138.275419, 35.884952],
+	"title": {
+		"ja": "信濃境",
+		"en": "Shinanosakai"
+	}
+}, {
+	"id": "JR-East.Chuo.Fujimi",
+	"railway": "JR-East.Chuo",
+	"coord": [138.238071, 35.912183],
+	"title": {
+		"ja": "富士見",
+		"en": "Fujimi"
+	}
+}, {
+	"id": "JR-East.Chuo.Suzurannosato",
+	"railway": "JR-East.Chuo",
+	"coord": [138.211775, 35.930288],
+	"title": {
+		"ja": "すずらんの里",
+		"en": "Suzurannosato"
+	}
+}, {
+	"id": "JR-East.Chuo.Aoyagi",
+	"railway": "JR-East.Chuo",
+	"coord": [138.197612, 35.942581],
+	"title": {
+		"ja": "青柳",
+		"en": "Aoyagi"
+	}
+}, {
+	"id": "JR-East.Chuo.Chino",
+	"railway": "JR-East.Chuo",
+	"coord": [138.151674, 35.995062],
+	"title": {
+		"ja": "茅野",
+		"en": "Chino"
+	}
+}, {
+	"id": "JR-East.Chuo.KamiSuwa",
+	"railway": "JR-East.Chuo",
+	"coord": [138.116306, 36.046618],
+	"title": {
+		"ja": "上諏訪",
+		"en": "KamiSuwa"
+	}
+}, {
+	"id": "JR-East.Chuo.ShimoSuwa",
+	"railway": "JR-East.Chuo",
+	"coord": [138.084953, 36.071948],
+	"title": {
+		"ja": "下諏訪",
+		"en": "ShimoSuwa"
+	}
+}, {
+	"id": "JR-East.Chuo.Okaya",
+	"railway": "JR-East.Chuo",
+	"coord": [138.045001, 36.056693],
+	"title": {
+		"ja": "岡谷",
+		"en": "Okaya"
+	}
+}, {
+	"id": "JR-East.Chuo.Midoriko",
+	"railway": "JR-East.Chuo",
+	"coord": [137.981928, 36.094176],
+	"title": {
+		"ja": "みどり湖",
+		"en": "Midoriko"
+	}
+}, {
+	"id": "JR-East.Chuo.Shiojiri",
+	"railway": "JR-East.Chuo",
+	"coord": [137.947961, 36.114364],
+	"title": {
+		"ja": "塩尻",
+		"en": "Shiojiri"
+	}
+}, {
 	"id": "JR-East.Ome.Tachikawa",
 	"railway": "JR-East.Ome",
 	"coord": [139.41374, 35.69795],
@@ -4166,54 +4310,180 @@
 		"zh-Hant": "高萩"
 	}
 }, {
+	"id": "JR-East.Joban.MinamiNakago",
+	"railway": "JR-East.Joban",
+	"coord": [140.729028, 36.753501],
+	"title": {
+		"ja": "南中郷",
+		"en": "MinamiNakago"
+	}
+}, {
+	"id": "JR-East.Joban.Isohara",
+	"railway": "JR-East.Joban",
+	"coord": [140.746366, 36.790684],
+	"title": {
+		"ja": "磯原",
+		"en": "Isohara"
+	}
+}, {
 	"id": "JR-East.Joban.Otsuko",
+	"railway": "JR-East.Joban",
+	"coord": [140.778001, 36.846085],
 	"title": {
 		"ja": "大津港",
-		"en": "Otsuko",
-		"fr": "Otsuko",
-		"ko": "오쓰코",
-		"zh-Hans": "大津港",
-		"zh-Hant": "大津港"
+		"en": "Otsuko"
+	}
+}, {
+	"id": "JR-East.Joban.Nakoso",
+	"railway": "JR-East.Joban",
+	"coord": [140.786506, 36.883883],
+	"title": {
+		"ja": "勿来",
+		"en": "Nakoso"
+	}
+}, {
+	"id": "JR-East.Joban.Ueda",
+	"railway": "JR-East.Joban",
+	"coord": [140.796468, 36.920649],
+	"title": {
+		"ja": "植田",
+		"en": "Ueda"
+	}
+}, {
+	"id": "JR-East.Joban.Izumi",
+	"railway": "JR-East.Joban",
+	"coord": [140.854125, 36.955602],
+	"title": {
+		"ja": "泉",
+		"en": "Izumi"
+	}
+}, {
+	"id": "JR-East.Joban.Yumoto",
+	"railway": "JR-East.Joban",
+	"coord": [140.849884, 37.006922],
+	"title": {
+		"ja": "湯本",
+		"en": "Yumoto"
+	}
+}, {
+	"id": "JR-East.Joban.Uchigo",
+	"railway": "JR-East.Joban",
+	"coord": [140.855005, 37.035895],
+	"title": {
+		"ja": "内郷",
+		"en": "Uchigo"
 	}
 }, {
 	"id": "JR-East.Joban.Iwaki",
+	"railway": "JR-East.Joban",
+	"coord": [140.892273, 37.058241],
 	"title": {
 		"ja": "いわき",
-		"en": "Iwaki",
-		"fr": "Iwaki",
-		"ko": "이와키",
-		"zh-Hans": "磐城",
-		"zh-Hant": "磐城"
+		"en": "Iwaki"
 	}
 }, {
 	"id": "JR-East.Joban.Kusano",
+	"railway": "JR-East.Joban",
+	"coord": [140.947243, 37.073863],
 	"title": {
 		"ja": "草野",
-		"en": "Kusano",
-		"fr": "Kusano",
-		"ko": "구사노",
-		"zh-Hans": "草野",
-		"zh-Hant": "草野"
+		"en": "Kusano"
+	}
+}, {
+	"id": "JR-East.Joban.Yotsukura",
+	"railway": "JR-East.Joban",
+	"coord": [140.980907, 37.102338],
+	"title": {
+		"ja": "四ツ倉",
+		"en": "Yotsukura"
 	}
 }, {
 	"id": "JR-East.Joban.Hisanohama",
+	"railway": "JR-East.Joban",
+	"coord": [140.995741, 37.142465],
 	"title": {
 		"ja": "久ノ浜",
-		"en": "Hisanohama",
-		"fr": "Hisanohama",
-		"ko": "히사노하마",
-		"zh-Hans": "久之滨",
-		"zh-Hant": "久之濱"
+		"en": "Hisanohama"
+	}
+}, {
+	"id": "JR-East.Joban.Suetsugi",
+	"railway": "JR-East.Joban",
+	"coord": [140.995565, 37.172156],
+	"title": {
+		"ja": "末続",
+		"en": "Suetsugi"
 	}
 }, {
 	"id": "JR-East.Joban.Hirono",
+	"railway": "JR-East.Joban",
+	"coord": [140.998769, 37.21157],
 	"title": {
 		"ja": "広野",
-		"en": "Hirono",
-		"fr": "Hirono",
-		"ko": "히로노",
-		"zh-Hans": "广野",
-		"zh-Hant": "廣野"
+		"en": "Hirono"
+	}
+}, {
+	"id": "JR-East.Joban.JVillage",
+	"railway": "JR-East.Joban",
+	"coord": [141.007589, 37.242294],
+	"title": {
+		"ja": "Ｊヴィレッジ",
+		"en": "JVillage"
+	}
+}, {
+	"id": "JR-East.Joban.Kido",
+	"railway": "JR-East.Joban",
+	"coord": [141.00247, 37.257875],
+	"title": {
+		"ja": "木戸",
+		"en": "Kido"
+	}
+}, {
+	"id": "JR-East.Joban.Tatsuta",
+	"railway": "JR-East.Joban",
+	"coord": [141.002822, 37.282485],
+	"title": {
+		"ja": "竜田",
+		"en": "Tatsuta"
+	}
+}, {
+	"id": "JR-East.Joban.Tomioka",
+	"railway": "JR-East.Joban",
+	"coord": [141.022274, 37.335261],
+	"title": {
+		"ja": "富岡",
+		"en": "Tomioka"
+	}
+}, {
+	"id": "JR-East.Joban.Yonomori",
+	"railway": "JR-East.Joban",
+	"coord": [140.991988, 37.365761],
+	"title": {
+		"ja": "夜ノ森",
+		"en": "Yonomori"
+	}
+}, {
+	"id": "JR-East.Joban.Ono",
+	"railway": "JR-East.Joban",
+	"coord": [140.984163, 37.409367],
+	"title": {
+		"ja": "大野",
+		"en": "Ono"
+	}
+}, {
+	"id": "JR-East.Joban.Futaba",
+	"railway": "JR-East.Joban",
+	"coord": [141.005815, 37.453795],
+	"title": {
+		"ja": "双葉",
+		"en": "Futaba"
+	}
+}, {
+	"id": "JR-East.Joban.Namie",
+	"railway": "JR-East.Joban",
+	"coord": [140.989521, 37.492291],
+	"title": {
+		"ja": "浪江",
+		"en": "Namie"
 	}
 }, {
 	"id": "JR-East.Joban.Haranomachi",
@@ -8111,7 +8381,7 @@
 		"ja-Wiki": "大宮駅 (埼玉県)"
 	},
 	"alternate": "JR-East.ShonanShinjuku.Omiya",
-	"ascending" : null,
+	"ascending": null,
 	"descending": "Southbound"
 }, {
 	"id": "JR-East.MusashinoNishiUrawaBranch.MusashiUrawa",
@@ -10343,14 +10613,268 @@
 		"zh-Hant": "大前"
 	}
 }, {
-	"id": "JR-East.Shinetsu.Nagano",
+	"id": "JR-East.Shinonoi.Shiojiri",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.947961, 36.114364],
+	"title": {
+		"ja": "塩尻",
+		"en": "Shiojiri"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Hirooka",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.949578, 36.148032],
+	"title": {
+		"ja": "広丘",
+		"en": "Hirooka"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Murai",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.956007, 36.174226],
+	"title": {
+		"ja": "村井",
+		"en": "Murai"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Hirata",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.962517, 36.191558],
+	"title": {
+		"ja": "平田",
+		"en": "Hirata"
+	}
+}, {
+	"id": "JR-East.Shinonoi.MinamiMatsumoto",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.969505, 36.210447],
+	"title": {
+		"ja": "南松本",
+		"en": "MinamiMatsumoto"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Matsumoto",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.96445, 36.230393],
+	"title": {
+		"ja": "松本",
+		"en": "Matsumoto"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Tazawa",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.941029, 36.301583],
+	"title": {
+		"ja": "田沢",
+		"en": "Tazawa"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Akashina",
+	"railway": "JR-East.Shinonoi",
+	"coord": [137.929967, 36.353948],
+	"title": {
+		"ja": "明科",
+		"en": "Akashina"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Nishijo",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.012377, 36.400353],
+	"title": {
+		"ja": "西条",
+		"en": "Nishijo"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Sakakita",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.015754, 36.430663],
+	"title": {
+		"ja": "坂北",
+		"en": "Sakakita"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Hijirikogen",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.047603, 36.455069],
+	"title": {
+		"ja": "聖高原",
+		"en": "Hijirikogen"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Kamuriki",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.079223, 36.457215],
+	"title": {
+		"ja": "冠着",
+		"en": "Kamuriki"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Obasute",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.093388, 36.502649],
+	"title": {
+		"ja": "姨捨",
+		"en": "Obasute"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Inariyama",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.108061, 36.552633],
+	"title": {
+		"ja": "稲荷山",
+		"en": "Inariyama"
+	}
+}, {
+	"id": "JR-East.Shinonoi.Shinonoi",
+	"railway": "JR-East.Shinonoi",
+	"coord": [138.138046, 36.5771],
+	"title": {
+		"ja": "篠ノ井",
+		"en": "Shinonoi"
+	}
+}, {
+	"id": "JR-East.Oito.Matsumoto",
+	"railway": "JR-East.Oito",
+	"coord": [137.96445, 36.230393],
+	"title": {
+		"ja": "松本",
+		"en": "Matsumoto"
+	}
+}, {
+	"id": "JR-East.Oito.KitaMatsumoto",
+	"railway": "JR-East.Oito",
+	"coord": [137.960983, 36.236971],
+	"title": {
+		"ja": "北松本",
+		"en": "KitaMatsumoto"
+	}
+}, {
+	"id": "JR-East.Oito.Shimauchi",
+	"railway": "JR-East.Oito",
+	"coord": [137.944817, 36.246991],
+	"title": {
+		"ja": "島内",
+		"en": "Shimauchi"
+	}
+}, {
+	"id": "JR-East.Oito.Shimatakamatsu",
+	"railway": "JR-East.Oito",
+	"coord": [137.931576, 36.246322],
+	"title": {
+		"ja": "島高松",
+		"en": "Shimatakamatsu"
+	}
+}, {
+	"id": "JR-East.Oito.Azusabashi",
+	"railway": "JR-East.Oito",
+	"coord": [137.918027, 36.250162],
+	"title": {
+		"ja": "梓橋",
+		"en": "Azusabashi"
+	}
+}, {
+	"id": "JR-East.Oito.Hitoichiba",
+	"railway": "JR-East.Oito",
+	"coord": [137.904136, 36.2596],
+	"title": {
+		"ja": "一日市場",
+		"en": "Hitoichiba"
+	}
+}, {
+	"id": "JR-East.Oito.Nakagaya",
+	"railway": "JR-East.Oito",
+	"coord": [137.903353, 36.273434],
+	"title": {
+		"ja": "中萱",
+		"en": "Nakagaya"
+	}
+}, {
+	"id": "JR-East.Oito.MinamiToyoshina",
+	"railway": "JR-East.Oito",
+	"coord": [137.903457, 36.291124],
+	"title": {
+		"ja": "南豊科",
+		"en": "MinamiToyoshina"
+	}
+}, {
+	"id": "JR-East.Oito.Toyoshina",
+	"railway": "JR-East.Oito",
+	"coord": [137.900896, 36.299957],
+	"title": {
+		"ja": "豊科",
+		"en": "Toyoshina"
+	}
+}, {
+	"id": "JR-East.Oito.Hakuyacho",
+	"railway": "JR-East.Oito",
+	"coord": [137.888349, 36.322529],
+	"title": {
+		"ja": "柏矢町",
+		"en": "Hakuyacho"
+	}
+}, {
+	"id": "JR-East.Oito.Hotaka",
+	"railway": "JR-East.Oito",
+	"coord": [137.881869, 36.33906],
+	"title": {
+		"ja": "穂高",
+		"en": "Hotaka"
+	}
+}, {
+	"id": "JR-East.Oito.ShinanoOmachi",
+	"railway": "JR-East.Oito",
+	"coord": [137.861674, 36.50031],
+	"title": {
+		"ja": "信濃大町",
+		"en": "ShinanoOmachi"
+	}
+}, {
+	"id": "JR-East.Oito.Hakuba",
+	"railway": "JR-East.Oito",
+	"coord": [137.863819, 36.695922],
+	"title": {
+		"ja": "白馬",
+		"en": "Hakuba"
+	}
+}, {
+	"id": "JR-East.ShinetsuNagano.Shinonoi",
+	"railway": "JR-East.ShinetsuNagano",
+	"coord": [138.138046, 36.5771],
+	"title": {
+		"ja": "篠ノ井",
+		"en": "Shinonoi"
+	}
+}, {
+	"id": "JR-East.ShinetsuNagano.Imai",
+	"railway": "JR-East.ShinetsuNagano",
+	"coord": [138.145347, 36.595732],
+	"title": {
+		"ja": "今井",
+		"en": "Imai"
+	}
+}, {
+	"id": "JR-East.ShinetsuNagano.Kawanakajima",
+	"railway": "JR-East.ShinetsuNagano",
+	"coord": [138.150679, 36.614167],
+	"title": {
+		"ja": "川中島",
+		"en": "Kawanakajima"
+	}
+}, {
+	"id": "JR-East.ShinetsuNagano.Amori",
+	"railway": "JR-East.ShinetsuNagano",
+	"coord": [138.161791, 36.630262],
+	"title": {
+		"ja": "安茂里",
+		"en": "Amori"
+	}
+}, {
+	"id": "JR-East.ShinetsuNagano.Nagano",
+	"railway": "JR-East.ShinetsuNagano",
+	"coord": [138.189101, 36.643307],
 	"title": {
 		"ja": "長野",
-		"en": "Nagano",
-		"fr": "Nagano",
-		"ko": "나가노",
-		"zh-Hans": "长野",
-		"zh-Hant": "長野"
+		"en": "Nagano"
 	}
 }, {
 	"id": "JR-Central.Tokaido.Atami",
@@ -15053,7 +15577,6 @@
 		"ko": "오시아게",
 		"zh-Hans": "押上",
 		"zh-Hant": "押上"
-
 	},
 	"exit": [
 		"Toei.Oshiage.A1",
@@ -17882,8 +18405,8 @@
 	"exit": [
 		"YokohamaMunicipal.Nakagawa.1",
 		"YokohamaMunicipal.Nakagawa.2"
-	]
-,	"altitude": -1
+	],
+	"altitude": -1
 }, {
 	"id": "YokohamaMunicipal.Blue.Azamino",
 	"railway": "YokohamaMunicipal.Blue",
@@ -24492,7 +25015,7 @@
 		"zh-Hans": "横濑",
 		"zh-Hant": "橫瀨"
 	}
- }, {
+}, {
 	"id": "Seibu.SeibuChichibu.SeibuChichibu",
 	"railway": "Seibu.SeibuChichibu",
 	"coord": [139.08346, 35.98991],
@@ -33687,56 +34210,6 @@
 		"ko": "쇼난에노시마",
 		"zh-Hans": "湘南江之岛",
 		"zh-Hant": "湘南江之島"
-	}
-}, {
-	"id": "JR-East.Chuo.Ryuo",
-	"title": {
-		"ja": "竜王",
-		"en": "Ryuo",
-		"fr": "Ryuo",
-		"ko": "류오",
-		"zh-Hans": "龙王",
-		"zh-Hant": "龍王"
-	}
-}, {
-	"id": "JR-East.Chuo.Nirasaki",
-	"title": {
-		"ja": "韮崎",
-		"en": "Nirasaki",
-		"fr": "Nirasaki",
-		"ko": "니라사키",
-		"zh-Hans": "韭崎",
-		"zh-Hant": "韮崎"
-	}
-}, {
-	"id": "JR-East.Chuo.Kobuchizawa",
-	"title": {
-		"ja": "小淵沢",
-		"en": "Kobuchizawa",
-		"fr": "Kobuchizawa",
-		"ko": "고부치자와",
-		"zh-Hans": "小渊泽",
-		"zh-Hant": "小淵澤"
-	}
-}, {
-	"id": "JR-East.Shinonoi.Matsumoto",
-	"title": {
-		"ja": "松本",
-		"en": "Matsumoto",
-		"fr": "Matsumoto",
-		"ko": "마쓰모토",
-		"zh-Hans": "松本",
-		"zh-Hant": "松本"
-	}
-}, {
-	"id": "JR-East.Oito.Hakuba",
-	"title": {
-		"ja": "白馬",
-		"en": "Hakuba",
-		"fr": "Hakuba",
-		"ko": "하쿠바",
-		"zh-Hans": "白马",
-		"zh-Hant": "白馬"
 	}
 }, {
 	"id": "JR-East.Tadami.AizuWakamatsu",

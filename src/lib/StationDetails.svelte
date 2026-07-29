@@ -6,8 +6,6 @@
   let {
     t,
     lang,
-    fareMode,
-    passenger,
     activeOperator,
     stationName,
     stationSub,
@@ -48,9 +46,6 @@
   // Platform-to-platform walking transfer: only called out when the names differ.
   const boundaryName = (prevLeg, nextLeg) =>
     prevLeg.toName === nextLeg.fromName ? prevLeg.toName : `${prevLeg.toName}・・・${nextLeg.fromName}`;
-
-  // Operator keys ship as bare identifiers (e.g. "TokyoMetro"); split the
-  // camelCase into words since no localized operator name is available here.
 
   function onDragEnd(dy, velocity) {
     dragging = false;
@@ -126,8 +121,6 @@
         <div class="section-title">{t.routes}</div>
         {#if isOrigin}
           <p class="note">{t.originHere}</p>
-        {:else if originName === null}
-          <p class="note">{t.pickOriginHint}</p>
         {:else if routes.length === 0}
           <p class="note">{t.noRoutes}</p>
         {:else}
@@ -346,10 +339,6 @@
     letter-spacing: 0.05em;
     margin: 14px 0 8px;
   }
-  .route-group-title:first-child {
-    margin-top: 0;
-  }
-
   .route {
     display: flex;
     flex-direction: column;

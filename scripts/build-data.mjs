@@ -35,11 +35,6 @@ const OPERATORS = [
   { key: 'JR-East', ja: 'JR東日本', en: 'JR East', fallback: '#008803' },
 ];
 
-// Keikyu (from 2023-10) and Seibu (from 2026-03) charge one flat child fare on IC at
-// any distance. ODPT still derives their child fares as half the adult one, so the
-// dumps carry a distance curve that no longer exists. Paper tickets keep the half fare.
-const FLAT_CHILD_IC = { Keikyu: 75, Seibu: 50 };
-
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 const round5 = (n) => Math.round(n * 1e5) / 1e5;
 
@@ -245,7 +240,7 @@ for (const rec of fares) {
   const prev = table.get(key);
   if (prev && prev[0] <= rec.ic) continue;
 
-  table.set(key, [rec.ic, rec.tk, FLAT_CHILD_IC[op] ?? rec.cic, rec.ctk]);
+  table.set(key, [rec.ic, rec.tk, rec.cic, rec.ctk]);
   maxFare = Math.max(maxFare, rec.tk, rec.ic);
 }
 if (maxFare > 0xffff) throw new Error(`fare ${maxFare} overflows uint16`);

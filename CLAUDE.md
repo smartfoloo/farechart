@@ -82,8 +82,11 @@ and the operator picker. An operator needs fare records in the dumps, an entry i
 `data/railway-lines.json` for every railway its nodes reference (the build throws otherwise), and a
 `data/polygons/<key>.geojson`.
 
-Operator-specific tariff quirks live there too: `FLAT_CHILD_IC` overrides Keikyu and Seibu, whose IC
-child fare is flat at any distance even though ODPT still derives a distance curve for it.
+Keikyu (from 2023-10) and Seibu (from 2026-03) charge one flat child IC fare at any distance instead
+of a distance curve — Seibu ¥50 system-wide, Keikyu ¥75 except a separate flat ¥100 on the Haneda
+Airport line. ODPT's dumps used to still derive these as a distance curve, which needed a
+`FLAT_CHILD_IC` override in `build-data.mjs`; ODPT now emits the flat fares (and the airport
+exception) directly per record, so the override was removed — don't reintroduce it.
 
 ### `<key>-special.geojson`: hand-drawn overrides for bad scraped lines
 

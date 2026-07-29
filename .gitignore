@@ -2,3 +2,5 @@ node_modules
 dist
 public/data
 .DS_Store
+CLAUDE.md
+AGENTS.md

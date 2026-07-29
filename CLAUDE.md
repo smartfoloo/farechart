@@ -85,6 +85,35 @@ and the operator picker. An operator needs fare records in the dumps, an entry i
 Operator-specific tariff quirks live there too: `FLAT_CHILD_IC` overrides Keikyu and Seibu, whose IC
 child fare is flat at any distance even though ODPT still derives a distance curve for it.
 
+### `<key>-special.geojson`: hand-drawn overrides for bad scraped lines
+
+`data/polygons/<key>.geojson` comes from uedayou/jrslod-geojson-downloader, and some of its JR East
+lines are wrong: instead of one continuous path, the line is many short disconnected segments (mostly
+just the stretch near each station), so it renders as a gapped, broken line on the map. 山手線,
+横須賀線, 根岸線, and 総武本線 were all affected this way.
+
+The fix for an affected line is a hand-drawn replacement — a single continuous `LineString` — kept in
+an optional `data/polygons/<key>-special.geojson` sibling file, loaded in `build-data.mjs` alongside
+the base file. Its properties schema differs from the scraped file's (`{ id, ja, en, color }`, color
+already `#`-prefixed, vs. the scraped `{ name, uri, color }` with an unprefixed color) — `build-data.mjs`
+normalizes both. Features from the special file are tagged `special: true` in the emitted
+`lines.geojson` so the frontend can tell them apart from the scraped set.
+
+JR East's special file currently holds 7 lines: 山手線, 中央線快速, 中央・総武線各駅停車, 埼京・川越線,
+京浜東北・根岸線, 横須賀線, 総武線快速. Their now-redundant, broken counterparts (old 山手線, 中央線,
+根岸線, 横須賀線, 総武本線 features) were deleted from `JR-East.geojson` outright rather than left in
+as dead duplicates.
+
+`JR-East.geojson` also no longer carries lines with no fare data — the app only prices the Suica
+首都圏エリア, so Tohoku/Niigata/Nagano-area lines like 五能線, 男鹿線, and 津軽線 were dropped along with
+about two dozen others in the same situation.
+
+**As a result, several JR East lines currently have no polygon coverage at all.** 54 JR East railways
+carry fare/routing data (`data/railway-lines.json`), but only 28 distinct line names have a matching
+polygon feature (scraped + special combined) — among the missing are trunk lines that do carry fare
+data and should eventually get coverage: 総武本線, 中央本線, 高崎線, 宇都宮線, 東海道線, 鶴見線, 相模線,
+青梅線, 篠ノ井線. Fares and routing work fine for these; they just don't draw on the map.
+
 ## JR East (wired in; fares are computed, not sourced)
 
 ODPT publishes no JR fare data, so JR East fares are **computed** by
